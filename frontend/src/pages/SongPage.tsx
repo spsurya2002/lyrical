@@ -1,11 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { LyricColumn } from '../components/lyric/LyricColumn.js';
 import { MeaningPanel } from '../components/meaning/MeaningPanel.js';
 import { GroundedMark } from '../components/grounding/GroundedMark.js';
 import { FixtureBanner } from '../components/FixtureBanner.js';
+import { ModeSwitch } from '../components/language/ModeSwitch.js';
+import { useLanguageMode } from '../hooks/useLanguageMode.js';
 import { useSongPage } from '../hooks/useSongPage.js';
-import type { Mode } from '../types.js';
 
 /**
  * THE MAIN SCREEN. Three zones, per docs/design_system.md §6:
@@ -16,11 +17,10 @@ import type { Mode } from '../types.js';
  */
 export function SongPage() {
   const { slug = '' } = useParams();
-  // State rather than a constant: Phase 4 (US2) replaces the initial value with
-  // the segmented mode switch, and everything below already reads from here.
-  const [mode] = useState<Mode>('en');
+  const [mode, setMode] = useLanguageMode();
   const state = useSongPage(slug, mode);
   const [activeLineNo, setActiveLineNo] = useState<number | null>(null);
+  const positionedFor = useRef<string | null>(null);
 
   // The page opens on the first SERVABLE line, not line 1 — landing on an empty
   // panel wastes the only thing the page has to offer.
@@ -31,8 +31,13 @@ export function SongPage() {
   // quieter form of not saying it.
   useEffect(() => {
     if (state.status !== 'ready') return;
+    // Position once per SONG, not per render. Re-running on a mode change would
+    // throw the reader back to the opening line, and FR-013 requires the active
+    // line and scroll position to survive a switch.
+    if (positionedFor.current === slug) return;
+    positionedFor.current = slug;
     setActiveLineNo(state.page.activeLineNo ?? state.page.lines[0]?.lineNo ?? null);
-  }, [state]);
+  }, [state, slug]);
 
   if (state.status === 'loading') {
     return <Shell>{null}</Shell>;
@@ -62,6 +67,9 @@ export function SongPage() {
     <Shell>
       <FixtureBanner />
       <header className="border-b border-border-subtle pb-6">
+        <div className="mb-4 flex flex-wrap items-center justify-end gap-3">
+          <ModeSwitch mode={mode} onChange={setMode} />
+        </div>
         <h1
           lang={page.lang}
           className={`text-display ${mode === 'hi' ? 'font-lyric-deva' : 'font-lyric'} text-primary`}
