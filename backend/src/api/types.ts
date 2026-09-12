@@ -38,7 +38,6 @@ export interface MeaningView {
   text: string;
   sourceCount: number;
   status: 'active' | 'stale';
-  words: SelectableWord[];
 }
 
 export interface UngroundedView {
@@ -50,6 +49,15 @@ export interface UngroundedView {
 export type LineView = {
   lineNo: number;
   text: string;
+  /**
+   * Words in this line that have their own servable meaning.
+   *
+   * On the LINE, not on the meaning: a line can be unexplained while a word
+   * inside it is explained. Nesting these under `meaning` made grounded word
+   * meanings unreachable on exactly those lines — which is the normal case
+   * under per-line honesty, not an edge case.
+   */
+  words: SelectableWord[];
 } & ({ meaning: MeaningView; ungrounded: null } | { meaning: null; ungrounded: UngroundedView });
 
 export interface CoverageView {

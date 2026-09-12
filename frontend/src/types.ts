@@ -32,7 +32,6 @@ export interface MeaningView {
   text: string;
   sourceCount: number;
   status: 'active' | 'stale';
-  words: SelectableWord[];
 }
 
 export interface UngroundedView {
@@ -44,6 +43,8 @@ export interface UngroundedView {
 export type LineView = {
   lineNo: number;
   text: string;
+  /** Words with their own servable meaning — on the LINE, not on the meaning. */
+  words: SelectableWord[];
 } & ({ meaning: MeaningView; ungrounded: null } | { meaning: null; ungrounded: UngroundedView });
 
 export interface SongPageResponse {
