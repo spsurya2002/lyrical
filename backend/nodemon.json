@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/nodemon.json",
+  "watch": ["src"],
+  "ext": "ts,json",
+  "ignore": ["src/**/*.test.ts", "src/db/seed/**"],
+  "exec": "tsx --env-file-if-exists=../.env src/server.ts",
+  "delay": 300,
+  "verbose": false
+}
