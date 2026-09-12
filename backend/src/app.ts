@@ -3,6 +3,8 @@ import type { Express } from 'express';
 import { errorHandler, notFound } from './api/middleware/errors.js';
 import { optionalAuth } from './api/middleware/optionalAuth.js';
 import { readLimiter } from './api/middleware/rateLimit.js';
+import { songPageRouter } from './api/routes/songPage.js';
+import { sourcesRouter } from './api/routes/sources.js';
 
 /**
  * Builds the Express app without starting it, so tests can mount it directly
@@ -31,6 +33,8 @@ export function createApp(): Express {
   });
 
   app.use('/api', readLimiter);
+  app.use('/api', songPageRouter);
+  app.use('/api', sourcesRouter);
 
   app.use(notFound);
   app.use(errorHandler);
