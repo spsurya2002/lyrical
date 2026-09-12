@@ -32,14 +32,14 @@ Per Principle II: never report a task complete without having run this.
 
 **Purpose**: project skeleton, tooling, and the gate itself
 
-- [ ] T001 Create npm workspace root with `backend/` and `frontend/` in `package.json`, per the structure in plan.md
-- [ ] T002 [P] Initialize backend: Express + TypeScript 5.x on Node 20 in `backend/package.json`, `backend/tsconfig.json`
-- [ ] T003 [P] Initialize frontend: React 18 + Vite + TypeScript + Tailwind in `frontend/package.json`, `frontend/vite.config.ts`
-- [ ] T004 [P] Configure ESLint + Prettier across both workspaces in `.eslintrc.cjs`, `.prettierrc`
-- [ ] T005 [P] Add `docker-compose.yml` with Postgres 16 + pgvector and Redis 7
-- [ ] T006 Create `.env.example` with every variable in quickstart.md, and `backend/src/config/index.ts` reading them — including `GROUNDING_MIN_SOURCES` defaulting to `4`. **No hardcoded limits anywhere else.**
-- [ ] T007 Wire test tooling (R-08): Vitest in `backend/vitest.config.ts` and `frontend/vitest.config.ts`, Playwright in `frontend/playwright.config.ts`, Testcontainers helper in `backend/tests/helpers/postgres.ts`
-- [ ] T008 Add scripts to root `package.json`: `dev`, `dev:api`, `dev:web`, `worker`, `db:migrate`, `db:seed`, `test`, `test:e2e`, `typecheck`, `lint`, and `verify` = typecheck + lint + test + e2e
+- [x] T001 Create npm workspace root with `backend/` and `frontend/` in `package.json`, per the structure in plan.md
+- [x] T002 [P] Initialize backend: Express + TypeScript 5.x on Node 20 in `backend/package.json`, `backend/tsconfig.json`
+- [x] T003 [P] Initialize frontend: React 18 + Vite + TypeScript + Tailwind in `frontend/package.json`, `frontend/vite.config.ts`
+- [x] T004 [P] Configure ESLint + Prettier across both workspaces in `.eslintrc.cjs`, `.prettierrc`
+- [x] T005 [P] Add `docker-compose.yml` with Postgres 16 + pgvector and Redis 7
+- [x] T006 Create `.env.example` with every variable in quickstart.md, and `backend/src/config/index.ts` reading them — including `GROUNDING_MIN_SOURCES` defaulting to `4`. **No hardcoded limits anywhere else.**
+- [x] T007 Wire test tooling (R-08): Vitest in `backend/vitest.config.ts` and `frontend/vitest.config.ts`, Playwright in `frontend/playwright.config.ts`, Testcontainers helper in `backend/tests/helpers/postgres.ts`
+- [x] T008 Add scripts to root `package.json`: `dev`, `dev:api`, `dev:web`, `worker`, `db:migrate`, `db:seed`, `test`, `test:e2e`, `typecheck`, `lint`, and `verify` = typecheck + lint + test + e2e
 
 **Verify**: `npm run verify` passes on an empty project. This is the gate coming online — it must pass before anything else is written.
 
@@ -53,31 +53,31 @@ Per Principle II: never report a task complete without having run this.
 
 ### Schema
 
-- [ ] T009 Create migration framework and initial migration in `backend/src/db/migrations/001_initial.sql` — the seven tables from data-model.md: `song`, `song_title`, `lyric_line`, `lyric_line_text`, `word_occurrence`, `meaning`, `meaning_rendering`, `source`, `meaning_source`
-- [ ] T010 Add constraints exactly as specified in data-model.md: `song.slug` unique · `lyric_line(song_id, line_no)` unique · `lyric_line_text` PK `(line_id, script)` · `word_occurrence(line_id, position)` unique · `meaning` unique `(target_type, target_id)` where `status = 'active'` · `meaning_rendering` PK `(meaning_id, mode)` with **cascade delete from `meaning`** · `meaning_source` PK `(meaning_id, source_id)`
-- [ ] T011 Add enums: `script` = `deva | latn` · `mode` = `en | hi | hi-Latn` · `target_type` = `song_summary | line | word_occurrence` · `meaning.status` = `active | stale` · `source.type` = `blog | forum | lyrics | interview | academic | other`
-- [ ] T012 [P] Add the indexes listed in data-model.md, including `meaning_source(meaning_id)` — the grounding count is the hot path
+- [x] T009 Create migration framework and initial migration in `backend/src/db/migrations/001_initial.sql` — the seven tables from data-model.md: `song`, `song_title`, `lyric_line`, `lyric_line_text`, `word_occurrence`, `meaning`, `meaning_rendering`, `source`, `meaning_source`
+- [x] T010 Add constraints exactly as specified in data-model.md: `song.slug` unique · `lyric_line(song_id, line_no)` unique · `lyric_line_text` PK `(line_id, script)` · `word_occurrence(line_id, position)` unique · `meaning` unique `(target_type, target_id)` where `status = 'active'` · `meaning_rendering` PK `(meaning_id, mode)` with **cascade delete from `meaning`** · `meaning_source` PK `(meaning_id, source_id)`
+- [x] T011 Add enums: `script` = `deva | latn` · `mode` = `en | hi | hi-Latn` · `target_type` = `song_summary | line | word_occurrence` · `meaning.status` = `active | stale` · `source.type` = `blog | forum | lyrics | interview | academic | other`
+- [x] T012 [P] Add the indexes listed in data-model.md, including `meaning_source(meaning_id)` — the grounding count is the hot path
 
 ### The rules — pure functions, no I/O
 
-- [ ] T013 [P] Implement `backend/src/domain/modeScript.ts` — mode → script: `hi → deva`, `en → latn`, `hi-Latn → latn` (R-01)
-- [ ] T014 [P] Implement `backend/src/domain/scriptValidator.ts` — reject any codepoint in `U+0600–06FF`, `U+0750–077F`, `U+0870–089F`, `U+08A0–08FF`, `U+FB50–FDFF`, `U+FE70–FEFF` in **every** mode; reject Devanagari (`U+0900–097F`, `U+A8E0–A8FF`) in `en` and `hi-Latn`; reject an `hi` payload whose body is predominantly Latin
-- [ ] T015 [P] Unit tests for `scriptValidator` in `backend/tests/unit/scriptValidator.test.ts` using **real qawwali vocabulary**, not `foo`/`bar` — including a fixture source containing genuine Urdu script
-- [ ] T016 [P] Implement `backend/src/domain/grounding.ts` — `isServable(sourceCount) = sourceCount >= config.GROUNDING_MIN_SOURCES`. Derived per call, **never stored** (R-05)
-- [ ] T017 [P] Unit tests for `grounding.ts` in `backend/tests/unit/grounding.test.ts` — at the bar, below it, at zero, and with the config value changed
-- [ ] T018 [P] Implement `backend/src/domain/coverage.ts` — `linesExplained / linesTotal`, derived from the same aggregate as grounding (R-06)
-- [ ] T019 [P] Implement `backend/src/domain/entitlements.ts` — `getEntitlements(userId)` returning plan and limits. **The single source.** No route may re-derive them
-- [ ] T020 [P] Unit tests for `entitlements.ts` in `backend/tests/unit/entitlements.test.ts` — basic, pro, and signed-out
+- [x] T013 [P] Implement `backend/src/domain/modeScript.ts` — mode → script: `hi → deva`, `en → latn`, `hi-Latn → latn` (R-01)
+- [x] T014 [P] Implement `backend/src/domain/scriptValidator.ts` — reject any codepoint in `U+0600–06FF`, `U+0750–077F`, `U+0870–089F`, `U+08A0–08FF`, `U+FB50–FDFF`, `U+FE70–FEFF` in **every** mode; reject Devanagari (`U+0900–097F`, `U+A8E0–A8FF`) in `en` and `hi-Latn`; reject an `hi` payload whose body is predominantly Latin
+- [x] T015 [P] Unit tests for `scriptValidator` in `backend/tests/unit/scriptValidator.test.ts` using **real qawwali vocabulary**, not `foo`/`bar` — including a fixture source containing genuine Urdu script
+- [x] T016 [P] Implement `backend/src/domain/grounding.ts` — `isServable(sourceCount) = sourceCount >= config.GROUNDING_MIN_SOURCES`. Derived per call, **never stored** (R-05)
+- [x] T017 [P] Unit tests for `grounding.ts` in `backend/tests/unit/grounding.test.ts` — at the bar, below it, at zero, and with the config value changed
+- [x] T018 [P] Implement `backend/src/domain/coverage.ts` — `linesExplained / linesTotal`, derived from the same aggregate as grounding (R-06)
+- [x] T019 [P] Implement `backend/src/domain/entitlements.ts` — `getEntitlements(userId)` returning plan and limits. **The single source.** No route may re-derive them
+- [x] T020 [P] Unit tests for `entitlements.ts` in `backend/tests/unit/entitlements.test.ts` — basic, pro, and signed-out
 
 ### Infrastructure
 
-- [ ] T021 [P] `backend/src/api/middleware/optionalAuth.ts` — verifies a JWT when present, **allows the request through when absent** (R-09). Getting this wrong locks out signed-out visitors
-- [ ] T022 [P] `backend/src/api/middleware/rateLimit.ts` — `express-rate-limit` backed by Redis
-- [ ] T023 [P] Error handling and structured logging in `backend/src/api/middleware/errors.ts` — no empty catch, no error swallowed into a default that looks like success
-- [ ] T024 [P] Redis cache helper in `backend/src/db/cache.ts`, keyed `song:{slug}:{mode}:{viewerClass}`
-- [ ] T025 [P] Frontend design tokens in `frontend/src/styles/tokens.css` — all 18 tokens from docs/design_system.md as CSS custom properties, consumed via Tailwind theme extension. **The only hex values in the codebase**
-- [ ] T026 [P] Font loading in `frontend/index.html` — Newsreader, Tiro Devanagari Hindi, Inter, Noto Sans Devanagari, JetBrains Mono with `display=swap`. Subset to Latin + Devanagari only; **do not ship Arabic glyph coverage**
-- [ ] T027 Seed fixtures in `backend/src/db/seed/` — the five songs from quickstart.md: `kun-faya-kun` (fully grounded), `piya-haji-ali` (2 sources, below bar), `arziyan` (4 of 26 lines), `khwaja-mere-khwaja` (same word, two meanings), `tere-bina` (stale meaning + one unreachable source)
+- [x] T021 [P] `backend/src/api/middleware/optionalAuth.ts` — verifies a JWT when present, **allows the request through when absent** (R-09). Getting this wrong locks out signed-out visitors
+- [x] T022 [P] `backend/src/api/middleware/rateLimit.ts` — `express-rate-limit` backed by Redis
+- [x] T023 [P] Error handling and structured logging in `backend/src/api/middleware/errors.ts` — no empty catch, no error swallowed into a default that looks like success
+- [x] T024 [P] Redis cache helper in `backend/src/db/cache.ts`, keyed `song:{slug}:{mode}:{viewerClass}`
+- [x] T025 [P] Frontend design tokens in `frontend/src/styles/tokens.css` — all 18 tokens from docs/design_system.md as CSS custom properties, consumed via Tailwind theme extension. **The only hex values in the codebase**
+- [x] T026 [P] Font loading in `frontend/index.html` — Newsreader, Tiro Devanagari Hindi, Inter, Noto Sans Devanagari, JetBrains Mono with `display=swap`. Subset to Latin + Devanagari only; **do not ship Arabic glyph coverage**
+- [x] T027 Seed fixtures in `backend/src/db/seed/` — the five songs from quickstart.md: `kun-faya-kun` (fully grounded), `piya-haji-ali` (2 sources, below bar), `arziyan` (4 of 26 lines), `khwaja-mere-khwaja` (same word, two meanings), `tere-bina` (stale meaning + one unreachable source)
 
 **Verify**: `npm run verify`, plus `npm run db:migrate && npm run db:seed` against a real Postgres.
 
