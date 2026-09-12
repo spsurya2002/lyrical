@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { Mode, SongPageResponse } from '../types.js';
 
 type State =
@@ -10,16 +10,27 @@ type State =
 /**
  * Loads a song page.
  *
- * Distinguishes 'missing' (no such song) from 'error' (something broke) —
- * collapsing the two would show a user "something went wrong" when the honest
- * answer is "we do not have that song".
+ * Two behaviours worth knowing:
+ *
+ * 1. 'missing' is distinct from 'error'. Collapsing them would tell a user
+ *    something broke when the honest answer is that we do not have that song.
+ *
+ * 2. Switching MODE keeps the current page on screen until the new one arrives,
+ *    so no loading state is ever shown (FR-014). All three renderings are
+ *    already stored, so the swap is a fetch away — not a regeneration. Only a
+ *    change of song drops back to 'loading'.
  */
 export function useSongPage(slug: string, mode: Mode): State {
   const [state, setState] = useState<State>({ status: 'loading' });
+  const loadedSlug = useRef<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
-    setState({ status: 'loading' });
+
+    // A new song starts empty; a new mode keeps what is already on screen.
+    if (loadedSlug.current !== slug) {
+      setState({ status: 'loading' });
+    }
 
     fetch(`/api/songs/${encodeURIComponent(slug)}?mode=${mode}`)
       .then(async (res) => {
@@ -33,11 +44,16 @@ export function useSongPage(slug: string, mode: Mode): State {
           return;
         }
         const page = (await res.json()) as SongPageResponse;
-        if (!cancelled) setState({ status: 'ready', page });
+        if (cancelled) return;
+        loadedSlug.current = slug;
+        setState({ status: 'ready', page });
       })
       .catch((error: unknown) => {
         if (cancelled) return;
-        setState({ status: 'error', message: error instanceof Error ? error.message : 'network error' });
+        setState({
+          status: 'error',
+          message: error instanceof Error ? error.message : 'network error',
+        });
       });
 
     return () => {
