@@ -28,14 +28,35 @@ export async function ensureTestDatabase(): Promise<void> {
   }
 }
 
-/** True when a Postgres is reachable, so tests can skip rather than fail noisily. */
+/**
+ * True when a Postgres is reachable.
+ *
+ * When it is not, integration tests skip — but LOUDLY, and never in CI.
+ *
+ * A quiet skip is dangerous here: the tests that disappear are the grounding
+ * and script-boundary ones, which are the two guarantees the constitution
+ * actually rests on. A run reporting "5 passed | 3 skipped" reads as success at
+ * a glance while proving neither. This happened: Docker had stopped, verify
+ * exited non-zero, and the summary still looked broadly fine.
+ */
 export async function postgresAvailable(): Promise<boolean> {
   const client = new pg.Client({ connectionString: ADMIN_URL, connectionTimeoutMillis: 2000 });
   try {
     await client.connect();
     await client.end();
     return true;
-  } catch {
+  } catch (error) {
+    const message =
+      'Postgres is NOT reachable — integration tests will be SKIPPED.\n' +
+      'The grounding and script-boundary guarantees are NOT being verified.\n' +
+      'Start it with: docker compose up -d';
+
+    if (process.env['CI'] !== undefined) {
+      // In CI a missing database is a broken pipeline, not a reason to pass.
+      throw new Error(`${message}\nRefusing to skip in CI.`, { cause: error });
+    }
+
+    console.warn(`\n${'!'.repeat(72)}\n${message}\n${'!'.repeat(72)}\n`);
     return false;
   }
 }

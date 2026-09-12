@@ -30,8 +30,10 @@ export default tseslint.config(
     },
   },
   {
-    // Config files run in Node and legitimately read process.env.
-    files: ['**/*.config.ts', '**/*.config.js'],
-    languageOptions: { globals: { process: 'readonly' } },
+    // Config files and repo scripts run in Node and legitimately use its globals.
+    files: ['**/*.config.ts', '**/*.config.js', 'scripts/**/*.mjs'],
+    languageOptions: {
+      globals: { process: 'readonly', console: 'readonly' },
+    },
   },
 );
