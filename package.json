@@ -1,0 +1,44 @@
+{
+  "name": "lyricsense",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Explains what songs mean — word by word, line by line — grounded in real sources.",
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c cyan,magenta \"npm run dev:api\" \"npm run dev:web\"",
+    "dev:api": "npm run dev --workspace backend",
+    "dev:web": "npm run dev --workspace frontend",
+    "worker": "npm run worker --workspace backend",
+    "db:migrate": "npm run db:migrate --workspace backend",
+    "db:seed": "npm run db:seed --workspace backend",
+    "test": "npm run test --workspaces --if-present",
+    "test:e2e": "npm run test:e2e --workspace frontend",
+    "test:script-boundary": "npm run test:script-boundary --workspace backend",
+    "test:grounding": "npm run test:grounding --workspace backend",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "verify": "npm run typecheck && npm run lint && npm run test && npm run test:e2e"
+  },
+  "comments": {
+    "overrides": "vitest pulls its own vite, which hoisted a second copy alongside the frontend's. Two vite installs means two sets of Plugin types and a typecheck failure. Vitest 5 accepts vite ^8, so one version serves both."
+  },
+  "overrides": {
+    "vite": "^8.3.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "concurrently": "^9.1.0",
+    "eslint": "^9.15.0",
+    "prettier": "^3.4.0",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.16.0"
+  }
+}
