@@ -3,6 +3,7 @@ import type { Express } from 'express';
 import { errorHandler, notFound } from './api/middleware/errors.js';
 import { optionalAuth } from './api/middleware/optionalAuth.js';
 import { readLimiter } from './api/middleware/rateLimit.js';
+import { notifyMeRouter } from './api/routes/notifyMe.js';
 import { songPageRouter } from './api/routes/songPage.js';
 import { sourcesRouter } from './api/routes/sources.js';
 import { wordMeaningRouter } from './api/routes/wordMeaning.js';
@@ -35,6 +36,7 @@ export function createApp(): Express {
 
   app.use('/api', readLimiter);
   app.use('/api', songPageRouter);
+  app.use('/api', notifyMeRouter);
   app.use('/api', wordMeaningRouter);
   app.use('/api', sourcesRouter);
 
