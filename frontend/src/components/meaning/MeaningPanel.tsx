@@ -1,11 +1,13 @@
 import type { LineView, Mode } from '../../types.js';
 import { GroundedMark } from '../grounding/GroundedMark.js';
+import { NotifyMe } from '../grounding/NotifyMe.js';
 import { SourceStrip } from '../grounding/SourceStrip.js';
 
 interface Props {
   line: LineView | null;
   mode: Mode;
   lang: string;
+  slug: string;
 }
 
 /**
@@ -19,7 +21,7 @@ interface Props {
  * (design_prompt_round2.md) will settle it. The behaviour below is what the spec
  * requires either way.
  */
-export function MeaningPanel({ line, mode, lang }: Props) {
+export function MeaningPanel({ line, mode, lang, slug }: Props) {
   if (line === null) {
     return (
       <aside aria-label="Meaning" className="min-w-0">
@@ -63,13 +65,13 @@ export function MeaningPanel({ line, mode, lang }: Props) {
           <SourceStrip meaningId={line.meaning.meaningId} mode={mode} />
         </>
       ) : (
-        <UngroundedNotice line={line} />
+        <UngroundedNotice line={line} slug={slug} />
       )}
     </aside>
   );
 }
 
-function UngroundedNotice({ line }: { line: LineView & { meaning: null } }) {
+function UngroundedNotice({ line, slug }: { line: LineView & { meaning: null }; slug: string }) {
   const { reason, sourceCount, sourcesRequired } = line.ungrounded;
 
   return (
@@ -94,12 +96,7 @@ function UngroundedNotice({ line }: { line: LineView & { meaning: null } }) {
           >
             Contribute a source
           </button>
-          <button
-            type="button"
-            className="rounded-md border border-border-default px-3 py-2 text-sm text-secondary transition-colors hover:border-border-strong hover:text-primary"
-          >
-            Notify me when it’s ready
-          </button>
+          <NotifyMe slug={slug} />
         </div>
       )}
     </div>

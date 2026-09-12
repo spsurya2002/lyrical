@@ -13,8 +13,9 @@ import { useSongPage } from '../hooks/useSongPage.js';
  * THE MAIN SCREEN. Three zones, per docs/design_system.md §6:
  * header · lyric column + meaning panel · song summary.
  *
- * The language switch lands in Phase 4 (US2); mode is fixed to English here so
- * the MVP is one story, demonstrable on its own.
+ * The panel shows one thing at a time: a line's meaning, a word's meaning, or
+ * an honest statement that neither is grounded. There is deliberately no state
+ * in which it shows two, and none in which it shows half of one.
  */
 export function SongPage() {
   const { slug = '' } = useParams();
@@ -107,7 +108,7 @@ export function SongPage() {
           }}
         />
         {selectedWordId === null ? (
-          <MeaningPanel line={activeLine} mode={mode} lang={page.lang} />
+          <MeaningPanel line={activeLine} mode={mode} lang={page.lang} slug={slug} />
         ) : (
           <WordGloss
             slug={slug}
