@@ -7,6 +7,7 @@ import type {
   ViewerView,
 } from '../api/types.js';
 import { log } from '../api/middleware/errors.js';
+import { enqueueBackfill } from '../jobs/queue.js';
 import { computeCoverage, firstServableLineNo } from '../domain/coverage.js';
 import { getEntitlements, type Viewer } from '../domain/entitlements.js';
 import { assessGrounding } from '../domain/grounding.js';
@@ -75,7 +76,12 @@ function toUngrounded(sourceCount: number, hasRendering: boolean): UngroundedVie
   };
 }
 
-function buildLine(row: LineRow, mode: Mode, words: SelectableWord[]): LineView {
+function buildLine(
+  row: LineRow,
+  mode: Mode,
+  words: SelectableWord[],
+  needsBackfill: string[],
+): LineView {
   const hasRendering = row.meaningText !== null && row.meaningId !== null;
   const state = assessGrounding(row.sourceCount, hasRendering);
 
@@ -94,12 +100,16 @@ function buildLine(row: LineRow, mode: Mode, words: SelectableWord[]): LineView 
     };
   }
 
-  return {
-    lineNo: row.lineNo,
-    text: row.text,
-    meaning: null,
-    ungrounded: toUngrounded(row.sourceCount, hasRendering),
-  };
+  const ungrounded = toUngrounded(row.sourceCount, hasRendering);
+
+  // The meaning exists and is grounded; only this language is missing. Queue it
+  // rather than blocking, and never fall back to another language — that would
+  // have the reader believe English was all that existed (R-02).
+  if (ungrounded.reason === 'mode_unavailable' && row.meaningId !== null) {
+    needsBackfill.push(row.meaningId);
+  }
+
+  return { lineNo: row.lineNo, text: row.text, meaning: null, ungrounded };
 }
 
 function groupWords(rows: WordRow[], mode: Mode): Map<string, SelectableWord[]> {
@@ -145,7 +155,10 @@ export async function getSongPage(
   ]);
 
   const wordsByLine = groupWords(wordRows, mode);
-  const lines = lineRows.map((row) => buildLine(row, mode, wordsByLine.get(row.lineId) ?? []));
+  const needsBackfill: string[] = [];
+  const lines = lineRows.map((row) =>
+    buildLine(row, mode, wordsByLine.get(row.lineId) ?? [], needsBackfill),
+  );
 
   // A summary is shown only when the summary itself is grounded. One assembled
   // from a handful of line meanings would be a guess (FR-024).
@@ -161,6 +174,12 @@ export async function getSongPage(
     } else {
       summaryUngrounded = toUngrounded(summaryRow.sourceCount, hasRendering);
     }
+  }
+
+  // Fire and forget: enqueueBackfill swallows its own failures, because a queue
+  // that is down must not fail a page the reader can otherwise read.
+  for (const meaningId of needsBackfill) {
+    void enqueueBackfill({ meaningId, targetMode: mode });
   }
 
   const servability = lines.map((l) => ({ lineNo: l.lineNo, servable: l.meaning !== null }));
