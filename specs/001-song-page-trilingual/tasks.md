@@ -89,22 +89,22 @@ Per Principle II: never report a task complete without having run this.
 
 **Independent test**: open `/song/kun-faya-kun` in English, read a line meaning and the song summary, open a source chip and see the excerpt actually used.
 
-- [ ] T028 [US1] Contract test for `GET /api/songs/:slug` in `backend/tests/contract/songPage.test.ts` against the shape in contracts/song-page-api.md — assert `meaning` and `ungrounded` are **mutually exclusive** on every line
-- [ ] T029 [US1] Page query in `backend/src/db/queries/songPage.sql.ts` — song + lines + text + meanings + renderings + source counts in **one** query; source lists in a second. **Not N+1 per line**
-- [ ] T030 [US1] `backend/src/services/songPageService.ts` — assemble the response, applying `grounding.isServable` and `coverage`. **Start reading the code here**
-- [ ] T031 [US1] Apply `scriptValidator` at the serialisation boundary in `songPageService.ts` (R-07) — a failing entity is replaced by its ungrounded state and logged at error level with its id; one bad line never fails the page
-- [ ] T032 [US1] Route `backend/src/api/routes/songPage.ts` with `optionalAuth` and `rateLimit`
-- [ ] T033 [P] [US1] Sources query and route: `backend/src/db/queries/sources.sql.ts`, `backend/src/api/routes/sources.ts` — `GET /api/meanings/:meaningId/sources`, including unreachable sources marked rather than hidden
-- [ ] T034 [P] [US1] Contract test for the sources endpoint in `backend/tests/contract/sources.test.ts`
-- [ ] T035 [US1] **Grounding integration test** in `backend/tests/integration/grounding.test.ts` — **with retrieval stripped, the page produces the ungrounded state, never an answer.** This is Principle I's testable line. If this passes while the pipeline still answers, the test is wrong
-- [ ] T036 [P] [US1] `frontend/src/hooks/useSongPage.ts` — fetch and cache the page payload
-- [ ] T037 [P] [US1] `frontend/src/components/lyric/LyricLine.tsx` — ⚠️ **the only component that renders lyric text.** R-001 depends on this staying true
-- [ ] T038 [US1] `frontend/src/components/lyric/LyricColumn.tsx` — the scrolling column, active-line treatment, independent scroll
-- [ ] T039 [P] [US1] `frontend/src/components/meaning/MeaningPanel.tsx` — desktop meaning panel
-- [ ] T040 [P] [US1] `frontend/src/components/grounding/SourceStrip.tsx` — chips with favicon, domain, type label; click opens the stored excerpt
-- [ ] T041 [P] [US1] `frontend/src/components/grounding/GroundedMark.tsx` — the `● 6 sources` mark
-- [ ] T042 [US1] `frontend/src/pages/SongPage.tsx` — the three-zone layout from docs/design_system.md §6
-- [ ] T043 [US1] E2E in `frontend/tests/e2e/readSong.spec.ts` — quickstart scenario 1
+- [x] T028 [US1] Contract test for `GET /api/songs/:slug` in `backend/tests/contract/songPage.test.ts` against the shape in contracts/song-page-api.md — assert `meaning` and `ungrounded` are **mutually exclusive** on every line
+- [x] T029 [US1] Page query in `backend/src/db/queries/songPage.sql.ts` — song + lines + text + meanings + renderings + source counts in **one** query; source lists in a second. **Not N+1 per line**
+- [x] T030 [US1] `backend/src/services/songPageService.ts` — assemble the response, applying `grounding.isServable` and `coverage`. **Start reading the code here**
+- [x] T031 [US1] Apply `scriptValidator` at the serialisation boundary in `songPageService.ts` (R-07) — a failing entity is replaced by its ungrounded state and logged at error level with its id; one bad line never fails the page
+- [x] T032 [US1] Route `backend/src/api/routes/songPage.ts` with `optionalAuth` and `rateLimit`
+- [x] T033 [P] [US1] Sources query and route: `backend/src/db/queries/sources.sql.ts`, `backend/src/api/routes/sources.ts` — `GET /api/meanings/:meaningId/sources`, including unreachable sources marked rather than hidden
+- [x] T034 [P] [US1] Contract test for the sources endpoint in `backend/tests/contract/sources.test.ts`
+- [x] T035 [US1] **Grounding integration test** in `backend/tests/integration/grounding.test.ts` — **with retrieval stripped, the page produces the ungrounded state, never an answer.** This is Principle I's testable line. If this passes while the pipeline still answers, the test is wrong
+- [x] T036 [P] [US1] `frontend/src/hooks/useSongPage.ts` — fetch and cache the page payload
+- [x] T037 [P] [US1] `frontend/src/components/lyric/LyricLine.tsx` — ⚠️ **the only component that renders lyric text.** R-001 depends on this staying true
+- [x] T038 [US1] `frontend/src/components/lyric/LyricColumn.tsx` — the scrolling column, active-line treatment, independent scroll
+- [x] T039 [P] [US1] `frontend/src/components/meaning/MeaningPanel.tsx` — desktop meaning panel
+- [x] T040 [P] [US1] `frontend/src/components/grounding/SourceStrip.tsx` — chips with favicon, domain, type label; click opens the stored excerpt
+- [x] T041 [P] [US1] `frontend/src/components/grounding/GroundedMark.tsx` — the `● 6 sources` mark
+- [x] T042 [US1] `frontend/src/pages/SongPage.tsx` — the three-zone layout from docs/design_system.md §6
+- [x] T043 [US1] E2E in `frontend/tests/e2e/readSong.spec.ts` — quickstart scenario 1
 
 **Checkpoint**: a demonstrable product. One song, one language, meanings with visible sources.
 
