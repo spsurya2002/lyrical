@@ -140,14 +140,14 @@ Per Principle II: never report a task complete without having run this.
 
 **Independent test**: on `khwaja-mere-khwaja`, select the same word at two occurrences and get two different meanings, with the difference stated.
 
-- [ ] T057 [US3] Word query in `backend/src/db/queries/wordMeaning.sql.ts` — by `word_occurrence.id`, not by spelling
-- [ ] T058 [US3] `backend/src/services/wordMeaningService.ts` — including `otherOccurrences[].differs`, computed by comparing `meaning_id`s (FR-019)
-- [ ] T059 [US3] Route `backend/src/api/routes/wordMeaning.ts` — `GET /api/songs/:slug/words/:occurrenceId`
-- [ ] T060 [P] [US3] Contract test in `backend/tests/contract/wordMeaning.test.ts`
-- [ ] T061 [US3] Integration test in `backend/tests/integration/wordIdentity.test.ts` — same spelling, two occurrences, two meanings; and same spelling, one shared meaning, `differs: false`. **The page must not imply a difference that isn't there**
-- [ ] T062 [P] [US3] `frontend/src/components/meaning/WordGloss.tsx` — renders in the meaning panel, **not a tooltip**
-- [ ] T063 [US3] Selectable-word treatment in `LyricLine.tsx` — dotted underline at rest, `--accent-wash` on hover. Words with no servable meaning are **not** selectable (FR-020)
-- [ ] T064 [US3] E2E in `frontend/tests/e2e/wordMeanings.spec.ts` — quickstart scenario 3
+- [x] T057 [US3] Word query in `backend/src/db/queries/wordMeaning.sql.ts` — by `word_occurrence.id`, not by spelling
+- [x] T058 [US3] `backend/src/services/wordMeaningService.ts` — including `otherOccurrences[].differs`, computed by comparing `meaning_id`s (FR-019)
+- [x] T059 [US3] Route `backend/src/api/routes/wordMeaning.ts` — `GET /api/songs/:slug/words/:occurrenceId`
+- [x] T060 [P] [US3] Contract test in `backend/tests/contract/wordMeaning.test.ts`
+- [x] T061 [US3] Integration test in `backend/tests/integration/wordIdentity.test.ts` — same spelling, two occurrences, two meanings; and same spelling, one shared meaning, `differs: false`. **The page must not imply a difference that isn't there**
+- [x] T062 [P] [US3] `frontend/src/components/meaning/WordGloss.tsx` — renders in the meaning panel, **not a tooltip**
+- [x] T063 [US3] Selectable-word treatment in `LyricLine.tsx` — dotted underline at rest, `--accent-wash` on hover. Words with no servable meaning are **not** selectable (FR-020)
+- [x] T064 [US3] E2E in `frontend/tests/e2e/wordMeanings.spec.ts` — quickstart scenario 3
 
 ---
 
@@ -157,14 +157,14 @@ Per Principle II: never report a task complete without having run this.
 
 **Independent test**: `piya-haji-ali` shows the lyric and no meaning at all, stating `2 sources · we need 4`. `arziyan` shows four explained lines, the rest honestly marked, and `4 of 26 lines explained`.
 
-- [ ] T065 [US4] Ungrounded response shapes in `songPageService.ts` — `reason` ∈ `below_bar | no_material | mode_unavailable`, with `sourceCount`, `sourcesRequired`, and the sources that **do** exist (FR-036, FR-037)
-- [ ] T066 [US4] `activeLineNo` = the first **servable** line, not line 1 — a user must land on a real explanation, never an empty panel
-- [ ] T067 [US4] Summary ungrounded independently of lines in `songPageService.ts` (FR-024) — a summary must never be assembled from line meanings
-- [ ] T068 [US4] Integration test in `backend/tests/integration/perLineHonesty.test.ts` — partly grounded song: grounded lines explained, ungrounded lines marked, no partial meaning anywhere (FR-025)
+- [x] T065 [US4] Ungrounded response shapes in `songPageService.ts` — `reason` ∈ `below_bar | no_material | mode_unavailable`, with `sourceCount`, `sourcesRequired`, and the sources that **do** exist (FR-036, FR-037)
+- [x] T066 [US4] `activeLineNo` = the first **servable** line, not line 1 — a user must land on a real explanation, never an empty panel
+- [x] T067 [US4] Summary ungrounded independently of lines in `songPageService.ts` (FR-024) — a summary must never be assembled from line meanings
+- [x] T068 [US4] Integration test in `backend/tests/integration/perLineHonesty.test.ts` — partly grounded song: grounded lines explained, ungrounded lines marked, no partial meaning anywhere (FR-025)
 - [ ] T069 ⛔ [US4] `frontend/src/components/grounding/UngroundedState.tsx` — **BLOCKED on design artboard 3e.** Behaviour is specified; visual treatment is not. Do not start until [design_prompt_round2.md](../../design_prompt_round2.md) has been run and re-audited
 - [ ] T070 ⛔ [US4] `frontend/src/components/grounding/CoverageIndicator.tsx` — **BLOCKED on design artboards 3d and 3f.** Same reason
-- [ ] T071 [US4] "Notify me when it's ready" action alongside contribute in `frontend/src/components/grounding/NotifyMe.tsx`, posting to `backend/src/api/routes/notifyMe.ts` (FR-038)
-- [ ] T072 [US4] E2E in `frontend/tests/e2e/honestGaps.spec.ts` — quickstart scenario 4
+- [x] T071 [US4] "Notify me when it's ready" action alongside contribute in `frontend/src/components/grounding/NotifyMe.tsx`, posting to `backend/src/api/routes/notifyMe.ts` (FR-038)
+- [x] T072 [US4] E2E in `frontend/tests/e2e/honestGaps.spec.ts` — quickstart scenario 4
 
 > T069 and T070 are the only blocked tasks. Everything else in US4 is backend and can proceed now.
 
