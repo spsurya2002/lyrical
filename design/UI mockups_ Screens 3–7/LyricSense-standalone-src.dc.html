@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#0A0908">
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="800" fill="#0A0908"/>
+<rect x="380" y="300" width="6" height="200" rx="3" fill="#D9A441"/>
+<rect x="430" y="330" width="300" height="22" rx="11" fill="#F5F1EA"/>
+<rect x="430" y="378" width="390" height="14" rx="7" fill="#433D37"/>
+<rect x="430" y="414" width="330" height="14" rx="7" fill="#433D37"/>
+<rect x="430" y="450" width="250" height="14" rx="7" fill="#433D37"/>
+<circle cx="438" cy="502" r="8" fill="#7FA87C"/>
+</svg>
+</template>
+
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Tiro+Devanagari+Hindi:ital@0;1&family=Inter:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#E7E3DB;font-family:Inter,system-ui,sans-serif}
+a{color:#8A6A20;text-decoration:none}
+a:hover{color:#5E4712}
+@keyframes ls-shimmer{0%{background-position:180% 0}100%{background-position:-180% 0}}
+@keyframes ls-breathe{0%,100%{opacity:.45}50%{opacity:1}}
+</style>
+</helmet>
+
+<section style="padding:44px 48px 20px;display:flex;flex-direction:column;gap:8px">
+<div style="font:600 13px/1.2 Inter,sans-serif;color:#1a1a1a">LyricSense — screens 8, 11–13 · 1, 2, 9, 10 · 3–7</div>
+<div style="font:400 12.5px/1.6 Inter,sans-serif;color:rgba(0,0,0,.55);max-width:70ch">Entry and commerce screens first, then the song experience. Same tokens throughout: ink <span style="font-family:'JetBrains Mono',monospace">#0A0908</span>, gold <span style="font-family:'JetBrains Mono',monospace">#D9A441</span>, Newsreader for meaning, Inter for interface. No Arabic/Urdu script anywhere — Arabic-origin words are set as <em>Fana</em> / फ़ना.</div>
+</section>
+
+<section style="padding:16px 48px 0;display:flex;flex-direction:column;gap:36px">
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:baseline;gap:9px"><a href="#8" style="font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);border-radius:5px;color:#1a1a1a">8</a><span style="font:400 11.5px/1.3 Inter,sans-serif;color:rgba(0,0,0,.55)">Chatbot — docked inside the meaning column, lyric never covered · Pro active, then Basic gated</span></div>
+
+<div id="8" style="display:flex;flex-direction:column;gap:20px;scroll-margin-top:16px">
+
+<div style="width:1240px;background:#0A0908;border:1px solid rgba(0,0,0,.18);border-radius:14px;overflow:hidden">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:32px;padding:20px 32px;border-bottom:1px solid #221F1C">
+<div style="display:flex;align-items:baseline;gap:14px">
+<span style="font:500 26px/1.2 Newsreader,serif;color:#F5F1EA">Kun Faya Kun</span>
+<span style="font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C">A.R. Rahman · <span style="font-family:'JetBrains Mono',monospace">2011</span></span>
+</div>
+<div style="display:flex;align-items:center;gap:10px">
+<span style="display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;background:#141211;border:1px solid rgba(217,164,65,0.28)"><span style="font:500 11px/1.3 Inter,sans-serif;letter-spacing:.08em;color:#D9A441">PRO</span></span>
+<div style="display:flex;gap:2px;padding:3px;background:#141211;border:1px solid #2E2A26;border-radius:999px">
+<span style="padding:6px 13px;border-radius:999px;background:rgba(217,164,65,0.10);border:1px solid rgba(217,164,65,0.28);font:500 12.5px/1.2 Inter,sans-serif;color:#D9A441">English</span>
+<span style="padding:7px 13px;font:500 12.5px/1.3 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">हिंदी</span>
+<span style="padding:7px 13px;font:500 12.5px/1.2 Inter,sans-serif;color:#7A746C">Hinglish</span>
+</div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;align-items:stretch">
+
+<div style="padding:28px 32px;border-right:1px solid #221F1C;display:flex;flex-direction:column;gap:2px">
+<div style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C;margin-bottom:12px">Lyric · always visible</div>
+<div style="padding:12px 16px;font:400 20px/1.6 Newsreader,serif;color:#B5AFA6">Ya nizaam-ud-din auliya</div>
+<div style="padding:14px 16px;border-left:2px solid #D9A441;border-radius:0 10px 10px 0;background:#1C1917;font:400 24px/1.55 Newsreader,serif;color:#F5F1EA">Kun faya kun</div>
+<div style="padding:12px 16px;font:400 20px/1.6 Newsreader,serif;color:#B5AFA6">Maula maula</div>
+<div style="padding:12px 16px;font:400 20px/1.6 Newsreader,serif;color:#B5AFA6">Tere naam pe</div>
+<div style="padding:12px 16px;font:400 20px/1.6 Newsreader,serif;color:#B5AFA6">Fana hua hun</div>
+<div style="padding:12px 16px;font:400 20px/1.6 Newsreader,serif;color:#B5AFA6">Ab main nahi hun</div>
+<div style="padding:12px 16px;font:400 20px/1.6 Newsreader,serif;color:#7A746C">Kun faya kun</div>
+<div style="margin-top:14px;font:400 13px/1.6 Inter,sans-serif;color:#7A746C;max-width:46ch">The chat docks in the right column only. Nothing ever overlays the words.</div>
+</div>
+
+<div style="background:#0D0C0B;display:flex;flex-direction:column">
+<div style="padding:24px 28px 18px;display:flex;flex-direction:column;gap:12px;border-bottom:1px solid #221F1C">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+<span style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">Meaning · line <span style="font-family:'JetBrains Mono',monospace">2</span></span>
+<span style="display:inline-flex;align-items:center;gap:7px"><span style="width:7px;height:7px;border-radius:999px;background:#7FA87C"></span><span style="font:400 12.5px/1.5 Inter,sans-serif;color:#7FA87C">grounded · <span style="font-family:'JetBrains Mono',monospace">4</span></span></span>
+</div>
+<div style="font:400 16px/1.7 Inter,sans-serif;color:#B5AFA6;max-width:60ch">A phrase carried into filmi verse from scripture: <em style="font-family:Newsreader,serif;font-size:17px;color:#F5F1EA;font-style:italic">be, and it is</em>. In this song it lands less as theology than as relief.</div>
+</div>
+
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;padding:20px 28px;background:#0A0908;border-bottom:1px solid #221F1C">
+<div style="display:flex;align-items:center;gap:10px">
+<span style="width:22px;height:22px;border-radius:6px;background:rgba(217,164,65,0.10);border:1px solid rgba(217,164,65,0.28);display:flex;align-items:center;justify-content:center;font:600 10px/1 Inter,sans-serif;color:#D9A441">LS</span>
+<span style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">Ask about this song</span>
+<span style="flex:1"></span>
+<span style="font:400 12.5px/1.5 Inter,sans-serif;color:#7A746C">Kun Faya Kun only</span>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="align-self:flex-end;max-width:78%;padding:13px 16px;background:#1C1917;border:1px solid #2E2A26;border-radius:12px 12px 4px 12px;font:400 15.5px/1.65 Inter,sans-serif;color:#F5F1EA">Why does he name a saint instead of God directly?</div>
+
+<div style="align-self:flex-start;max-width:88%;display:flex;flex-direction:column;gap:10px;padding:16px;background:#141211;border:1px solid #221F1C;border-radius:12px 12px 12px 4px">
+<div style="font:400 15.5px/1.7 Inter,sans-serif;color:#B5AFA6">Because the song sits inside a specific devotional practice rather than a general one. Addressing Nizamuddin Auliya is how a petitioner reaches the divine <em style="font-family:Newsreader,serif;font-size:16.5px;color:#F5F1EA;font-style:italic">through</em> someone closer — the saint as intercessor. It also places the song geographically, at his dargah in Delhi.</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;padding-top:4px;border-top:1px solid #221F1C">
+<span style="display:inline-flex;align-items:center;gap:7px;padding:6px 11px 6px 7px;background:#1C1917;border:1px solid #2E2A26;border-radius:999px;margin-top:8px"><span style="width:14px;height:14px;border-radius:4px;background:#433D37"></span><span style="font:400 13px/1 Inter,sans-serif;color:#B5AFA6">sufipoetry.blog</span></span>
+<span style="display:inline-flex;align-items:center;gap:7px;padding:6px 11px 6px 7px;background:#1C1917;border:1px solid #2E2A26;border-radius:999px;margin-top:8px"><span style="width:14px;height:14px;border-radius:4px;background:#433D37"></span><span style="font:400 13px/1 Inter,sans-serif;color:#B5AFA6">scroll.in</span></span>
+</div>
+</div>
+
+<div style="align-self:flex-start;max-width:88%;display:flex;flex-direction:column;gap:10px;padding:16px;background:#141211;border:1px solid #221F1C;border-radius:12px">
+<span style="display:inline-flex;align-items:center;gap:7px;align-self:flex-start;padding:5px 11px;border-radius:999px;background:#070606;border:1px solid #2E2A26"><span style="width:7px;height:7px;border-radius:999px;background:#C2705A"></span><span style="font:400 12px/1.4 Inter,sans-serif;color:#C2705A">outside our sources</span></span>
+<div style="font:400 15.5px/1.7 Inter,sans-serif;color:#B5AFA6">You asked what the director intended in the film's edit — none of our six sources cover that, so I won't speculate. I can tell you what Rahman said about composing it instead.</div>
+</div>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:auto">
+<span style="padding:8px 13px;border-radius:999px;background:#141211;border:1px solid #2E2A26;font:400 13.5px/1.3 Inter,sans-serif;color:#B5AFA6">What is fana, exactly?</span>
+<span style="padding:8px 13px;border-radius:999px;background:#141211;border:1px solid #2E2A26;font:400 13.5px/1.3 Inter,sans-serif;color:#B5AFA6">Is this a real qawwali?</span>
+<span style="padding:8px 13px;border-radius:999px;background:#141211;border:1px solid #2E2A26;font:400 13.5px/1.3 Inter,sans-serif;color:#B5AFA6">Compare to Arziyan</span>
+</div>
+</div>
+
+<div style="padding:16px 28px 20px;background:#0A0908;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:center;gap:12px;padding:13px 16px;background:#1C1917;border:1px solid #433D37;border-radius:12px">
+<span style="flex:1;font:400 15px/1.5 Inter,sans-serif;color:#7A746C">Ask a follow-up…</span>
+<span style="padding:9px 15px;border-radius:8px;background:#D9A441;color:#0A0908;font:600 13.5px/1 Inter,sans-serif">Ask</span>
+</div>
+<span style="font:400 12.5px/1.6 Inter,sans-serif;color:#7A746C">Answers are limited to this song's stored sources. It will say so when a question falls outside them.</span>
+</div>
+</div>
+</div>
+</div>
+
+<div style="width:1240px;background:#0A0908;border:1px solid rgba(0,0,0,.18);border-radius:14px;overflow:hidden">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:32px;padding:20px 32px;border-bottom:1px solid #221F1C">
+<div style="display:flex;align-items:baseline;gap:14px">
+<span style="font:500 26px/1.2 Newsreader,serif;color:#F5F1EA">Kun Faya Kun</span>
+<span style="font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C">Basic plan</span>
+</div>
+<div style="display:flex;align-items:center;gap:9px;padding:7px 12px;background:#141211;border:1px solid #221F1C;border-radius:999px">
+<span style="display:flex;gap:3px"><span style="width:14px;height:4px;border-radius:2px;background:#D9A441"></span><span style="width:14px;height:4px;border-radius:2px;background:#D9A441"></span><span style="width:14px;height:4px;border-radius:2px;background:#D9A441"></span><span style="width:14px;height:4px;border-radius:2px;background:#2E2A26"></span><span style="width:14px;height:4px;border-radius:2px;background:#2E2A26"></span></span>
+<span style="font:400 12.5px/1.5 Inter,sans-serif;color:#7A746C"><span style="font-family:'JetBrains Mono',monospace">3</span> of <span style="font-family:'JetBrains Mono',monospace">5</span> left</span>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;align-items:stretch">
+<div style="padding:28px 32px;border-right:1px solid #221F1C;display:flex;flex-direction:column;gap:2px">
+<div style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C;margin-bottom:12px">Lyric · unaffected</div>
+<div style="padding:12px 16px;font:400 20px/1.6 Newsreader,serif;color:#B5AFA6">Ya nizaam-ud-din auliya</div>
+<div style="padding:14px 16px;border-left:2px solid #D9A441;border-radius:0 10px 10px 0;background:#1C1917;font:400 24px/1.55 Newsreader,serif;color:#F5F1EA">Kun faya kun</div>
+<div style="padding:12px 16px;font:400 20px/1.6 Newsreader,serif;color:#B5AFA6">Maula maula</div>
+<div style="padding:12px 16px;font:400 20px/1.6 Newsreader,serif;color:#B5AFA6">Tere naam pe</div>
+<div style="padding:12px 16px;font:400 20px/1.6 Newsreader,serif;color:#7A746C">Fana hua hun</div>
+</div>
+
+<div style="background:#0D0C0B;display:flex;flex-direction:column">
+<div style="padding:24px 28px 18px;display:flex;flex-direction:column;gap:12px;border-bottom:1px solid #221F1C">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+<span style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">Meaning · line <span style="font-family:'JetBrains Mono',monospace">2</span></span>
+<span style="display:inline-flex;align-items:center;gap:7px"><span style="width:7px;height:7px;border-radius:999px;background:#7FA87C"></span><span style="font:400 12.5px/1.5 Inter,sans-serif;color:#7FA87C">grounded · <span style="font-family:'JetBrains Mono',monospace">4</span></span></span>
+</div>
+<div style="font:400 16px/1.7 Inter,sans-serif;color:#B5AFA6;max-width:60ch">Everything on this page — line meanings, word meanings, the song summary, all three languages — is included in Basic. Only follow-up questions are Pro.</div>
+</div>
+
+<div style="flex:1;padding:32px 28px;display:flex;flex-direction:column;justify-content:center;gap:18px;background:#0A0908">
+<div style="padding:26px;background:#141211;border:1px solid #2E2A26;border-radius:16px;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:10px">
+<span style="width:22px;height:22px;border-radius:6px;background:#1C1917;border:1px solid #2E2A26;display:flex;align-items:center;justify-content:center;font:600 10px/1 Inter,sans-serif;color:#7A746C">LS</span>
+<span style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">Ask about this song</span>
+<span style="flex:1"></span>
+<span style="padding:4px 9px;border-radius:999px;background:rgba(217,164,65,0.10);border:1px solid rgba(217,164,65,0.28);font:600 10.5px/1.2 Inter,sans-serif;letter-spacing:.08em;color:#D9A441">PRO</span>
+</div>
+<div style="font:400 22px/1.5 Newsreader,serif;color:#F5F1EA;max-width:32ch">Follow-up questions come with Pro.</div>
+<div style="font:400 15.5px/1.7 Inter,sans-serif;color:#B5AFA6;max-width:54ch">The chatbot answers only from this song's stored sources — the same six you can already open below each explanation. It adds conversation, not extra knowledge.</div>
+<div style="display:flex;flex-direction:column;gap:8px;padding:14px 16px;background:#0D0C0B;border:1px solid #221F1C;border-radius:10px">
+<span style="font:400 12.5px/1.5 Inter,sans-serif;color:#7A746C">What people ask here most</span>
+<span style="font:400 15px/1.7 Newsreader,serif;color:#7A746C">“Why does he name a saint instead of God directly?”</span>
+</div>
+<div style="display:flex;align-items:center;gap:12px;padding-top:2px">
+<span style="padding:12px 18px;border-radius:10px;background:#D9A441;color:#0A0908;font:600 14.5px/1 Inter,sans-serif">See Pro · ₹<span style="font-family:'JetBrains Mono',monospace">249</span>/mo</span>
+<span style="font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C">Nothing on this page is taken away.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:baseline;gap:9px"><a href="#11" style="font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);border-radius:5px;color:#1a1a1a">11</a><span style="font:400 11.5px/1.3 Inter,sans-serif;color:rgba(0,0,0,.55)">Library — songs view, then words view where every entry carries its song context</span></div>
+
+<div id="11" style="display:flex;flex-direction:column;gap:20px;scroll-margin-top:16px">
+
+<div style="width:1240px;background:#0A0908;border:1px solid rgba(0,0,0,.18);border-radius:14px;overflow:hidden">
+<div style="display:flex;align-items:center;gap:20px;padding:22px 32px 18px;border-bottom:1px solid #221F1C">
+<span style="font:500 26px/1.2 Newsreader,serif;color:#F5F1EA">Library</span>
+<div style="display:flex;gap:2px;padding:3px;background:#141211;border:1px solid #2E2A26;border-radius:999px">
+<span style="padding:7px 15px;border-radius:999px;background:rgba(217,164,65,0.10);border:1px solid rgba(217,164,65,0.28);font:500 13px/1.2 Inter,sans-serif;color:#D9A441">Songs <span style="font-family:'JetBrains Mono',monospace;font-size:12px">14</span></span>
+<span style="padding:8px 15px;font:500 13px/1.2 Inter,sans-serif;color:#7A746C">Words <span style="font-family:'JetBrains Mono',monospace;font-size:12px">38</span></span>
+</div>
+<span style="flex:1"></span>
+<span style="font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C"><span style="font-family:'JetBrains Mono',monospace">14</span> of <span style="font-family:'JetBrains Mono',monospace">20</span> saved · Basic</span>
+<span style="padding:9px 15px;border-radius:10px;border:1px solid #2E2A26;background:#141211;font:500 13.5px/1 Inter,sans-serif;color:#B5AFA6">Recently opened ▾</span>
+</div>
+
+<div style="padding:24px 32px 32px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+<div style="padding:18px;background:#141211;border:1px solid #221F1C;border-radius:16px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:flex-start;gap:14px">
+<span style="width:52px;height:52px;border-radius:9px;background:linear-gradient(145deg,#433D37 0%,#221F1C 100%);border:1px solid #2E2A26;flex:none"></span>
+<div style="flex:1;display:flex;flex-direction:column;gap:3px">
+<span style="font:500 19px/1.35 Newsreader,serif;color:#F5F1EA">Kun Faya Kun</span>
+<span style="font:400 13px/1.6 Inter,sans-serif;color:#7A746C">A.R. Rahman · <span style="font-family:'JetBrains Mono',monospace">2011</span></span>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+<span style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;background:#070606;border:1px solid #2E2A26"><span style="width:6px;height:6px;border-radius:999px;background:#7FA87C"></span><span style="font:400 12px/1.4 Inter,sans-serif;color:#7FA87C"><span style="font-family:'JetBrains Mono',monospace">6</span></span></span>
+<span style="padding:5px 10px;border-radius:999px;background:#1C1917;border:1px solid #2E2A26;font:400 12px/1.4 Inter,sans-serif;color:#B5AFA6"><span style="font-family:'JetBrains Mono',monospace">5</span> words saved</span>
+<span style="flex:1"></span>
+<span style="font:400 12px/1.4 Inter,sans-serif;color:#7A746C">2d ago</span>
+</div>
+</div>
+
+<div style="padding:18px;background:#141211;border:1px solid #221F1C;border-radius:16px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:flex-start;gap:14px">
+<span style="width:52px;height:52px;border-radius:9px;background:linear-gradient(145deg,#433D37 0%,#221F1C 100%);border:1px solid #2E2A26;flex:none"></span>
+<div style="flex:1;display:flex;flex-direction:column;gap:3px">
+<span style="font:500 19px/1.35 Newsreader,serif;color:#F5F1EA">Arziyan</span>
+<span style="font:400 13px/1.6 Inter,sans-serif;color:#7A746C">A.R. Rahman · <span style="font-family:'JetBrains Mono',monospace">2009</span></span>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+<span style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;background:#070606;border:1px solid #2E2A26"><span style="width:6px;height:6px;border-radius:999px;background:#7FA87C"></span><span style="font:400 12px/1.4 Inter,sans-serif;color:#7FA87C"><span style="font-family:'JetBrains Mono',monospace">5</span></span></span>
+<span style="padding:5px 10px;border-radius:999px;background:#1C1917;border:1px solid #2E2A26;font:400 12px/1.4 Inter,sans-serif;color:#B5AFA6"><span style="font-family:'JetBrains Mono',monospace">8</span> words saved</span>
+<span style="flex:1"></span>
+<span style="font:400 12px/1.4 Inter,sans-serif;color:#7A746C">4d ago</span>
+</div>
+</div>
+
+<div style="padding:18px;background:#141211;border:1px solid #221F1C;border-radius:16px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:flex-start;gap:14px">
+<span style="width:52px;height:52px;border-radius:9px;background:linear-gradient(145deg,#433D37 0%,#221F1C 100%);border:1px solid #2E2A26;flex:none"></span>
+<div style="flex:1;display:flex;flex-direction:column;gap:3px">
+<span style="font:500 19px/1.35 Newsreader,serif;color:#F5F1EA">Piya Haji Ali</span>
+<span style="font:400 13px/1.6 Inter,sans-serif;color:#7A746C">A.R. Rahman · <span style="font-family:'JetBrains Mono',monospace">1997</span></span>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+<span style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;background:#070606;border:1px solid #2E2A26"><span style="width:6px;height:6px;border-radius:999px;background:#C2705A"></span><span style="font:400 12px/1.4 Inter,sans-serif;color:#C2705A">lyric only</span></span>
+<span style="flex:1"></span>
+<span style="font:400 12px/1.4 Inter,sans-serif;color:#7A746C">1w ago</span>
+</div>
+</div>
+
+<div style="padding:18px;background:#141211;border:1px solid #221F1C;border-radius:16px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:flex-start;gap:14px">
+<span style="width:52px;height:52px;border-radius:9px;background:linear-gradient(145deg,#433D37 0%,#221F1C 100%);border:1px solid #2E2A26;flex:none"></span>
+<div style="flex:1;display:flex;flex-direction:column;gap:3px">
+<span style="font:500 19px/1.35 Newsreader,serif;color:#F5F1EA">Tere Bina</span>
+<span style="font:400 13px/1.6 Inter,sans-serif;color:#7A746C">A.R. Rahman · <span style="font-family:'JetBrains Mono',monospace">2007</span></span>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+<span style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;background:#070606;border:1px solid #2E2A26"><span style="width:6px;height:6px;border-radius:999px;background:#7FA87C"></span><span style="font:400 12px/1.4 Inter,sans-serif;color:#7FA87C"><span style="font-family:'JetBrains Mono',monospace">4</span></span></span>
+<span style="padding:5px 10px;border-radius:999px;background:#1C1917;border:1px solid #2E2A26;font:400 12px/1.4 Inter,sans-serif;color:#B5AFA6"><span style="font-family:'JetBrains Mono',monospace">2</span> words saved</span>
+<span style="flex:1"></span>
+<span style="font:400 12px/1.4 Inter,sans-serif;color:#7A746C">1w ago</span>
+</div>
+</div>
+
+<div style="padding:18px;background:#141211;border:1px solid #221F1C;border-radius:16px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:flex-start;gap:14px">
+<span style="width:52px;height:52px;border-radius:9px;background:linear-gradient(145deg,#433D37 0%,#221F1C 100%);border:1px solid #2E2A26;flex:none"></span>
+<div style="flex:1;display:flex;flex-direction:column;gap:3px">
+<span style="font:500 19px/1.35 Newsreader,serif;color:#F5F1EA">Allah Hoo</span>
+<span style="font:400 13px/1.6 Inter,sans-serif;color:#7A746C">Nusrat Fateh Ali Khan</span>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+<span style="display:inline-flex;align-items:center;gap:7px;padding:5px 10px;border-radius:999px;background:#070606;border:1px solid rgba(217,164,65,0.28)"><span style="width:6px;height:6px;border-radius:999px;background:#D9A441;animation:ls-breathe 2s ease-in-out infinite"></span><span style="font:400 12px/1.4 Inter,sans-serif;color:#D9A441">researching</span></span>
+<span style="flex:1"></span>
+<span style="font:400 12px/1.4 Inter,sans-serif;color:#7A746C">now</span>
+</div>
+</div>
+
+<div style="padding:18px;border:1px dashed #2E2A26;border-radius:16px;display:flex;flex-direction:column;justify-content:center;gap:8px;background:#0D0C0B">
+<span style="font:400 15px/1.6 Newsreader,serif;color:#B5AFA6"><span style="font-family:'JetBrains Mono',monospace;font-size:14px">6</span> slots left on Basic</span>
+<span style="font:400 12.5px/1.6 Inter,sans-serif;color:#7A746C">Pro makes the library unlimited. Saved items are never deleted if you downgrade.</span>
+</div>
+</div>
+</div>
+
+<div style="width:1240px;background:#0A0908;border:1px solid rgba(0,0,0,.18);border-radius:14px;overflow:hidden">
+<div style="display:flex;align-items:center;gap:20px;padding:22px 32px 18px;border-bottom:1px solid #221F1C">
+<span style="font:500 26px/1.2 Newsreader,serif;color:#F5F1EA">Library</span>
+<div style="display:flex;gap:2px;padding:3px;background:#141211;border:1px solid #2E2A26;border-radius:999px">
+<span style="padding:8px 15px;font:500 13px/1.2 Inter,sans-serif;color:#7A746C">Songs <span style="font-family:'JetBrains Mono',monospace;font-size:12px">14</span></span>
+<span style="padding:7px 15px;border-radius:999px;background:rgba(217,164,65,0.10);border:1px solid rgba(217,164,65,0.28);font:500 13px/1.2 Inter,sans-serif;color:#D9A441">Words <span style="font-family:'JetBrains Mono',monospace;font-size:12px">38</span></span>
+</div>
+<span style="flex:1"></span>
+<span style="padding:9px 15px;border-radius:10px;border:1px solid #2E2A26;background:#141211;font:500 13.5px/1 Inter,sans-serif;color:#B5AFA6">Group by word ▾</span>
+</div>
+
+<div style="padding:22px 32px 10px;display:flex;align-items:center;gap:16px">
+<div style="font:400 15px/1.7 Inter,sans-serif;color:#B5AFA6;max-width:72ch">A word never means one thing. Each save keeps the song it came from, because that's the only place the meaning was true.</div>
+</div>
+
+<div style="padding:12px 32px 32px;display:flex;flex-direction:column;gap:18px">
+
+<div style="background:#141211;border:1px solid #221F1C;border-radius:16px;overflow:hidden">
+<div style="display:flex;align-items:baseline;gap:14px;padding:18px 22px;border-bottom:1px solid #221F1C;background:#0D0C0B">
+<span style="font:500 26px/1.3 Newsreader,serif;color:#F5F1EA">Fana</span>
+<span style="font:400 15px/1.6 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">फ़ना</span>
+<span style="font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C">noun · from Arabic</span>
+<span style="flex:1"></span>
+<span style="padding:5px 11px;border-radius:999px;background:#1C1917;border:1px solid #2E2A26;font:400 12.5px/1.4 Inter,sans-serif;color:#B5AFA6">saved in <span style="font-family:'JetBrains Mono',monospace">3</span> songs</span>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr)">
+<div style="padding:20px 22px;border-right:1px solid #221F1C;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:center;gap:10px">
+<span style="width:26px;height:26px;border-radius:6px;background:linear-gradient(145deg,#433D37 0%,#221F1C 100%);border:1px solid #2E2A26;flex:none"></span>
+<span style="font:500 14.5px/1.5 Inter,sans-serif;color:#F5F1EA">Kun Faya Kun</span>
+</div>
+<div style="border-left:2px solid #D9A441;padding-left:12px;font:400 16px/1.6 Newsreader,serif;color:#B5AFA6">“Fana hua hun”</div>
+<div style="font:400 14.5px/1.7 Inter,sans-serif;color:#B5AFA6">Dissolved into the divine — offered as relief, not loss. The self burns off and the singer is glad of it.</div>
+<span style="display:inline-flex;align-items:center;gap:6px;align-self:flex-start;padding:5px 10px;border-radius:999px;background:#070606;border:1px solid #2E2A26;margin-top:2px"><span style="width:6px;height:6px;border-radius:999px;background:#7FA87C"></span><span style="font:400 12px/1.4 Inter,sans-serif;color:#7FA87C"><span style="font-family:'JetBrains Mono',monospace">4</span> sources</span></span>
+</div>
+<div style="padding:20px 22px;border-right:1px solid #221F1C;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:center;gap:10px">
+<span style="width:26px;height:26px;border-radius:6px;background:linear-gradient(145deg,#433D37 0%,#221F1C 100%);border:1px solid #2E2A26;flex:none"></span>
+<span style="font:500 14.5px/1.5 Inter,sans-serif;color:#F5F1EA">Tere Bina</span>
+</div>
+<div style="border-left:2px solid #433D37;padding-left:12px;font:400 16px/1.6 Newsreader,serif;color:#B5AFA6">“Fana kar de”</div>
+<div style="font:400 14.5px/1.7 Inter,sans-serif;color:#B5AFA6">Romantic, not devotional — undo me, ruin me. The same erasure asked of a lover instead of God.</div>
+<span style="display:inline-flex;align-items:center;gap:6px;align-self:flex-start;padding:5px 10px;border-radius:999px;background:#070606;border:1px solid #2E2A26;margin-top:2px"><span style="width:6px;height:6px;border-radius:999px;background:#7FA87C"></span><span style="font:400 12px/1.4 Inter,sans-serif;color:#7FA87C"><span style="font-family:'JetBrains Mono',monospace">4</span> sources</span></span>
+</div>
+<div style="padding:20px 22px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:center;gap:10px">
+<span style="width:26px;height:26px;border-radius:6px;background:linear-gradient(145deg,#433D37 0%,#221F1C 100%);border:1px solid #2E2A26;flex:none"></span>
+<span style="font:500 14.5px/1.5 Inter,sans-serif;color:#F5F1EA">Arziyan</span>
+</div>
+<div style="border-left:2px solid #433D37;padding-left:12px;font:400 16px/1.6 Newsreader,serif;color:#B5AFA6">“Fana ki hadd”</div>
+<div style="font:400 14.5px/1.7 Inter,sans-serif;color:#B5AFA6">Used as a boundary, a limit of self-erasure the petitioner claims to have reached. Closer to argument than surrender.</div>
+<span style="display:inline-flex;align-items:center;gap:6px;align-self:flex-start;padding:5px 10px;border-radius:999px;background:#070606;border:1px solid #2E2A26;margin-top:2px"><span style="width:6px;height:6px;border-radius:999px;background:#7FA87C"></span><span style="font:400 12px/1.4 Inter,sans-serif;color:#7FA87C"><span style="font-family:'JetBrains Mono',monospace">5</span> sources</span></span>
+</div>
+</div>
+<div style="padding:14px 22px;border-top:1px solid #221F1C;background:#0D0C0B;font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C">Three songs, three meanings. We don't merge them into one definition.</div>
+</div>
+
+<div style="background:#141211;border:1px solid #221F1C;border-radius:16px;overflow:hidden">
+<div style="display:flex;align-items:baseline;gap:14px;padding:18px 22px;border-bottom:1px solid #221F1C;background:#0D0C0B">
+<span style="font:500 26px/1.3 Newsreader,serif;color:#F5F1EA">Maula</span>
+<span style="font:400 15px/1.6 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">मौला</span>
+<span style="font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C">noun · address</span>
+<span style="flex:1"></span>
+<span style="padding:5px 11px;border-radius:999px;background:#1C1917;border:1px solid #2E2A26;font:400 12.5px/1.4 Inter,sans-serif;color:#B5AFA6">saved in <span style="font-family:'JetBrains Mono',monospace">2</span> songs</span>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr)">
+<div style="padding:20px 22px;border-right:1px solid #221F1C;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:center;gap:10px">
+<span style="width:26px;height:26px;border-radius:6px;background:linear-gradient(145deg,#433D37 0%,#221F1C 100%);border:1px solid #2E2A26;flex:none"></span>
+<span style="font:500 14.5px/1.5 Inter,sans-serif;color:#F5F1EA">Kun Faya Kun</span>
+</div>
+<div style="border-left:2px solid #433D37;padding-left:12px;font:400 16px/1.6 Newsreader,serif;color:#B5AFA6">“Maula maula”</div>
+<div style="font:400 14.5px/1.7 Inter,sans-serif;color:#B5AFA6">Lord, master — repeated until it stops being a title and becomes breathing.</div>
+</div>
+<div style="padding:20px 22px;border-right:1px solid #221F1C;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:center;gap:10px">
+<span style="width:26px;height:26px;border-radius:6px;background:linear-gradient(145deg,#433D37 0%,#221F1C 100%);border:1px solid #2E2A26;flex:none"></span>
+<span style="font:500 14.5px/1.5 Inter,sans-serif;color:#F5F1EA">Piya Haji Ali</span>
+</div>
+<div style="border-left:2px solid #433D37;padding-left:12px;font:400 16px/1.6 Newsreader,serif;color:#7A746C">“Maula maula”</div>
+<span style="display:inline-flex;align-items:center;gap:6px;align-self:flex-start;padding:5px 10px;border-radius:999px;background:#070606;border:1px solid #2E2A26"><span style="width:6px;height:6px;border-radius:999px;background:#C2705A"></span><span style="font:400 12px/1.4 Inter,sans-serif;color:#C2705A">not enough material</span></span>
+<div style="font:400 14.5px/1.7 Inter,sans-serif;color:#7A746C">Saved from the lyric, but we have no grounded reading for it in this song yet. It'll fill in if sources arrive.</div>
+</div>
+<div style="padding:20px 22px;display:flex;flex-direction:column;justify-content:center;gap:6px;background:#0D0C0B">
+<span style="font:400 14.5px/1.7 Inter,sans-serif;color:#7A746C">Open a word in any song to add its reading here.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:baseline;gap:9px"><a href="#12" style="font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);border-radius:5px;color:#1a1a1a">12</a><span style="font:400 11.5px/1.3 Inter,sans-serif;color:rgba(0,0,0,.55)">Contribute — URL or image, free on both plans, with the review queue visible</span></div>
+
+<div id="12" style="width:1240px;background:#0A0908;border:1px solid rgba(0,0,0,.18);border-radius:14px;overflow:hidden;scroll-margin-top:16px">
+<div style="padding:32px 32px 26px;border-bottom:1px solid #221F1C;display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap">
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="font:400 32px/1.35 Newsreader,serif;color:#F5F1EA">Add a source for <span style="font-style:italic">Piya Haji Ali</span></div>
+<div style="font:400 16px/1.7 Inter,sans-serif;color:#B5AFA6;max-width:64ch">We're two sources short of explaining this song. An interview, a poetry commentary, a page from a book — anything written by someone who knows.</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">
+<span style="display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;background:#141211;border:1px solid #2E2A26"><span style="width:7px;height:7px;border-radius:999px;background:#7FA87C"></span><span style="font:400 12.5px/1.4 Inter,sans-serif;color:#7FA87C">free on Basic and Pro</span></span>
+<span style="font:400 13px/1.6 Inter,sans-serif;color:#7A746C">Contributing never uses your monthly count</span>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1.15fr 1fr;align-items:stretch">
+
+<div style="padding:28px 32px 32px;border-right:1px solid #221F1C;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">Paste a link</div>
+<div style="display:flex;align-items:center;gap:12px;padding:8px 8px 8px 18px;background:#1C1917;border:1px solid #433D37;border-radius:12px">
+<span style="flex:1;font:400 15.5px/1.6 Inter,sans-serif;color:#7A746C">https://…</span>
+<span style="padding:11px 18px;border-radius:9px;background:#D9A441;color:#0A0908;font:600 14px/1 Inter,sans-serif">Add</span>
+</div>
+<div style="font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C">Articles, interviews, lyric archives, blog posts, forum threads.</div>
+</div>
+
+<div style="display:flex;align-items:center;gap:14px">
+<span style="flex:1;height:1px;background:#221F1C"></span>
+<span style="font:400 13px/1.5 Inter,sans-serif;color:#7A746C">or</span>
+<span style="flex:1;height:1px;background:#221F1C"></span>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">Upload an image</div>
+<div style="padding:34px 26px;border:1px dashed #433D37;border-radius:14px;background:#0D0C0B;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center">
+<span style="width:44px;height:44px;border-radius:11px;background:#1C1917;border:1px solid #2E2A26;display:flex;align-items:center;justify-content:center"><span style="width:16px;height:12px;border:1px solid #7A746C;border-radius:2px"></span></span>
+<div style="font:400 17px/1.6 Newsreader,serif;color:#F5F1EA">Drop a photo of a page, or browse</div>
+<div style="font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C;max-width:46ch">A liner note, a page of a poetry collection, a printed interview. We read the text; we don't republish the image.</div>
+</div>
+</div>
+
+<div style="margin-top:auto;padding:18px;background:#141211;border:1px solid #221F1C;border-radius:12px;display:flex;flex-direction:column;gap:8px">
+<span style="font:500 14.5px/1.6 Inter,sans-serif;color:#F5F1EA">What makes a source usable</span>
+<span style="font:400 14px/1.7 Inter,sans-serif;color:#B5AFA6">Someone stating something specific about this song — who wrote it, what a phrase refers to, where it was recorded. Not a comment saying it's beautiful.</span>
+</div>
+</div>
+
+<div style="padding:28px 32px 32px;background:#0D0C0B;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+<span style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">Your contributions</span>
+<span style="font:400 13px/1.6 Inter,sans-serif;color:#7A746C"><span style="font-family:'JetBrains Mono',monospace">7</span> all time · <span style="font-family:'JetBrains Mono',monospace">5</span> accepted</span>
+</div>
+
+<div style="padding:18px;background:#1C1917;border:1px solid #433D37;border-radius:14px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;gap:10px">
+<span style="width:18px;height:18px;border-radius:5px;background:#433D37;flex:none"></span>
+<span style="font:500 14px/1.6 Inter,sans-serif;color:#F5F1EA">thehindu.com</span>
+<span style="flex:1"></span>
+<span style="display:inline-flex;align-items:center;gap:7px;padding:5px 11px;border-radius:999px;background:#070606;border:1px solid rgba(217,164,65,0.28)"><span style="width:7px;height:7px;border-radius:999px;background:#D9A441;animation:ls-breathe 2.2s ease-in-out infinite"></span><span style="font:400 12px/1.4 Inter,sans-serif;color:#D9A441">in review</span></span>
+</div>
+<div style="font:400 15px/1.7 Newsreader,serif;color:#B5AFA6">“Rahman on recording at the Haji Ali dargah” — added <span style="font-family:'JetBrains Mono',monospace;font-size:14px">2</span> hours ago</div>
+<div style="display:flex;flex-direction:column;gap:0;padding-top:4px;border-top:1px solid #2E2A26">
+<div style="display:flex;align-items:center;gap:12px;padding:10px 0">
+<span style="width:18px;height:18px;border-radius:999px;border:1px solid rgba(127,168,124,0.5);background:rgba(127,168,124,0.12);display:flex;align-items:center;justify-content:center;font:600 10px/1 Inter,sans-serif;color:#7FA87C">✓</span>
+<span style="flex:1;font:400 14.5px/1.7 Inter,sans-serif;color:#B5AFA6">Link fetched and readable</span>
+</div>
+<div style="display:flex;align-items:center;gap:12px;padding:10px 0">
+<span style="width:18px;height:18px;border-radius:999px;border:1px solid rgba(217,164,65,0.45);background:rgba(217,164,65,0.10);display:flex;align-items:center;justify-content:center;flex:none"><span style="width:6px;height:6px;border-radius:999px;background:#D9A441;animation:ls-breathe 1.6s ease-in-out infinite"></span></span>
+<span style="flex:1;font:400 14.5px/1.7 Inter,sans-serif;color:#F5F1EA">Reviewed before it's used</span>
+</div>
+<div style="display:flex;align-items:center;gap:12px;padding:10px 0">
+<span style="width:18px;height:18px;border-radius:999px;border:1px solid #2E2A26;flex:none"></span>
+<span style="flex:1;font:400 14.5px/1.7 Inter,sans-serif;color:#7A746C">Song re-explained with it included</span>
+</div>
+</div>
+<div style="font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C;padding-top:2px">Nothing you send changes an explanation on its own. A person checks it first — usually within a day.</div>
+</div>
+
+<div style="padding:16px 18px;background:#141211;border:1px solid #221F1C;border-radius:12px;display:flex;align-items:center;gap:14px">
+<span style="width:18px;height:18px;border-radius:5px;background:#433D37;flex:none"></span>
+<div style="flex:1;display:flex;flex-direction:column;gap:2px">
+<span style="font:500 14px/1.6 Inter,sans-serif;color:#B5AFA6">rekhta.org</span>
+<span style="font:400 13px/1.6 Inter,sans-serif;color:#7A746C">Accepted · now cited on <span style="font-family:'JetBrains Mono',monospace">3</span> lines of Arziyan</span>
+</div>
+<span style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;background:#070606;border:1px solid #2E2A26;flex:none"><span style="width:6px;height:6px;border-radius:999px;background:#7FA87C"></span><span style="font:400 12px/1.4 Inter,sans-serif;color:#7FA87C">in use</span></span>
+</div>
+
+<div style="padding:16px 18px;background:#141211;border:1px solid #221F1C;border-radius:12px;display:flex;align-items:center;gap:14px">
+<span style="width:18px;height:18px;border-radius:5px;background:#433D37;flex:none"></span>
+<div style="flex:1;display:flex;flex-direction:column;gap:2px">
+<span style="font:500 14px/1.6 Inter,sans-serif;color:#B5AFA6">a fan blog</span>
+<span style="font:400 13px/1.6 Inter,sans-serif;color:#7A746C">Declined — no specific claims about the song</span>
+</div>
+<span style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;background:#070606;border:1px solid #2E2A26;flex:none"><span style="width:6px;height:6px;border-radius:999px;background:#C2705A"></span><span style="font:400 12px/1.4 Inter,sans-serif;color:#C2705A">not used</span></span>
+</div>
+
+<div style="margin-top:auto;padding-top:14px;border-top:1px solid #221F1C;font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C;max-width:50ch">Once a song crosses four reliable sources, we research it and everyone sees the result — including you, without spending a song credit.</div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:baseline;gap:9px"><a href="#13" style="font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);border-radius:5px;color:#1a1a1a">13</a><span style="font:400 11.5px/1.3 Inter,sans-serif;color:rgba(0,0,0,.55)">Share card — one line, one meaning · 1080×1080 shown at 1:1, all three modes</span></div>
+
+<div id="13" style="display:flex;flex-direction:column;gap:20px;scroll-margin-top:16px">
+
+<div style="width:1240px;display:flex;gap:20px">
+
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="width:392px;height:392px;background:#0A0908;border:1px solid #2E2A26;border-radius:18px;padding:34px;display:flex;flex-direction:column;box-sizing:border-box">
+<div style="display:flex;align-items:center;gap:9px">
+<span style="width:20px;height:20px;border-radius:5px;background:rgba(217,164,65,0.10);border:1px solid rgba(217,164,65,0.28);display:flex;align-items:center;justify-content:center;font:600 9px/1 Inter,sans-serif;color:#D9A441">LS</span>
+<span style="font:500 11.5px/1.4 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">LyricSense</span>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px">
+<div style="border-left:2px solid #D9A441;padding-left:16px;font:400 30px/1.4 Newsreader,serif;color:#F5F1EA">Kun faya kun</div>
+<div style="font:400 15px/1.7 Inter,sans-serif;color:#B5AFA6">Scripture carried into a film song: <em style="font-family:Newsreader,serif;font-size:16px;color:#F5F1EA;font-style:italic">be, and it is</em>. Creation needs no labour — and here it lands as relief, not theology.</div>
+</div>
+<div style="display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid #221F1C">
+<span style="width:34px;height:34px;border-radius:7px;background:linear-gradient(145deg,#433D37 0%,#221F1C 100%);border:1px solid #2E2A26;flex:none"></span>
+<div style="flex:1;display:flex;flex-direction:column;gap:1px">
+<span style="font:500 14px/1.5 Newsreader,serif;color:#F5F1EA">Kun Faya Kun</span>
+<span style="font:400 11.5px/1.5 Inter,sans-serif;color:#7A746C">A.R. Rahman · <span style="font-family:'JetBrains Mono',monospace">2011</span></span>
+</div>
+<span style="display:inline-flex;align-items:center;gap:6px;flex:none"><span style="width:6px;height:6px;border-radius:999px;background:#7FA87C"></span><span style="font:400 11.5px/1.4 Inter,sans-serif;color:#7FA87C"><span style="font-family:'JetBrains Mono',monospace">4</span> sources</span></span>
+</div>
+</div>
+<div style="font:400 11px/1.4 Inter,sans-serif;color:rgba(0,0,0,.5);text-align:center">English</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="width:392px;height:392px;background:#0A0908;border:1px solid #2E2A26;border-radius:18px;padding:34px;display:flex;flex-direction:column;box-sizing:border-box">
+<div style="display:flex;align-items:center;gap:9px">
+<span style="width:20px;height:20px;border-radius:5px;background:rgba(217,164,65,0.10);border:1px solid rgba(217,164,65,0.28);display:flex;align-items:center;justify-content:center;font:600 9px/1 Inter,sans-serif;color:#D9A441">LS</span>
+<span style="font:500 11.5px/1.5 'Noto Sans Devanagari',Inter,sans-serif;letter-spacing:.06em;color:#7A746C">लिरिकसेंस</span>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px">
+<div style="border-left:2px solid #D9A441;padding-left:16px;font:400 30px/1.5 'Tiro Devanagari Hindi',serif;color:#F5F1EA">कुन फ़या कुन</div>
+<div style="font:400 15px/1.8 'Noto Sans Devanagari',Inter,sans-serif;color:#B5AFA6">धर्मग्रंथ से फ़िल्मी गाने में आया वाक्य — <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:#F5F1EA">हो जा, तो वह हो जाता है</span>। यहाँ यह तर्क नहीं, राहत बनकर आता है।</div>
+</div>
+<div style="display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid #221F1C">
+<span style="width:34px;height:34px;border-radius:7px;background:linear-gradient(145deg,#433D37 0%,#221F1C 100%);border:1px solid #2E2A26;flex:none"></span>
+<div style="flex:1;display:flex;flex-direction:column;gap:1px">
+<span style="font:400 14px/1.5 'Tiro Devanagari Hindi',serif;color:#F5F1EA">कुन फ़या कुन</span>
+<span style="font:400 11.5px/1.6 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">ए. आर. रहमान · <span style="font-family:'JetBrains Mono',monospace">2011</span></span>
+</div>
+<span style="display:inline-flex;align-items:center;gap:6px;flex:none"><span style="width:6px;height:6px;border-radius:999px;background:#7FA87C"></span><span style="font:400 11.5px/1.5 'Noto Sans Devanagari',Inter,sans-serif;color:#7FA87C"><span style="font-family:'JetBrains Mono',monospace">4</span> स्रोत</span></span>
+</div>
+</div>
+<div style="font:400 11px/1.4 Inter,sans-serif;color:rgba(0,0,0,.5);text-align:center">हिंदी</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="width:392px;height:392px;background:#0A0908;border:1px solid #2E2A26;border-radius:18px;padding:34px;display:flex;flex-direction:column;box-sizing:border-box">
+<div style="display:flex;align-items:center;gap:9px">
+<span style="width:20px;height:20px;border-radius:5px;background:rgba(217,164,65,0.10);border:1px solid rgba(217,164,65,0.28);display:flex;align-items:center;justify-content:center;font:600 9px/1 Inter,sans-serif;color:#D9A441">LS</span>
+<span style="font:500 11.5px/1.4 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">LyricSense</span>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px">
+<div style="border-left:2px solid #D9A441;padding-left:16px;font:400 30px/1.4 Newsreader,serif;color:#F5F1EA">Kun faya kun</div>
+<div style="font:400 15px/1.7 Inter,sans-serif;color:#B5AFA6">Dharmgranth se filmi gaane mein aaya jumla — <em style="font-family:Newsreader,serif;font-size:16px;color:#F5F1EA;font-style:italic">ho ja, aur woh ho jaata hai</em>. Yahaan yeh tark nahi, raahat banke aata hai.</div>
+</div>
+<div style="display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid #221F1C">
+<span style="width:34px;height:34px;border-radius:7px;background:linear-gradient(145deg,#433D37 0%,#221F1C 100%);border:1px solid #2E2A26;flex:none"></span>
+<div style="flex:1;display:flex;flex-direction:column;gap:1px">
+<span style="font:500 14px/1.5 Newsreader,serif;color:#F5F1EA">Kun Faya Kun</span>
+<span style="font:400 11.5px/1.5 Inter,sans-serif;color:#7A746C">A.R. Rahman · <span style="font-family:'JetBrains Mono',monospace">2011</span></span>
+</div>
+<span style="display:inline-flex;align-items:center;gap:6px;flex:none"><span style="width:6px;height:6px;border-radius:999px;background:#7FA87C"></span><span style="font:400 11.5px/1.4 Inter,sans-serif;color:#7FA87C"><span style="font-family:'JetBrains Mono',monospace">4</span> source</span></span>
+</div>
+</div>
+<div style="font:400 11px/1.4 Inter,sans-serif;color:rgba(0,0,0,.5);text-align:center">Hinglish</div>
+</div>
+</div>
+
+<div style="width:1240px;box-sizing:border-box;background:#0A0908;border:1px solid rgba(0,0,0,.18);border-radius:14px;padding:28px 32px;display:flex;align-items:center;gap:28px;justify-content:space-between;flex-wrap:wrap">
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="font:400 22px/1.5 Newsreader,serif;color:#F5F1EA">Export · <span style="font-style:italic">“Kun faya kun”</span></div>
+<div style="font:400 14.5px/1.7 Inter,sans-serif;color:#B5AFA6;max-width:56ch">The source count travels with the card. A shared meaning always says how many sources stand behind it.</div>
+</div>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+<div style="display:flex;gap:2px;padding:3px;background:#141211;border:1px solid #2E2A26;border-radius:999px">
+<span style="padding:7px 14px;border-radius:999px;background:rgba(217,164,65,0.10);border:1px solid rgba(217,164,65,0.28);font:500 12.5px/1.2 Inter,sans-serif;color:#D9A441">Square</span>
+<span style="padding:8px 14px;font:500 12.5px/1.2 Inter,sans-serif;color:#7A746C">Story</span>
+<span style="padding:8px 14px;font:500 12.5px/1.2 Inter,sans-serif;color:#7A746C">Wide</span>
+</div>
+<span style="padding:12px 18px;border-radius:10px;border:1px solid #2E2A26;background:#141211;color:#B5AFA6;font:500 14px/1 Inter,sans-serif">Copy image</span>
+<span style="padding:12px 18px;border-radius:10px;background:#D9A441;color:#0A0908;font:600 14px/1 Inter,sans-serif">Download PNG</span>
+<span style="padding:5px 10px;border-radius:999px;background:rgba(217,164,65,0.10);border:1px solid rgba(217,164,65,0.28);font:600 10.5px/1.2 Inter,sans-serif;letter-spacing:.08em;color:#D9A441">PRO</span>
+</div>
+</div>
+</div>
+</div>
+
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:baseline;gap:9px"><a href="#1" style="font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);border-radius:5px;color:#1a1a1a">1</a><span style="font:400 11.5px/1.3 Inter,sans-serif;color:rgba(0,0,0,.55)">Landing — one input, the promise stated plainly, pricing summary lower</span></div>
+
+<div id="1" style="width:1240px;background:#0A0908;border:1px solid rgba(0,0,0,.18);border-radius:14px;overflow:hidden;scroll-margin-top:16px">
+
+<div style="display:flex;align-items:center;justify-content:space-between;gap:32px;padding:22px 32px;border-bottom:1px solid #221F1C">
+<div style="display:flex;align-items:baseline;gap:10px">
+<span style="font:500 20px/1.2 Newsreader,serif;color:#F5F1EA;letter-spacing:-0.01em">LyricSense</span>
+<span style="font:400 13px/1.6 Inter,sans-serif;color:#7A746C">Hindi film songs, explained</span>
+</div>
+<div style="display:flex;align-items:center;gap:22px">
+<span style="font:400 14px/1.6 Inter,sans-serif;color:#B5AFA6">Library</span>
+<span style="font:400 14px/1.6 Inter,sans-serif;color:#B5AFA6">Pricing</span>
+<div style="display:flex;gap:2px;padding:3px;background:#141211;border:1px solid #2E2A26;border-radius:999px">
+<span style="padding:6px 13px;border-radius:999px;background:rgba(217,164,65,0.10);border:1px solid rgba(217,164,65,0.28);font:500 12.5px/1.2 Inter,sans-serif;color:#D9A441">EN</span>
+<span style="padding:7px 13px;font:500 12.5px/1.3 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">हिं</span>
+<span style="padding:7px 13px;font:500 12.5px/1.2 Inter,sans-serif;color:#7A746C">Hin</span>
+</div>
+<span style="padding:9px 16px;border-radius:10px;border:1px solid #2E2A26;background:#141211;font:500 13.5px/1 Inter,sans-serif;color:#B5AFA6">Sign in</span>
+</div>
+</div>
+
+<div style="padding:76px 32px 64px;display:flex;flex-direction:column;align-items:center;gap:28px;background:#0D0C0B;border-bottom:1px solid #221F1C">
+<div style="font:400 52px/1.25 Newsreader,serif;color:#F5F1EA;text-align:center;max-width:24ch;letter-spacing:-0.015em;text-wrap:pretty">What is that song actually saying?</div>
+<div style="font:400 19px/1.65 Inter,sans-serif;color:#B5AFA6;text-align:center;max-width:54ch;text-wrap:pretty">Line by line, word by word — in English, हिंदी, or Hinglish. Built from sources we show you, and silent when those sources aren't good enough.</div>
+
+<div style="width:100%;max-width:720px;display:flex;flex-direction:column;gap:12px;padding-top:8px">
+<div style="display:flex;align-items:center;gap:12px;padding:8px 8px 8px 20px;background:#1C1917;border:1px solid #433D37;border-radius:14px;box-shadow:0 18px 44px rgba(0,0,0,.45)">
+<span style="flex:1;font:400 17px/1.6 Inter,sans-serif;color:#7A746C">Song name, a link, or anything you remember…</span>
+<span style="padding:13px 22px;border-radius:10px;background:#D9A441;color:#0A0908;font:600 15px/1 Inter,sans-serif">Explain it</span>
+</div>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-left:4px">
+<span style="font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C">Try:</span>
+<span style="padding:6px 12px;border-radius:999px;background:#141211;border:1px solid #2E2A26;font:400 13.5px/1.3 Inter,sans-serif;color:#B5AFA6">Kun Faya Kun</span>
+<span style="padding:6px 12px;border-radius:999px;background:#141211;border:1px solid #2E2A26;font:400 13.5px/1.4 'Noto Sans Devanagari',Inter,sans-serif;color:#B5AFA6">तुझे देखा तो</span>
+<span style="padding:6px 12px;border-radius:999px;background:#141211;border:1px solid #2E2A26;font:400 13.5px/1.3 Inter,sans-serif;color:#B5AFA6">the one about the dargah</span>
+</div>
+</div>
+</div>
+
+<div style="padding:44px 32px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;border-bottom:1px solid #221F1C">
+<div style="display:flex;flex-direction:column;gap:12px;padding:24px;background:#141211;border:1px solid #221F1C;border-radius:16px">
+<span style="display:inline-flex;align-items:center;gap:7px;align-self:flex-start;padding:6px 12px;border-radius:999px;background:#070606;border:1px solid #2E2A26"><span style="width:7px;height:7px;border-radius:999px;background:#7FA87C"></span><span style="font:400 12.5px/1.4 Inter,sans-serif;color:#7FA87C">grounded</span></span>
+<div style="font:400 20px/1.5 Newsreader,serif;color:#F5F1EA">It doesn't make things up</div>
+<div style="font:400 15px/1.7 Inter,sans-serif;color:#B5AFA6">Every explanation ends in the sources it came from — interviews, lyric archives, poetry commentary. You can open each one.</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:24px;background:#141211;border:1px solid #221F1C;border-radius:16px">
+<span style="display:inline-flex;align-items:center;gap:7px;align-self:flex-start;padding:6px 12px;border-radius:999px;background:#070606;border:1px solid #2E2A26"><span style="width:7px;height:7px;border-radius:999px;background:#C2705A"></span><span style="font:400 12.5px/1.4 Inter,sans-serif;color:#C2705A">not enough</span></span>
+<div style="font:400 20px/1.5 Newsreader,serif;color:#F5F1EA">And it says so when it can't</div>
+<div style="font:400 15px/1.7 Inter,sans-serif;color:#B5AFA6">Below four reliable sources, we show you the lyric and nothing else. A guess about a poem is worse than an honest gap.</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:24px;background:#141211;border:1px solid #221F1C;border-radius:16px">
+<span style="display:inline-flex;align-items:center;gap:7px;align-self:flex-start;padding:6px 12px;border-radius:999px;background:#070606;border:1px solid #2E2A26"><span style="font:400 12.5px/1.4 Inter,sans-serif;color:#B5AFA6">EN · हिंदी · Hinglish</span></span>
+<div style="font:400 20px/1.5 Newsreader,serif;color:#F5F1EA">In the language you think in</div>
+<div style="font:400 15px/1.7 Inter,sans-serif;color:#B5AFA6">The same meaning, written natively for each — not machine-translated from the English and not a transliteration of it.</div>
+</div>
+</div>
+
+<div style="padding:40px 32px 48px;display:flex;align-items:center;gap:40px;justify-content:space-between;flex-wrap:wrap">
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="font:400 26px/1.4 Newsreader,serif;color:#F5F1EA">Free for five songs a month.</div>
+<div style="font:400 15px/1.7 Inter,sans-serif;color:#B5AFA6;max-width:58ch">All three languages, no trial, no card. Pro removes the monthly limit, adds the song chatbot, and lets you export.</div>
+</div>
+<div style="display:flex;align-items:stretch;gap:14px">
+<div style="padding:18px 22px;background:#141211;border:1px solid #2E2A26;border-radius:14px;display:flex;flex-direction:column;gap:6px;min-width:172px">
+<span style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">Basic</span>
+<span style="font:500 30px/1.2 Newsreader,serif;color:#F5F1EA">Free</span>
+<span style="font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C"><span style="font-family:'JetBrains Mono',monospace">5</span> new songs / month</span>
+</div>
+<div style="padding:18px 22px;background:#1C1917;border:1px solid rgba(217,164,65,0.28);border-radius:14px;display:flex;flex-direction:column;gap:6px;min-width:172px">
+<span style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#D9A441">Pro</span>
+<span style="font:500 30px/1.2 Newsreader,serif;color:#F5F1EA">₹<span style="font-family:'JetBrains Mono',monospace;font-size:27px">249</span><span style="font:400 15px/1 Inter,sans-serif;color:#7A746C"> /mo</span></span>
+<span style="font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C">Unlimited · chatbot · export</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:baseline;gap:9px"><a href="#2" style="font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);border-radius:5px;color:#1a1a1a">2</a><span style="font:400 11.5px/1.3 Inter,sans-serif;color:rgba(0,0,0,.55)">Search / disambiguation — a vague query, ranked candidates, and a “none of these” path</span></div>
+
+<div id="2" style="width:1240px;background:#0A0908;border:1px solid rgba(0,0,0,.18);border-radius:14px;overflow:hidden;scroll-margin-top:16px">
+
+<div style="display:flex;align-items:center;gap:16px;padding:18px 32px;border-bottom:1px solid #221F1C">
+<span style="font:500 18px/1.2 Newsreader,serif;color:#F5F1EA;letter-spacing:-0.01em">LyricSense</span>
+<div style="flex:1;display:flex;align-items:center;gap:12px;padding:11px 18px;background:#141211;border:1px solid #2E2A26;border-radius:12px">
+<span style="flex:1;font:400 15px/1.6 Inter,sans-serif;color:#F5F1EA">the one about the dargah, Rahman</span>
+<span style="font:400 13px/1.6 Inter,sans-serif;color:#7A746C">✕</span>
+</div>
+<div style="display:flex;align-items:center;gap:9px;padding:7px 12px;background:#141211;border:1px solid #221F1C;border-radius:999px">
+<span style="display:flex;gap:3px"><span style="width:14px;height:4px;border-radius:2px;background:#D9A441"></span><span style="width:14px;height:4px;border-radius:2px;background:#D9A441"></span><span style="width:14px;height:4px;border-radius:2px;background:#D9A441"></span><span style="width:14px;height:4px;border-radius:2px;background:#2E2A26"></span><span style="width:14px;height:4px;border-radius:2px;background:#2E2A26"></span></span>
+<span style="font:400 12.5px/1.5 Inter,sans-serif;color:#7A746C"><span style="font-family:'JetBrains Mono',monospace">3</span> left</span>
+</div>
+</div>
+
+<div style="padding:28px 32px 16px;display:flex;align-items:baseline;justify-content:space-between;gap:24px">
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="font:400 26px/1.4 Newsreader,serif;color:#F5F1EA">Which one do you mean?</div>
+<div style="font:400 15px/1.7 Inter,sans-serif;color:#B5AFA6;max-width:62ch">Four songs match a shrine and A.R. Rahman. Ready ones open instantly; the others need a research pass first.</div>
+</div>
+<span style="font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C;flex:none"><span style="font-family:'JetBrains Mono',monospace">4</span> candidates</span>
+</div>
+
+<div style="padding:8px 32px 0;display:flex;flex-direction:column;gap:10px">
+
+<div style="display:flex;align-items:center;gap:20px;padding:16px;background:#1C1917;border:1px solid #433D37;border-radius:16px">
+<span style="width:78px;height:78px;border-radius:10px;background:linear-gradient(145deg,#433D37 0%,#221F1C 100%);border:1px solid #2E2A26;flex:none"></span>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px">
+<div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap">
+<span style="font:500 24px/1.3 Newsreader,serif;color:#F5F1EA">Kun Faya Kun</span>
+<span style="font:400 15px/1.6 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">कुन फ़या कुन</span>
+</div>
+<div style="font:400 14.5px/1.6 Inter,sans-serif;color:#B5AFA6">A.R. Rahman · Javed Ali, Mohit Chauhan · <span style="font-family:'JetBrains Mono',monospace;font-size:13.5px">2011</span> · Rockstar</div>
+<div style="font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C">Names Nizamuddin Auliya and his dargah in the opening line</div>
+</div>
+<span style="display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;background:#070606;border:1px solid #2E2A26;flex:none"><span style="width:7px;height:7px;border-radius:999px;background:#7FA87C"></span><span style="font:400 12.5px/1.4 Inter,sans-serif;color:#7FA87C">ready · <span style="font-family:'JetBrains Mono',monospace">6</span> sources</span></span>
+<span style="padding:12px 20px;border-radius:10px;background:#D9A441;color:#0A0908;font:600 14.5px/1 Inter,sans-serif;flex:none">Open</span>
+</div>
+
+<div style="display:flex;align-items:center;gap:20px;padding:16px;background:#141211;border:1px solid #221F1C;border-radius:16px">
+<span style="width:78px;height:78px;border-radius:10px;background:linear-gradient(145deg,#433D37 0%,#221F1C 100%);border:1px solid #2E2A26;flex:none"></span>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px">
+<div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap">
+<span style="font:500 24px/1.3 Newsreader,serif;color:#F5F1EA">Piya Haji Ali</span>
+<span style="font:400 15px/1.6 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">पिया हाजी अली</span>
+</div>
+<div style="font:400 14.5px/1.6 Inter,sans-serif;color:#B5AFA6">A.R. Rahman · A.R. Rahman, Srinivas · <span style="font-family:'JetBrains Mono',monospace;font-size:13.5px">1997</span> · Fiza</div>
+<div style="font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C">Set at the Haji Ali dargah in Mumbai</div>
+</div>
+<span style="display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;background:#070606;border:1px solid #2E2A26;flex:none"><span style="width:7px;height:7px;border-radius:999px;background:#C2705A"></span><span style="font:400 12.5px/1.4 Inter,sans-serif;color:#C2705A">not enough material</span></span>
+<span style="padding:12px 20px;border-radius:10px;border:1px solid #2E2A26;background:#1C1917;color:#B5AFA6;font:500 14.5px/1 Inter,sans-serif;flex:none">See what we have</span>
+</div>
+
+<div style="display:flex;align-items:center;gap:20px;padding:16px;background:#141211;border:1px solid #221F1C;border-radius:16px">
+<span style="width:78px;height:78px;border-radius:10px;background:linear-gradient(145deg,#433D37 0%,#221F1C 100%);border:1px solid #2E2A26;flex:none"></span>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px">
+<div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap">
+<span style="font:500 24px/1.3 Newsreader,serif;color:#F5F1EA">Arziyan</span>
+<span style="font:400 15px/1.6 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">अर्ज़ियाँ</span>
+</div>
+<div style="font:400 14.5px/1.6 Inter,sans-serif;color:#B5AFA6">A.R. Rahman · Javed Ali, Kailash Kher · <span style="font-family:'JetBrains Mono',monospace;font-size:13.5px">2009</span> · Delhi-6</div>
+<div style="font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C">A qawwali-form plea addressed to the saint</div>
+</div>
+<span style="display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;background:#070606;border:1px solid #2E2A26;flex:none"><span style="width:7px;height:7px;border-radius:999px;background:#7FA87C"></span><span style="font:400 12.5px/1.4 Inter,sans-serif;color:#7FA87C">ready · <span style="font-family:'JetBrains Mono',monospace">5</span> sources</span></span>
+<span style="padding:12px 20px;border-radius:10px;border:1px solid #2E2A26;background:#1C1917;color:#B5AFA6;font:500 14.5px/1 Inter,sans-serif;flex:none">Open</span>
+</div>
+
+<div style="display:flex;align-items:center;gap:20px;padding:16px;background:#141211;border:1px solid #221F1C;border-radius:16px">
+<span style="width:78px;height:78px;border-radius:10px;background:linear-gradient(145deg,#433D37 0%,#221F1C 100%);border:1px solid #2E2A26;flex:none"></span>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px">
+<div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap">
+<span style="font:500 24px/1.3 Newsreader,serif;color:#F5F1EA">Khwaja Mere Khwaja</span>
+<span style="font:400 15px/1.6 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">ख़्वाजा मेरे ख़्वाजा</span>
+</div>
+<div style="font:400 14.5px/1.6 Inter,sans-serif;color:#B5AFA6">A.R. Rahman · A.R. Rahman · <span style="font-family:'JetBrains Mono',monospace;font-size:13.5px">2008</span> · Jodhaa Akbar</div>
+<div style="font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C">Addressed to Moinuddin Chishti of Ajmer</div>
+</div>
+<span style="display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:#070606;border:1px solid #2E2A26;flex:none"><span style="width:7px;height:7px;border-radius:999px;background:#D9A441;animation:ls-breathe 2s ease-in-out infinite"></span><span style="font:400 12.5px/1.4 Inter,sans-serif;color:#D9A441">needs research · ~<span style="font-family:'JetBrains Mono',monospace">1</span> min</span></span>
+<span style="padding:12px 20px;border-radius:10px;border:1px solid rgba(217,164,65,0.28);background:rgba(217,164,65,0.10);color:#D9A441;font:500 14.5px/1 Inter,sans-serif;flex:none">Research it</span>
+</div>
+</div>
+
+<div style="margin:28px 32px 32px;padding:24px;background:#0D0C0B;border:1px solid #221F1C;border-radius:16px;display:flex;align-items:center;gap:28px;justify-content:space-between;flex-wrap:wrap">
+<div style="display:flex;flex-direction:column;gap:7px">
+<div style="font:400 20px/1.5 Newsreader,serif;color:#F5F1EA">None of these?</div>
+<div style="font:400 14.5px/1.7 Inter,sans-serif;color:#B5AFA6;max-width:64ch">Give us a line you remember, however garbled, or paste a link from anywhere — YouTube, Spotify, a lyrics page. We'll find it or tell you we couldn't.</div>
+</div>
+<div style="display:flex;align-items:center;gap:10px;flex:none">
+<span style="padding:12px 18px;border-radius:10px;border:1px solid #2E2A26;background:#141211;color:#B5AFA6;font:500 14.5px/1 Inter,sans-serif">Describe it instead</span>
+<span style="padding:12px 18px;border-radius:10px;border:1px solid #2E2A26;background:#141211;color:#B5AFA6;font:500 14.5px/1 Inter,sans-serif">Paste a link</span>
+</div>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:baseline;gap:9px"><a href="#9" style="font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);border-radius:5px;color:#1a1a1a">9</a><span style="font:400 11.5px/1.3 Inter,sans-serif;color:rgba(0,0,0,.55)">Pricing — Basic vs Pro, differences stated as facts</span></div>
+
+<div id="9" style="width:1240px;background:#0A0908;border:1px solid rgba(0,0,0,.18);border-radius:14px;overflow:hidden;scroll-margin-top:16px">
+<div style="padding:56px 32px 36px;display:flex;flex-direction:column;align-items:center;gap:14px;border-bottom:1px solid #221F1C;background:#0D0C0B">
+<div style="font:400 40px/1.3 Newsreader,serif;color:#F5F1EA;letter-spacing:-0.01em">Two plans, one honest engine</div>
+<div style="font:400 17px/1.7 Inter,sans-serif;color:#B5AFA6;text-align:center;max-width:58ch">Both plans use the same sources and the same refusal to guess. Pro buys volume and tools, never better answers.</div>
+</div>
+
+<div style="padding:36px 32px 40px;display:grid;grid-template-columns:1fr 1fr;gap:20px">
+
+<div style="background:#141211;border:1px solid #2E2A26;border-radius:18px;padding:30px;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<span style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">Basic</span>
+<div style="display:flex;align-items:baseline;gap:10px">
+<span style="font:500 44px/1.15 Newsreader,serif;color:#F5F1EA">Free</span>
+<span style="font:400 15px/1.6 Inter,sans-serif;color:#7A746C">forever, no card</span>
+</div>
+<span style="font:400 15px/1.7 Inter,sans-serif;color:#B5AFA6;max-width:44ch">Enough to understand the songs you keep coming back to.</span>
+</div>
+<div style="height:1px;background:#221F1C"></div>
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:baseline;gap:12px"><span style="font:500 13px/1.5 'JetBrains Mono',monospace;color:#7FA87C;flex:none">✓</span><span style="font:400 16px/1.7 Inter,sans-serif;color:#B5AFA6"><span style="font-family:'JetBrains Mono',monospace;color:#F5F1EA">5</span> newly researched songs each month</span></div>
+<div style="display:flex;align-items:baseline;gap:12px"><span style="font:500 13px/1.5 'JetBrains Mono',monospace;color:#7FA87C;flex:none">✓</span><span style="font:400 16px/1.7 Inter,sans-serif;color:#B5AFA6">All three languages — English, हिंदी, Hinglish</span></div>
+<div style="display:flex;align-items:baseline;gap:12px"><span style="font:500 13px/1.5 'JetBrains Mono',monospace;color:#7FA87C;flex:none">✓</span><span style="font:400 16px/1.7 Inter,sans-serif;color:#B5AFA6">Line meanings, word meanings, song summary</span></div>
+<div style="display:flex;align-items:baseline;gap:12px"><span style="font:500 13px/1.5 'JetBrains Mono',monospace;color:#7FA87C;flex:none">✓</span><span style="font:400 16px/1.7 Inter,sans-serif;color:#B5AFA6">Full source list on every explanation</span></div>
+<div style="display:flex;align-items:baseline;gap:12px"><span style="font:500 13px/1.5 'JetBrains Mono',monospace;color:#7FA87C;flex:none">✓</span><span style="font:400 16px/1.7 Inter,sans-serif;color:#B5AFA6"><span style="font-family:'JetBrains Mono',monospace;color:#F5F1EA">20</span> saved items in your library</span></div>
+<div style="display:flex;align-items:baseline;gap:12px"><span style="font:500 13px/1.5 'JetBrains Mono',monospace;color:#7A746C;flex:none">—</span><span style="font:400 16px/1.7 Inter,sans-serif;color:#7A746C">No song chatbot</span></div>
+<div style="display:flex;align-items:baseline;gap:12px"><span style="font:500 13px/1.5 'JetBrains Mono',monospace;color:#7A746C;flex:none">—</span><span style="font:400 16px/1.7 Inter,sans-serif;color:#7A746C">No PDF or share-card export</span></div>
+</div>
+<div style="margin-top:auto;padding-top:8px">
+<span style="display:block;text-align:center;padding:14px 20px;border-radius:12px;border:1px solid #2E2A26;background:#1C1917;color:#B5AFA6;font:500 15px/1 Inter,sans-serif">You're on Basic</span>
+</div>
+</div>
+
+<div style="background:#1C1917;border:1px solid rgba(217,164,65,0.28);border-radius:18px;padding:30px;display:flex;flex-direction:column;gap:22px;box-shadow:0 22px 52px rgba(0,0,0,.45)">
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:center;gap:10px">
+<span style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#D9A441">Pro</span>
+<span style="padding:4px 9px;border-radius:999px;background:rgba(217,164,65,0.10);border:1px solid rgba(217,164,65,0.28);font:500 11px/1.3 Inter,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#D9A441">cancel anytime</span>
+</div>
+<div style="display:flex;align-items:baseline;gap:10px">
+<span style="font:500 44px/1.15 Newsreader,serif;color:#F5F1EA">₹<span style="font-family:'JetBrains Mono',monospace;font-size:40px">249</span></span>
+<span style="font:400 15px/1.6 Inter,sans-serif;color:#7A746C">per month · ₹<span style="font-family:'JetBrains Mono',monospace">2,490</span> yearly</span>
+</div>
+<span style="font:400 15px/1.7 Inter,sans-serif;color:#B5AFA6;max-width:44ch">For the listener who goes down the whole discography in one evening.</span>
+</div>
+<div style="height:1px;background:#2E2A26"></div>
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:baseline;gap:12px"><span style="font:500 13px/1.5 'JetBrains Mono',monospace;color:#D9A441;flex:none">✓</span><span style="font:400 16px/1.7 Inter,sans-serif;color:#F5F1EA">Unlimited research — no monthly ceiling</span></div>
+<div style="display:flex;align-items:baseline;gap:12px"><span style="font:500 13px/1.5 'JetBrains Mono',monospace;color:#D9A441;flex:none">✓</span><span style="font:400 16px/1.7 Inter,sans-serif;color:#F5F1EA">The song chatbot — ask follow-ups, still cited</span></div>
+<div style="display:flex;align-items:baseline;gap:12px"><span style="font:500 13px/1.5 'JetBrains Mono',monospace;color:#D9A441;flex:none">✓</span><span style="font:400 16px/1.7 Inter,sans-serif;color:#F5F1EA">Unlimited library, organised your way</span></div>
+<div style="display:flex;align-items:baseline;gap:12px"><span style="font:500 13px/1.5 'JetBrains Mono',monospace;color:#D9A441;flex:none">✓</span><span style="font:400 16px/1.7 Inter,sans-serif;color:#F5F1EA">Export as PDF or a share card</span></div>
+<div style="display:flex;align-items:baseline;gap:12px"><span style="font:500 13px/1.5 'JetBrains Mono',monospace;color:#7A746C;flex:none">·</span><span style="font:400 16px/1.7 Inter,sans-serif;color:#B5AFA6">Everything in Basic, unchanged</span></div>
+</div>
+<div style="margin-top:auto;padding-top:8px;display:flex;flex-direction:column;gap:10px">
+<span style="display:block;text-align:center;padding:14px 20px;border-radius:12px;background:#D9A441;color:#0A0908;font:600 15px/1 Inter,sans-serif">Upgrade to Pro</span>
+<span style="text-align:center;font:400 13px/1.6 Inter,sans-serif;color:#7A746C">Your <span style="font-family:'JetBrains Mono',monospace">20</span> saved items carry over</span>
+</div>
+</div>
+</div>
+
+<div style="padding:0 32px 44px">
+<div style="padding:22px 24px;background:#0D0C0B;border:1px solid #221F1C;border-radius:14px;display:flex;align-items:center;gap:18px">
+<span style="display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;background:#070606;border:1px solid #2E2A26;flex:none"><span style="width:7px;height:7px;border-radius:999px;background:#7FA87C"></span><span style="font:400 12.5px/1.4 Inter,sans-serif;color:#7FA87C">same on both plans</span></span>
+<span style="font:400 15px/1.7 Inter,sans-serif;color:#B5AFA6">Sources, the four-source bar, and the refusal to guess. If a song has thin material, Pro won't invent an answer either.</span>
+</div>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:baseline;gap:9px"><a href="#10" style="font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);border-radius:5px;color:#1a1a1a">10</a><span style="font:400 11.5px/1.3 Inter,sans-serif;color:rgba(0,0,0,.55)">Quota states — meter at 1 remaining, then the limit moment naming what was attempted</span></div>
+
+<div id="10" style="display:flex;flex-direction:column;gap:20px;scroll-margin-top:16px">
+
+<div style="width:1240px;background:#0A0908;border:1px solid rgba(0,0,0,.18);border-radius:14px;overflow:hidden">
+<div style="display:flex;align-items:center;gap:16px;padding:18px 32px;border-bottom:1px solid #221F1C">
+<span style="font:500 18px/1.2 Newsreader,serif;color:#F5F1EA;letter-spacing:-0.01em">LyricSense</span>
+<div style="flex:1"></div>
+<div style="display:flex;align-items:center;gap:10px;padding:7px 8px 7px 13px;background:#141211;border:1px solid rgba(217,164,65,0.28);border-radius:999px">
+<span style="display:flex;gap:3px"><span style="width:14px;height:4px;border-radius:2px;background:#D9A441"></span><span style="width:14px;height:4px;border-radius:2px;background:#2E2A26"></span><span style="width:14px;height:4px;border-radius:2px;background:#2E2A26"></span><span style="width:14px;height:4px;border-radius:2px;background:#2E2A26"></span><span style="width:14px;height:4px;border-radius:2px;background:#2E2A26"></span></span>
+<span style="font:400 12.5px/1.5 Inter,sans-serif;color:#B5AFA6"><span style="font-family:'JetBrains Mono',monospace;color:#D9A441">1</span> new song left this month</span>
+<span style="padding:6px 11px;border-radius:999px;background:rgba(217,164,65,0.10);border:1px solid rgba(217,164,65,0.28);font:500 12px/1 Inter,sans-serif;color:#D9A441">See Pro</span>
+</div>
+<span style="width:32px;height:32px;border-radius:999px;background:#1C1917;border:1px solid #2E2A26;flex:none"></span>
+</div>
+<div style="padding:22px 32px 26px;display:flex;align-items:center;gap:20px;justify-content:space-between;flex-wrap:wrap">
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font:400 20px/1.5 Newsreader,serif;color:#F5F1EA">One left — anything already in your library stays free to reopen.</div>
+<div style="font:400 14.5px/1.7 Inter,sans-serif;color:#B5AFA6">The counter only moves when we research a song that's new to you. It resets on <span style="font-family:'JetBrains Mono',monospace;color:#F5F1EA">1 Oct</span>.</div>
+</div>
+<span style="font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C;flex:none"><span style="font-family:'JetBrains Mono',monospace">4</span> of <span style="font-family:'JetBrains Mono',monospace">5</span> used · <span style="font-family:'JetBrains Mono',monospace">18</span> days left</span>
+</div>
+</div>
+
+<div style="width:1240px;background:#0A0908;border:1px solid rgba(0,0,0,.18);border-radius:14px;overflow:hidden;position:relative">
+<div style="display:flex;align-items:center;gap:16px;padding:18px 32px;border-bottom:1px solid #221F1C">
+<span style="font:500 18px/1.2 Newsreader,serif;color:#F5F1EA;letter-spacing:-0.01em">LyricSense</span>
+<div style="flex:1"></div>
+<div style="display:flex;align-items:center;gap:10px;padding:7px 13px;background:#141211;border:1px solid #2E2A26;border-radius:999px">
+<span style="display:flex;gap:3px"><span style="width:14px;height:4px;border-radius:2px;background:#2E2A26"></span><span style="width:14px;height:4px;border-radius:2px;background:#2E2A26"></span><span style="width:14px;height:4px;border-radius:2px;background:#2E2A26"></span><span style="width:14px;height:4px;border-radius:2px;background:#2E2A26"></span><span style="width:14px;height:4px;border-radius:2px;background:#2E2A26"></span></span>
+<span style="font:400 12.5px/1.5 Inter,sans-serif;color:#7A746C">All <span style="font-family:'JetBrains Mono',monospace">5</span> used · resets <span style="font-family:'JetBrains Mono',monospace">1 Oct</span></span>
+</div>
+<span style="width:32px;height:32px;border-radius:999px;background:#1C1917;border:1px solid #2E2A26;flex:none"></span>
+</div>
+
+<div style="position:relative;padding:40px 32px 48px;background:#0D0C0B">
+<div style="opacity:.28;display:flex;flex-direction:column;gap:10px;filter:blur(1.5px)">
+<div style="font:500 28px/1.2 Newsreader,serif;color:#F5F1EA">Khwaja Mere Khwaja</div>
+<div style="font:400 14px/1.6 Inter,sans-serif;color:#7A746C">A.R. Rahman · 2008 · Jodhaa Akbar</div>
+<div style="height:14px;width:62%;border-radius:6px;background:#1C1917;margin-top:12px"></div>
+<div style="height:14px;width:48%;border-radius:6px;background:#1C1917"></div>
+<div style="height:14px;width:70%;border-radius:6px;background:#1C1917"></div>
+</div>
+
+<div style="margin:-96px auto 0;position:relative;max-width:720px;background:#1C1917;border:1px solid #433D37;border-radius:18px;padding:30px;display:flex;flex-direction:column;gap:20px;box-shadow:0 28px 64px rgba(0,0,0,.6)">
+<div style="display:flex;align-items:center;gap:12px">
+<span style="display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;background:#070606;border:1px solid #2E2A26"><span style="width:7px;height:7px;border-radius:999px;background:#D9A441"></span><span style="font:400 12.5px/1.4 Inter,sans-serif;color:#D9A441">monthly limit reached</span></span>
+<span style="flex:1"></span>
+<span style="font:400 13px/1.6 Inter,sans-serif;color:#7A746C">✕</span>
+</div>
+
+<div style="font:400 28px/1.45 Newsreader,serif;color:#F5F1EA;max-width:34ch;text-wrap:pretty">You've used all <span style="font-family:'JetBrains Mono',monospace;font-size:26px">5</span> new songs for September.</div>
+
+<div style="padding:16px 18px;background:#141211;border:1px solid #2E2A26;border-radius:12px;display:flex;align-items:center;gap:16px">
+<span style="width:46px;height:46px;border-radius:8px;background:linear-gradient(145deg,#433D37 0%,#221F1C 100%);border:1px solid #2E2A26;flex:none"></span>
+<div style="display:flex;flex-direction:column;gap:4px">
+<span style="font:400 13px/1.5 Inter,sans-serif;color:#7A746C">You were trying to research</span>
+<span style="font:500 18px/1.4 Newsreader,serif;color:#F5F1EA">Khwaja Mere Khwaja <span style="font:400 14px/1.6 Inter,sans-serif;color:#7A746C">· A.R. Rahman, 2008</span></span>
+</div>
+</div>
+
+<div style="font:400 16px/1.7 Inter,sans-serif;color:#B5AFA6;max-width:60ch">Nothing you've already read is locked — your library and all three languages stay open. Two ways forward:</div>
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#141211;border:1px solid #2E2A26;border-radius:12px">
+<span style="font:500 13px/1.7 'JetBrains Mono',monospace;color:#7FA87C;flex:none">01</span>
+<div style="flex:1;display:flex;flex-direction:column;gap:4px">
+<span style="font:500 16px/1.6 Inter,sans-serif;color:#F5F1EA">Wait for <span style="font-family:'JetBrains Mono',monospace">1 Oct</span> — <span style="font-family:'JetBrains Mono',monospace">18</span> days</span>
+<span style="font:400 14.5px/1.7 Inter,sans-serif;color:#B5AFA6">We'll save this song to your queue and research it the moment your count resets.</span>
+</div>
+<span style="padding:11px 16px;border-radius:10px;border:1px solid #2E2A26;background:#1C1917;color:#B5AFA6;font:500 14px/1 Inter,sans-serif;flex:none">Queue it</span>
+</div>
+<div style="display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#141211;border:1px solid rgba(217,164,65,0.28);border-radius:12px">
+<span style="font:500 13px/1.7 'JetBrains Mono',monospace;color:#D9A441;flex:none">02</span>
+<div style="flex:1;display:flex;flex-direction:column;gap:4px">
+<span style="font:500 16px/1.6 Inter,sans-serif;color:#F5F1EA">Pro — ₹<span style="font-family:'JetBrains Mono',monospace">249</span>/month, no limit</span>
+<span style="font:400 14.5px/1.7 Inter,sans-serif;color:#B5AFA6">Also adds the chatbot, an unlimited library, and export. Same sources, same honesty.</span>
+</div>
+<span style="padding:11px 16px;border-radius:10px;background:#D9A441;color:#0A0908;font:600 14px/1 Inter,sans-serif;flex:none">See Pro</span>
+</div>
+</div>
+
+<div style="padding-top:6px;font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C">Or <span style="color:#B5AFA6">browse your library</span> — <span style="font-family:'JetBrains Mono',monospace">14</span> songs already explained.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<p style="margin:8px 0 20px;font:400 12px/1.6 Inter,sans-serif;color:rgba(0,0,0,.5)">Try next: “add a signed-out vs signed-in variant of <a href="#1">1</a>” · “show <a href="#2">2</a> with zero results” · “make <a href="#10">10</a> a slim inline banner instead of a modal”</p>
+</section>
+
+<section style="padding:16px 48px 44px;display:flex;flex-direction:column;gap:36px">
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:baseline;gap:9px"><a href="#3a" style="font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);border-radius:5px;color:#1a1a1a">3a</a><span style="font:400 11.5px/1.3 Inter,sans-serif;color:rgba(0,0,0,.55)">Song page — English mode · desktop 1240</span></div>
+
+<div id="3a" style="width:1240px;background:#0A0908;border:1px solid rgba(0,0,0,.18);border-radius:14px;overflow:hidden;scroll-margin-top:16px">
+
+<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:32px;padding:28px 32px 24px;border-bottom:1px solid #221F1C">
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="font:500 44px/1.15 Newsreader,serif;color:#F5F1EA;letter-spacing:-0.01em">Kun Faya Kun</div>
+<div style="display:flex;align-items:center;gap:14px">
+<span style="font:400 14px/1.6 Inter,sans-serif;color:#7A746C">A.R. Rahman · Javed Ali, Mohit Chauhan · <span style="font-family:'JetBrains Mono',monospace;font-size:13px">2011</span></span>
+<span style="width:1px;height:12px;background:#2E2A26"></span>
+<span style="display:inline-flex;align-items:center;gap:7px"><span style="width:7px;height:7px;border-radius:999px;background:#7FA87C"></span><span style="font:400 14px/1.6 Inter,sans-serif;color:#7FA87C"><span style="font-family:'JetBrains Mono',monospace;font-size:13px">6</span> sources</span></span>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:10px;padding-top:6px">
+<sc-if value="{{ showQuotaMeter }}" hint-placeholder-val="{{ true }}">
+<div style="display:flex;align-items:center;gap:9px;padding:7px 12px;background:#141211;border:1px solid #221F1C;border-radius:999px">
+<span style="display:flex;gap:3px"><span style="width:14px;height:4px;border-radius:2px;background:#D9A441"></span><span style="width:14px;height:4px;border-radius:2px;background:#D9A441"></span><span style="width:14px;height:4px;border-radius:2px;background:#D9A441"></span><span style="width:14px;height:4px;border-radius:2px;background:#2E2A26"></span><span style="width:14px;height:4px;border-radius:2px;background:#2E2A26"></span></span>
+<span style="font:400 12.5px/1.5 Inter,sans-serif;color:#7A746C"><span style="font-family:'JetBrains Mono',monospace">3</span> of <span style="font-family:'JetBrains Mono',monospace">5</span> new songs left</span>
+</div>
+</sc-if>
+<div style="display:flex;gap:2px;padding:3px;background:#141211;border:1px solid #2E2A26;border-radius:999px">
+<span style="padding:7px 15px;border-radius:999px;background:rgba(217,164,65,0.10);border:1px solid rgba(217,164,65,0.28);font:500 13px/1.2 Inter,sans-serif;color:#D9A441">English</span>
+<span style="padding:8px 15px;border-radius:999px;border:1px solid transparent;font:500 13px/1.2 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">हिंदी</span>
+<span style="padding:8px 15px;border-radius:999px;border:1px solid transparent;font:500 13px/1.2 Inter,sans-serif;color:#7A746C">Hinglish</span>
+</div>
+<span style="width:38px;height:38px;border-radius:10px;border:1px solid #2E2A26;background:#141211;display:flex;align-items:center;justify-content:center;color:#7A746C;font-size:15px">⚙</span>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch">
+
+<div style="padding:32px;display:flex;flex-direction:column;gap:4px;border-right:1px solid #221F1C">
+<div style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C;margin-bottom:12px">Lyric</div>
+
+<div style="padding:14px 18px;border-left:2px solid transparent;font:400 21px/1.6 Newsreader,serif;color:#B5AFA6">Ya nizaam-ud-din auliya</div>
+
+<div style="padding:18px;border-left:2px solid #D9A441;border-radius:0 10px 10px 0;background:#1C1917;display:flex;flex-direction:column;gap:10px">
+<div style="font:400 28px/1.55 Newsreader,serif;color:#F5F1EA">
+<span style="padding:4px 6px;margin:-4px -2px;border-radius:6px;background:rgba(217,164,65,0.10);box-shadow:inset 0 -1px 0 rgba(217,164,65,0.28);color:#F5F1EA">Kun</span>
+<span style="padding:4px 6px;border-bottom:1px dotted #4E4942">faya</span>
+<span style="padding:4px 6px;border-bottom:1px dotted #4E4942">kun</span>
+</div>
+<div style="font:400 12.5px/1.5 Inter,sans-serif;color:#7A746C">Tap any word for its meaning in this song</div>
+</div>
+
+<div style="padding:14px 18px;border-left:2px solid transparent;font:400 21px/1.6 Newsreader,serif;color:#B5AFA6">Maula maula</div>
+<div style="padding:14px 18px;border-left:2px solid transparent;font:400 21px/1.6 Newsreader,serif;color:#B5AFA6">Tere naam pe</div>
+<div style="padding:14px 18px;border-left:2px solid transparent;font:400 21px/1.6 Newsreader,serif;color:#B5AFA6">Fana hua hun</div>
+<div style="padding:14px 18px;border-left:2px solid transparent;font:400 21px/1.6 Newsreader,serif;color:#B5AFA6">Ab main nahi hun</div>
+<div style="padding:14px 18px;border-left:2px solid transparent;font:400 21px/1.6 Newsreader,serif;color:#7A746C">Kun faya kun</div>
+</div>
+
+<div style="padding:32px;display:flex;flex-direction:column;gap:0;background:#0D0C0B">
+<div style="background:#141211;border:1px solid #221F1C;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+<span style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">Meaning · line 2</span>
+<span style="display:inline-flex;align-items:center;gap:7px"><span style="width:7px;height:7px;border-radius:999px;background:#7FA87C"></span><span style="font:400 12.5px/1.5 Inter,sans-serif;color:#7FA87C">grounded · <span style="font-family:'JetBrains Mono',monospace">4</span> sources</span></span>
+</div>
+
+<div style="font:400 18px/1.65 Newsreader,serif;color:#F5F1EA">“Kun faya kun”</div>
+
+<div style="font:400 16px/1.7 Inter,sans-serif;color:#B5AFA6;max-width:66ch">A phrase carried into filmi verse from scripture: <em style="font-family:Newsreader,serif;font-size:17px;color:#F5F1EA;font-style:italic">be, and it is</em>. Creation needs no labour — the wish alone is the act. In this song it lands less as theology than as relief: the moment you stop struggling and hand yourself over, things begin to move on their own.</div>
+
+<div style="height:1px;background:#221F1C"></div>
+
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">Words in this line</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<span style="padding:8px 14px;border-radius:999px;background:rgba(217,164,65,0.10);border:1px solid rgba(217,164,65,0.28);font:400 16px/1.2 Newsreader,serif;color:#D9A441">Kun</span>
+<span style="padding:8px 14px;border-radius:999px;background:#1C1917;border:1px solid #2E2A26;font:400 16px/1.2 Newsreader,serif;color:#B5AFA6">Faya</span>
+<span style="padding:8px 14px;border-radius:999px;background:#1C1917;border:1px solid #2E2A26;font:400 16px/1.2 Newsreader,serif;color:#B5AFA6">Maula</span>
+<span style="padding:8px 14px;border-radius:999px;background:#1C1917;border:1px solid #2E2A26;font:400 16px/1.2 Newsreader,serif;color:#B5AFA6">Auliya</span>
+<span style="padding:8px 14px;border-radius:999px;background:#1C1917;border:1px solid #2E2A26;font:400 16px/1.2 Newsreader,serif;color:#B5AFA6">Fana</span>
+</div>
+</div>
+
+<div style="background:#070606;border:1px solid #221F1C;border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:baseline;gap:12px">
+<span style="font:500 24px/1.3 Newsreader,serif;color:#F5F1EA">Kun</span>
+<span style="font:400 14px/1.6 Inter,sans-serif;color:#7A746C">verb · command form</span>
+</div>
+<div style="font:400 16px/1.7 Inter,sans-serif;color:#B5AFA6;max-width:62ch">“Be.” One syllable that starts everything. It is sung here as an exhale rather than an order — the surrender is the point, not the power.</div>
+<div style="font:400 14px/1.6 Inter,sans-serif;color:#7A746C;padding-top:4px;border-top:1px solid #221F1C;max-width:62ch">In this song it carries the whole refrain. In ghazal lyrics the same word usually appears inside a longer phrase and reads far more plainly.</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">Built from</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;background:#1C1917;border:1px solid #2E2A26;border-radius:999px"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13.5px/1 Inter,sans-serif;color:#B5AFA6">rekhta.org</span><span style="font:500 11px/1 Inter,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#7A746C">lyrics</span></span>
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;background:#1C1917;border:1px solid #2E2A26;border-radius:999px"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13.5px/1 Inter,sans-serif;color:#B5AFA6">scroll.in</span><span style="font:500 11px/1 Inter,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#7A746C">interview</span></span>
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;background:#1C1917;border:1px solid #2E2A26;border-radius:999px"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13.5px/1 Inter,sans-serif;color:#B5AFA6">reddit.com</span><span style="font:500 11px/1 Inter,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#7A746C">forum</span></span>
+<span style="display:inline-flex;align-items:center;gap:6px;padding:7px 12px;background:transparent;border:1px solid #221F1C;border-radius:999px;font:400 13.5px/1 Inter,sans-serif;color:#7A746C">+1 more</span>
+</div>
+</div>
+</div>
+
+<div style="position:sticky;bottom:0;margin-top:16px;padding-top:16px;background:linear-gradient(180deg,rgba(13,12,11,0) 0%,#0D0C0B 40%)">
+<div style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:#1C1917;border:1px solid #2E2A26;border-radius:12px">
+<span style="flex:1;font:400 15px/1.5 Inter,sans-serif;color:#7A746C">Ask about this song…</span>
+<span style="padding:5px 9px;border-radius:999px;background:#D9A441;color:#0A0908;font:600 11px/1 Inter,sans-serif;letter-spacing:.08em">PRO</span>
+</div>
+</div>
+</div>
+</div>
+
+<div style="padding:32px 32px 40px;border-top:1px solid #221F1C;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:center;gap:14px">
+<span style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">What the whole song means</span>
+<span style="flex:1;height:1px;background:#221F1C"></span>
+</div>
+<div style="font:400 18px/1.65 Newsreader,serif;color:#F5F1EA;max-width:68ch">It is a song about letting go of the self — the singer arrives worn out, and leaves having stopped insisting on being anyone in particular.</div>
+<div style="font:400 16px/1.7 Inter,sans-serif;color:#B5AFA6;max-width:68ch">The refrain repeats a phrase about divine will so many times that it stops being a claim and becomes a rhythm to breathe with. The verses name a shrine and its saint, which places the song in a specific devotional practice rather than a general spirituality; the qawwali rhythm underneath does the same work. By the end the word <em style="font-family:Newsreader,serif;font-size:17px;color:#F5F1EA;font-style:italic">fana</em> — being dissolved — is offered as a relief rather than a loss.</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;padding-top:6px">
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;background:#141211;border:1px solid #2E2A26;border-radius:999px"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13.5px/1 Inter,sans-serif;color:#B5AFA6">scroll.in</span><span style="font:500 11px/1 Inter,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#7A746C">interview</span></span>
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;background:#141211;border:1px solid #2E2A26;border-radius:999px"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13.5px/1 Inter,sans-serif;color:#B5AFA6">sufipoetry.blog</span><span style="font:500 11px/1 Inter,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#7A746C">blog</span></span>
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;background:#141211;border:1px solid #2E2A26;border-radius:999px"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13.5px/1 Inter,sans-serif;color:#B5AFA6">thehindu.com</span><span style="font:500 11px/1 Inter,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#7A746C">interview</span></span>
+</div>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:baseline;gap:9px"><a href="#3b" style="font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);border-radius:5px;color:#1a1a1a">3b</a><span style="font:400 11.5px/1.3 Inter,sans-serif;color:rgba(0,0,0,.55)">Song page — Hindi mode · identical layout, Devanagari set in Tiro Devanagari Hindi, +0.1 line-height</span></div>
+
+<div id="3b" style="width:1240px;background:#0A0908;border:1px solid rgba(0,0,0,.18);border-radius:14px;overflow:hidden;scroll-margin-top:16px">
+
+<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:32px;padding:28px 32px 24px;border-bottom:1px solid #221F1C">
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="font:400 44px/1.25 'Tiro Devanagari Hindi',serif;color:#F5F1EA">कुन फ़या कुन</div>
+<div style="display:flex;align-items:center;gap:14px">
+<span style="font:400 14px/1.7 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">ए. आर. रहमान · जावेद अली, मोहित चौहान · <span style="font-family:'JetBrains Mono',monospace;font-size:13px">2011</span></span>
+<span style="width:1px;height:12px;background:#2E2A26"></span>
+<span style="display:inline-flex;align-items:center;gap:7px"><span style="width:7px;height:7px;border-radius:999px;background:#7FA87C"></span><span style="font:400 14px/1.7 'Noto Sans Devanagari',Inter,sans-serif;color:#7FA87C"><span style="font-family:'JetBrains Mono',monospace;font-size:13px">6</span> स्रोत</span></span>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:10px;padding-top:6px">
+<sc-if value="{{ showQuotaMeter }}" hint-placeholder-val="{{ true }}">
+<div style="display:flex;align-items:center;gap:9px;padding:7px 12px;background:#141211;border:1px solid #221F1C;border-radius:999px">
+<span style="display:flex;gap:3px"><span style="width:14px;height:4px;border-radius:2px;background:#D9A441"></span><span style="width:14px;height:4px;border-radius:2px;background:#D9A441"></span><span style="width:14px;height:4px;border-radius:2px;background:#D9A441"></span><span style="width:14px;height:4px;border-radius:2px;background:#2E2A26"></span><span style="width:14px;height:4px;border-radius:2px;background:#2E2A26"></span></span>
+<span style="font:400 12.5px/1.6 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">इस महीने <span style="font-family:'JetBrains Mono',monospace">5</span> में से <span style="font-family:'JetBrains Mono',monospace">3</span> बाक़ी</span>
+</div>
+</sc-if>
+<div style="display:flex;gap:2px;padding:3px;background:#141211;border:1px solid #2E2A26;border-radius:999px">
+<span style="padding:8px 15px;border-radius:999px;border:1px solid transparent;font:500 13px/1.2 Inter,sans-serif;color:#7A746C">English</span>
+<span style="padding:7px 15px;border-radius:999px;background:rgba(217,164,65,0.10);border:1px solid rgba(217,164,65,0.28);font:500 13px/1.3 'Noto Sans Devanagari',Inter,sans-serif;color:#D9A441">हिंदी</span>
+<span style="padding:8px 15px;border-radius:999px;border:1px solid transparent;font:500 13px/1.2 Inter,sans-serif;color:#7A746C">Hinglish</span>
+</div>
+<span style="width:38px;height:38px;border-radius:10px;border:1px solid #2E2A26;background:#141211;display:flex;align-items:center;justify-content:center;color:#7A746C;font-size:15px">⚙</span>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch">
+<div style="padding:32px;display:flex;flex-direction:column;gap:4px;border-right:1px solid #221F1C">
+<div style="font:500 12.5px/1.6 'Noto Sans Devanagari',Inter,sans-serif;letter-spacing:.06em;color:#7A746C;margin-bottom:12px">बोल</div>
+
+<div style="padding:14px 18px;border-left:2px solid transparent;font:400 21px/1.7 'Tiro Devanagari Hindi',serif;color:#B5AFA6">या निज़ामुद्दीन औलिया</div>
+
+<div style="padding:18px;border-left:2px solid #D9A441;border-radius:0 10px 10px 0;background:#1C1917;display:flex;flex-direction:column;gap:10px">
+<div style="font:400 28px/1.65 'Tiro Devanagari Hindi',serif;color:#F5F1EA">
+<span style="padding:5px 7px;margin:-5px -3px;border-radius:6px;background:rgba(217,164,65,0.10);box-shadow:inset 0 -1px 0 rgba(217,164,65,0.28);color:#F5F1EA">कुन</span>
+<span style="padding:5px 7px;border-bottom:1px dotted #4E4942">फ़या</span>
+<span style="padding:5px 7px;border-bottom:1px dotted #4E4942">कुन</span>
+</div>
+<div style="font:400 12.5px/1.6 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">किसी भी शब्द पर टैप करें, उसका मतलब देखें</div>
+</div>
+
+<div style="padding:14px 18px;border-left:2px solid transparent;font:400 21px/1.7 'Tiro Devanagari Hindi',serif;color:#B5AFA6">मौला मौला</div>
+<div style="padding:14px 18px;border-left:2px solid transparent;font:400 21px/1.7 'Tiro Devanagari Hindi',serif;color:#B5AFA6">तेरे नाम पे</div>
+<div style="padding:14px 18px;border-left:2px solid transparent;font:400 21px/1.7 'Tiro Devanagari Hindi',serif;color:#B5AFA6">फ़ना हुआ हूँ</div>
+<div style="padding:14px 18px;border-left:2px solid transparent;font:400 21px/1.7 'Tiro Devanagari Hindi',serif;color:#B5AFA6">अब मैं नहीं हूँ</div>
+<div style="padding:14px 18px;border-left:2px solid transparent;font:400 21px/1.7 'Tiro Devanagari Hindi',serif;color:#7A746C">कुन फ़या कुन</div>
+</div>
+
+<div style="padding:32px;display:flex;flex-direction:column;gap:0;background:#0D0C0B">
+<div style="background:#141211;border:1px solid #221F1C;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+<span style="font:500 12.5px/1.6 'Noto Sans Devanagari',Inter,sans-serif;letter-spacing:.06em;color:#7A746C">मतलब · पंक्ति <span style="font-family:'JetBrains Mono',monospace">2</span></span>
+<span style="display:inline-flex;align-items:center;gap:7px"><span style="width:7px;height:7px;border-radius:999px;background:#7FA87C"></span><span style="font:400 12.5px/1.6 'Noto Sans Devanagari',Inter,sans-serif;color:#7FA87C">स्रोतों पर आधारित · <span style="font-family:'JetBrains Mono',monospace">4</span></span></span>
+</div>
+
+<div style="font:400 18px/1.75 'Tiro Devanagari Hindi',serif;color:#F5F1EA">“कुन फ़या कुन”</div>
+
+<div style="font:400 16px/1.8 'Noto Sans Devanagari',Inter,sans-serif;color:#B5AFA6;max-width:60ch">धर्मग्रंथ से फ़िल्मी काव्य में आया एक वाक्य — <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:17px;color:#F5F1EA">हो जा, तो वह हो जाता है</span>। रचना के लिए मेहनत नहीं, बस इच्छा काफ़ी है। गाने में यह किसी धार्मिक तर्क की तरह नहीं, राहत की तरह आता है: जिस पल आप लड़ना छोड़कर ख़ुद को सौंप देते हैं, चीज़ें अपने-आप चलने लगती हैं।</div>
+
+<div style="height:1px;background:#221F1C"></div>
+
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="font:500 12.5px/1.6 'Noto Sans Devanagari',Inter,sans-serif;letter-spacing:.06em;color:#7A746C">इस पंक्ति के शब्द</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<span style="padding:8px 14px;border-radius:999px;background:rgba(217,164,65,0.10);border:1px solid rgba(217,164,65,0.28);font:400 16px/1.4 'Tiro Devanagari Hindi',serif;color:#D9A441">कुन</span>
+<span style="padding:8px 14px;border-radius:999px;background:#1C1917;border:1px solid #2E2A26;font:400 16px/1.4 'Tiro Devanagari Hindi',serif;color:#B5AFA6">फ़या</span>
+<span style="padding:8px 14px;border-radius:999px;background:#1C1917;border:1px solid #2E2A26;font:400 16px/1.4 'Tiro Devanagari Hindi',serif;color:#B5AFA6">मौला</span>
+<span style="padding:8px 14px;border-radius:999px;background:#1C1917;border:1px solid #2E2A26;font:400 16px/1.4 'Tiro Devanagari Hindi',serif;color:#B5AFA6">औलिया</span>
+<span style="padding:8px 14px;border-radius:999px;background:#1C1917;border:1px solid #2E2A26;font:400 16px/1.4 'Tiro Devanagari Hindi',serif;color:#B5AFA6">फ़ना</span>
+</div>
+</div>
+
+<div style="background:#070606;border:1px solid #221F1C;border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:baseline;gap:12px">
+<span style="font:400 24px/1.4 'Tiro Devanagari Hindi',serif;color:#F5F1EA">कुन</span>
+<span style="font:400 14px/1.7 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">क्रिया · आदेश रूप</span>
+</div>
+<div style="font:400 16px/1.8 'Noto Sans Devanagari',Inter,sans-serif;color:#B5AFA6;max-width:58ch">“हो जा।” एक ही अक्षर, जिससे सब कुछ शुरू होता है। यहाँ इसे आदेश की तरह नहीं, एक साँस छोड़ने की तरह गाया गया है — बात ताक़त की नहीं, समर्पण की है।</div>
+<div style="font:400 14px/1.7 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C;padding-top:4px;border-top:1px solid #221F1C;max-width:58ch">इस गाने में यही शब्द पूरे मुखड़े को सँभालता है। ग़ज़लों में यह आमतौर पर लंबे वाक्य के भीतर आता है और कहीं ज़्यादा सादा लगता है।</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="font:500 12.5px/1.6 'Noto Sans Devanagari',Inter,sans-serif;letter-spacing:.06em;color:#7A746C">किन स्रोतों से</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;background:#1C1917;border:1px solid #2E2A26;border-radius:999px"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13.5px/1 Inter,sans-serif;color:#B5AFA6">rekhta.org</span><span style="font:500 11px/1.4 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">बोल</span></span>
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;background:#1C1917;border:1px solid #2E2A26;border-radius:999px"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13.5px/1 Inter,sans-serif;color:#B5AFA6">scroll.in</span><span style="font:500 11px/1.4 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">इंटरव्यू</span></span>
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;background:#1C1917;border:1px solid #2E2A26;border-radius:999px"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13.5px/1 Inter,sans-serif;color:#B5AFA6">reddit.com</span><span style="font:500 11px/1.4 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">चर्चा</span></span>
+<span style="display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border:1px solid #221F1C;border-radius:999px;font:400 13.5px/1.4 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">+1 और</span>
+</div>
+</div>
+</div>
+
+<div style="position:sticky;bottom:0;margin-top:16px;padding-top:16px;background:linear-gradient(180deg,rgba(13,12,11,0) 0%,#0D0C0B 40%)">
+<div style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:#1C1917;border:1px solid #2E2A26;border-radius:12px">
+<span style="flex:1;font:400 15px/1.7 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">इस गाने के बारे में पूछें…</span>
+<span style="padding:5px 9px;border-radius:999px;background:#D9A441;color:#0A0908;font:600 11px/1 Inter,sans-serif;letter-spacing:.08em">PRO</span>
+</div>
+</div>
+</div>
+</div>
+
+<div style="padding:32px 32px 40px;border-top:1px solid #221F1C;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:center;gap:14px">
+<span style="font:500 12.5px/1.6 'Noto Sans Devanagari',Inter,sans-serif;letter-spacing:.06em;color:#7A746C">पूरे गाने का मतलब</span>
+<span style="flex:1;height:1px;background:#221F1C"></span>
+</div>
+<div style="font:400 18px/1.75 'Tiro Devanagari Hindi',serif;color:#F5F1EA;max-width:62ch">यह गाना ख़ुद को छोड़ देने के बारे में है — गाने वाला थका हुआ आता है, और जाते-जाते कोई ख़ास बने रहने की ज़िद छोड़ देता है।</div>
+<div style="font:400 16px/1.8 'Noto Sans Devanagari',Inter,sans-serif;color:#B5AFA6;max-width:62ch">मुखड़ा ईश्वरीय इच्छा की बात इतनी बार दोहराता है कि वह दावा नहीं रह जाता, साँस लेने की लय बन जाता है। अंतरे एक दरगाह और उसके संत का नाम लेते हैं, जिससे गाना किसी आम अध्यात्म का नहीं, एक ख़ास भक्ति-परंपरा का हो जाता है; नीचे बजती क़व्वाली की लय भी यही करती है। आख़िर में <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:17px;color:#F5F1EA">फ़ना</span> — मिट जाना — नुक़सान नहीं, राहत की तरह पेश होता है।</div>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:baseline;gap:9px"><a href="#3c" style="font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);border-radius:5px;color:#1a1a1a">3c</a><span style="font:400 11.5px/1.3 Inter,sans-serif;color:rgba(0,0,0,.55)">Song page — Hinglish mode · Latin script, Hindi language</span></div>
+
+<div id="3c" style="width:1240px;background:#0A0908;border:1px solid rgba(0,0,0,.18);border-radius:14px;overflow:hidden;scroll-margin-top:16px">
+
+<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:32px;padding:28px 32px 24px;border-bottom:1px solid #221F1C">
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="font:500 44px/1.15 Newsreader,serif;color:#F5F1EA;letter-spacing:-0.01em">Kun Faya Kun</div>
+<div style="display:flex;align-items:center;gap:14px">
+<span style="font:400 14px/1.6 Inter,sans-serif;color:#7A746C">A.R. Rahman · Javed Ali, Mohit Chauhan · <span style="font-family:'JetBrains Mono',monospace;font-size:13px">2011</span></span>
+<span style="width:1px;height:12px;background:#2E2A26"></span>
+<span style="display:inline-flex;align-items:center;gap:7px"><span style="width:7px;height:7px;border-radius:999px;background:#7FA87C"></span><span style="font:400 14px/1.6 Inter,sans-serif;color:#7FA87C"><span style="font-family:'JetBrains Mono',monospace;font-size:13px">6</span> source</span></span>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:10px;padding-top:6px">
+<div style="display:flex;gap:2px;padding:3px;background:#141211;border:1px solid #2E2A26;border-radius:999px">
+<span style="padding:8px 15px;border-radius:999px;border:1px solid transparent;font:500 13px/1.2 Inter,sans-serif;color:#7A746C">English</span>
+<span style="padding:8px 15px;border-radius:999px;border:1px solid transparent;font:500 13px/1.3 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">हिंदी</span>
+<span style="padding:7px 15px;border-radius:999px;background:rgba(217,164,65,0.10);border:1px solid rgba(217,164,65,0.28);font:500 13px/1.2 Inter,sans-serif;color:#D9A441">Hinglish</span>
+</div>
+<span style="width:38px;height:38px;border-radius:10px;border:1px solid #2E2A26;background:#141211;display:flex;align-items:center;justify-content:center;color:#7A746C;font-size:15px">⚙</span>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch">
+<div style="padding:32px;display:flex;flex-direction:column;gap:4px;border-right:1px solid #221F1C">
+<div style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C;margin-bottom:12px">Bol</div>
+<div style="padding:14px 18px;border-left:2px solid transparent;font:400 21px/1.6 Newsreader,serif;color:#B5AFA6">Ya nizaam-ud-din auliya</div>
+<div style="padding:18px;border-left:2px solid #D9A441;border-radius:0 10px 10px 0;background:#1C1917;display:flex;flex-direction:column;gap:10px">
+<div style="font:400 28px/1.55 Newsreader,serif;color:#F5F1EA">
+<span style="padding:4px 6px;margin:-4px -2px;border-radius:6px;background:rgba(217,164,65,0.10);box-shadow:inset 0 -1px 0 rgba(217,164,65,0.28);color:#F5F1EA">Kun</span>
+<span style="padding:4px 6px;border-bottom:1px dotted #4E4942">faya</span>
+<span style="padding:4px 6px;border-bottom:1px dotted #4E4942">kun</span>
+</div>
+<div style="font:400 12.5px/1.5 Inter,sans-serif;color:#7A746C">Kisi bhi shabd par tap karein</div>
+</div>
+<div style="padding:14px 18px;border-left:2px solid transparent;font:400 21px/1.6 Newsreader,serif;color:#B5AFA6">Maula maula</div>
+<div style="padding:14px 18px;border-left:2px solid transparent;font:400 21px/1.6 Newsreader,serif;color:#B5AFA6">Tere naam pe</div>
+<div style="padding:14px 18px;border-left:2px solid transparent;font:400 21px/1.6 Newsreader,serif;color:#B5AFA6">Fana hua hun</div>
+<div style="padding:14px 18px;border-left:2px solid transparent;font:400 21px/1.6 Newsreader,serif;color:#B5AFA6">Ab main nahi hun</div>
+<div style="padding:14px 18px;border-left:2px solid transparent;font:400 21px/1.6 Newsreader,serif;color:#7A746C">Kun faya kun</div>
+</div>
+
+<div style="padding:32px;display:flex;flex-direction:column;gap:0;background:#0D0C0B">
+<div style="background:#141211;border:1px solid #221F1C;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+<span style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">Matlab · line <span style="font-family:'JetBrains Mono',monospace">2</span></span>
+<span style="display:inline-flex;align-items:center;gap:7px"><span style="width:7px;height:7px;border-radius:999px;background:#7FA87C"></span><span style="font:400 12.5px/1.5 Inter,sans-serif;color:#7FA87C">grounded · <span style="font-family:'JetBrains Mono',monospace">4</span> source</span></span>
+</div>
+<div style="font:400 18px/1.65 Newsreader,serif;color:#F5F1EA">“Kun faya kun”</div>
+<div style="font:400 16px/1.7 Inter,sans-serif;color:#B5AFA6;max-width:66ch">Dharmgranth se filmi shayari mein aaya ek jumla — <em style="font-family:Newsreader,serif;font-size:17px;color:#F5F1EA;font-style:italic">ho ja, aur woh ho jaata hai</em>. Banane ke liye mehnat nahi, sirf ichha kaafi hai. Gaane mein yeh kisi dharmik tark ki tarah nahi, raahat ki tarah aata hai: jis pal aap ladna chhod kar khud ko saunp dete hain, cheezein apne-aap chalne lagti hain.</div>
+<div style="height:1px;background:#221F1C"></div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">Is line ke shabd</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<span style="padding:8px 14px;border-radius:999px;background:rgba(217,164,65,0.10);border:1px solid rgba(217,164,65,0.28);font:400 16px/1.2 Newsreader,serif;color:#D9A441">Kun</span>
+<span style="padding:8px 14px;border-radius:999px;background:#1C1917;border:1px solid #2E2A26;font:400 16px/1.2 Newsreader,serif;color:#B5AFA6">Faya</span>
+<span style="padding:8px 14px;border-radius:999px;background:#1C1917;border:1px solid #2E2A26;font:400 16px/1.2 Newsreader,serif;color:#B5AFA6">Maula</span>
+<span style="padding:8px 14px;border-radius:999px;background:#1C1917;border:1px solid #2E2A26;font:400 16px/1.2 Newsreader,serif;color:#B5AFA6">Auliya</span>
+<span style="padding:8px 14px;border-radius:999px;background:#1C1917;border:1px solid #2E2A26;font:400 16px/1.2 Newsreader,serif;color:#B5AFA6">Fana</span>
+</div>
+</div>
+<div style="background:#070606;border:1px solid #221F1C;border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:baseline;gap:12px">
+<span style="font:500 24px/1.3 Newsreader,serif;color:#F5F1EA">Kun</span>
+<span style="font:400 14px/1.6 Inter,sans-serif;color:#7A746C">kriya · aadesh roop</span>
+</div>
+<div style="font:400 16px/1.7 Inter,sans-serif;color:#B5AFA6;max-width:62ch">“Ho ja.” Ek hi akshar, jisse sab kuch shuru hota hai. Yahaan ise aadesh ki tarah nahi, ek saans chhodne ki tarah gaya gaya hai — baat taaqat ki nahi, samarpan ki hai.</div>
+<div style="font:400 14px/1.6 Inter,sans-serif;color:#7A746C;padding-top:4px;border-top:1px solid #221F1C;max-width:62ch">Is gaane mein yahi shabd poore mukhde ko sambhaalta hai. Ghazalon mein yeh aam taur par lambe vaakya ke andar aata hai aur kaafi saada lagta hai.</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">Kin sources se</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;background:#1C1917;border:1px solid #2E2A26;border-radius:999px"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13.5px/1 Inter,sans-serif;color:#B5AFA6">rekhta.org</span><span style="font:500 11px/1 Inter,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#7A746C">bol</span></span>
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;background:#1C1917;border:1px solid #2E2A26;border-radius:999px"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13.5px/1 Inter,sans-serif;color:#B5AFA6">scroll.in</span><span style="font:500 11px/1 Inter,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#7A746C">interview</span></span>
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;background:#1C1917;border:1px solid #2E2A26;border-radius:999px"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13.5px/1 Inter,sans-serif;color:#B5AFA6">reddit.com</span><span style="font:500 11px/1 Inter,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#7A746C">forum</span></span>
+</div>
+</div>
+</div>
+<div style="position:sticky;bottom:0;margin-top:16px;padding-top:16px;background:linear-gradient(180deg,rgba(13,12,11,0) 0%,#0D0C0B 40%)">
+<div style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:#1C1917;border:1px solid #2E2A26;border-radius:12px">
+<span style="flex:1;font:400 15px/1.5 Inter,sans-serif;color:#7A746C">Is gaane ke baare mein poochhein…</span>
+<span style="padding:5px 9px;border-radius:999px;background:#D9A441;color:#0A0908;font:600 11px/1 Inter,sans-serif;letter-spacing:.08em">PRO</span>
+</div>
+</div>
+</div>
+</div>
+
+<div style="padding:32px 32px 40px;border-top:1px solid #221F1C;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:center;gap:14px">
+<span style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">Poore gaane ka matlab</span>
+<span style="flex:1;height:1px;background:#221F1C"></span>
+</div>
+<div style="font:400 18px/1.65 Newsreader,serif;color:#F5F1EA;max-width:68ch">Yeh gaana khud ko chhod dene ke baare mein hai — gaane wala thaka hua aata hai, aur jaate-jaate koi khaas bane rehne ki zid chhod deta hai.</div>
+<div style="font:400 16px/1.7 Inter,sans-serif;color:#B5AFA6;max-width:68ch">Mukhda ishwariya ichha ki baat itni baar dohraata hai ki woh daawa nahi rehta, saans lene ki lay ban jaata hai. Antare ek dargah aur uske sant ka naam lete hain, jisse gaana kisi aam adhyatm ka nahi, ek khaas bhakti-parampara ka ho jaata hai. Aakhir mein <em style="font-family:Newsreader,serif;font-size:17px;color:#F5F1EA;font-style:italic">fana</em> — mit jaana — nuksaan nahi, raahat ki tarah pesh hota hai.</div>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:baseline;gap:9px"><a href="#4" style="font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);border-radius:5px;color:#1a1a1a">4</a><span style="font:400 11.5px/1.3 Inter,sans-serif;color:rgba(0,0,0,.55)">Song page — mobile · meaning becomes a bottom sheet · word targets are 44px tall via padding, text stays large</span></div>
+
+<div id="4" style="display:flex;gap:28px;flex-wrap:wrap;scroll-margin-top:16px">
+
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="width:390px;height:844px;background:#0A0908;border:1px solid #2E2A26;border-radius:38px;overflow:hidden;position:relative;display:flex;flex-direction:column">
+<div style="display:flex;align-items:center;justify-content:space-between;padding:14px 26px 6px;font:500 13px/1 'JetBrains Mono',monospace;color:#B5AFA6"><span>9:41</span><span style="display:flex;gap:5px"><span style="width:16px;height:9px;border:1px solid #4E4942;border-radius:2px"></span></span></div>
+<div style="padding:14px 20px 16px;border-bottom:1px solid #221F1C;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+<div style="font:500 26px/1.2 Newsreader,serif;color:#F5F1EA">Kun Faya Kun</div>
+<span style="font:400 13px/1.4 Inter,sans-serif;color:#7A746C">2011</span>
+</div>
+<div style="display:flex;gap:2px;padding:3px;background:#141211;border:1px solid #2E2A26;border-radius:999px">
+<span style="flex:1;text-align:center;padding:9px 0;border-radius:999px;background:rgba(217,164,65,0.10);border:1px solid rgba(217,164,65,0.28);font:500 13px/1.2 Inter,sans-serif;color:#D9A441">English</span>
+<span style="flex:1;text-align:center;padding:10px 0;font:500 13px/1.3 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">हिंदी</span>
+<span style="flex:1;text-align:center;padding:10px 0;font:500 13px/1.2 Inter,sans-serif;color:#7A746C">Hinglish</span>
+</div>
+</div>
+<div style="flex:1;padding:16px 12px;display:flex;flex-direction:column;gap:2px;overflow:hidden">
+<div style="padding:12px 10px;font:400 21px/1.6 Newsreader,serif;color:#B5AFA6;min-height:44px;display:flex;align-items:center">Ya nizaam-ud-din auliya</div>
+<div style="padding:14px 12px;border-left:2px solid #D9A441;border-radius:0 10px 10px 0;background:#1C1917;font:400 24px/1.55 Newsreader,serif;color:#F5F1EA">
+<span style="display:inline-block;padding:10px 8px;margin:-4px 0;border-radius:6px;background:rgba(217,164,65,0.10);box-shadow:inset 0 -1px 0 rgba(217,164,65,0.28)">Kun</span>
+<span style="display:inline-block;padding:10px 8px;margin:-4px 0;border-bottom:1px dotted #4E4942">faya</span>
+<span style="display:inline-block;padding:10px 8px;margin:-4px 0;border-bottom:1px dotted #4E4942">kun</span>
+</div>
+<div style="padding:12px 10px;font:400 21px/1.6 Newsreader,serif;color:#B5AFA6;min-height:44px;display:flex;align-items:center">Maula maula</div>
+<div style="padding:12px 10px;font:400 21px/1.6 Newsreader,serif;color:#B5AFA6;min-height:44px;display:flex;align-items:center">Tere naam pe</div>
+<div style="padding:12px 10px;font:400 21px/1.6 Newsreader,serif;color:#7A746C;min-height:44px;display:flex;align-items:center">Fana hua hun</div>
+</div>
+<div style="position:absolute;left:0;right:0;bottom:0;background:#1C1917;border-top:1px solid #2E2A26;border-radius:20px 20px 38px 38px;padding:12px 20px 26px;display:flex;flex-direction:column;gap:16px;box-shadow:0 -20px 48px rgba(0,0,0,.55)">
+<div style="width:38px;height:4px;border-radius:999px;background:#433D37;align-self:center"></div>
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+<span style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">Kun · in this song</span>
+<span style="display:inline-flex;align-items:center;gap:6px"><span style="width:7px;height:7px;border-radius:999px;background:#7FA87C"></span><span style="font:400 12.5px/1.5 Inter,sans-serif;color:#7FA87C"><span style="font-family:'JetBrains Mono',monospace">4</span> sources</span></span>
+</div>
+<div style="font:400 16px/1.7 Inter,sans-serif;color:#B5AFA6">“Be.” One syllable that starts everything — sung here as an exhale rather than an order. The surrender is the point, not the power.</div>
+<div style="display:flex;gap:8px;overflow:hidden">
+<span style="display:inline-flex;align-items:center;gap:7px;padding:8px 12px 8px 8px;background:#141211;border:1px solid #2E2A26;border-radius:999px;flex:none"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13px/1 Inter,sans-serif;color:#B5AFA6">rekhta.org</span></span>
+<span style="display:inline-flex;align-items:center;gap:7px;padding:8px 12px 8px 8px;background:#141211;border:1px solid #2E2A26;border-radius:999px;flex:none"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13px/1 Inter,sans-serif;color:#B5AFA6">scroll.in</span></span>
+<span style="display:inline-flex;align-items:center;padding:8px 12px;border:1px solid #221F1C;border-radius:999px;font:400 13px/1 Inter,sans-serif;color:#7A746C;flex:none">+2</span>
+</div>
+<div style="display:flex;align-items:center;gap:10px;padding:13px 16px;background:#141211;border:1px solid #2E2A26;border-radius:12px">
+<span style="flex:1;font:400 15px/1.5 Inter,sans-serif;color:#7A746C">Ask about this song…</span>
+<span style="padding:5px 9px;border-radius:999px;background:#D9A441;color:#0A0908;font:600 11px/1 Inter,sans-serif;letter-spacing:.08em">PRO</span>
+</div>
+</div>
+</div>
+<div style="font:400 11px/1.4 Inter,sans-serif;color:rgba(0,0,0,.5);text-align:center">Sheet open — word selected</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="width:390px;height:844px;background:#0A0908;border:1px solid #2E2A26;border-radius:38px;overflow:hidden;position:relative;display:flex;flex-direction:column">
+<div style="display:flex;align-items:center;justify-content:space-between;padding:14px 26px 6px;font:500 13px/1 'JetBrains Mono',monospace;color:#B5AFA6"><span>9:41</span><span style="width:16px;height:9px;border:1px solid #4E4942;border-radius:2px"></span></div>
+<div style="padding:14px 20px 16px;border-bottom:1px solid #221F1C;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+<div style="font:400 26px/1.35 'Tiro Devanagari Hindi',serif;color:#F5F1EA">कुन फ़या कुन</div>
+<span style="font:400 13px/1.4 'JetBrains Mono',monospace;color:#7A746C">2011</span>
+</div>
+<div style="display:flex;gap:2px;padding:3px;background:#141211;border:1px solid #2E2A26;border-radius:999px">
+<span style="flex:1;text-align:center;padding:10px 0;font:500 13px/1.2 Inter,sans-serif;color:#7A746C">English</span>
+<span style="flex:1;text-align:center;padding:9px 0;border-radius:999px;background:rgba(217,164,65,0.10);border:1px solid rgba(217,164,65,0.28);font:500 13px/1.3 'Noto Sans Devanagari',Inter,sans-serif;color:#D9A441">हिंदी</span>
+<span style="flex:1;text-align:center;padding:10px 0;font:500 13px/1.2 Inter,sans-serif;color:#7A746C">Hinglish</span>
+</div>
+</div>
+<div style="flex:1;padding:16px 12px;display:flex;flex-direction:column;gap:2px">
+<div style="padding:12px 10px;font:400 21px/1.7 'Tiro Devanagari Hindi',serif;color:#B5AFA6;min-height:44px">या निज़ामुद्दीन औलिया</div>
+<div style="padding:14px 12px;border-left:2px solid #D9A441;border-radius:0 10px 10px 0;background:#1C1917;font:400 24px/1.65 'Tiro Devanagari Hindi',serif;color:#F5F1EA">
+<span style="display:inline-block;padding:10px 8px;margin:-2px 0;border-bottom:1px dotted #4E4942">कुन</span>
+<span style="display:inline-block;padding:10px 8px;margin:-2px 0;border-bottom:1px dotted #4E4942">फ़या</span>
+<span style="display:inline-block;padding:10px 8px;margin:-2px 0;border-bottom:1px dotted #4E4942">कुन</span>
+</div>
+<div style="padding:12px 10px;font:400 21px/1.7 'Tiro Devanagari Hindi',serif;color:#B5AFA6;min-height:44px">मौला मौला</div>
+<div style="padding:12px 10px;font:400 21px/1.7 'Tiro Devanagari Hindi',serif;color:#B5AFA6;min-height:44px">तेरे नाम पे</div>
+<div style="padding:12px 10px;font:400 21px/1.7 'Tiro Devanagari Hindi',serif;color:#B5AFA6;min-height:44px">फ़ना हुआ हूँ</div>
+<div style="padding:12px 10px;font:400 21px/1.7 'Tiro Devanagari Hindi',serif;color:#7A746C;min-height:44px">अब मैं नहीं हूँ</div>
+</div>
+<div style="position:absolute;left:0;right:0;bottom:0;background:#141211;border-top:1px solid #221F1C;border-radius:20px 20px 38px 38px;padding:12px 20px 26px;display:flex;flex-direction:column;gap:12px">
+<div style="width:38px;height:4px;border-radius:999px;background:#433D37;align-self:center"></div>
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+<span style="font:400 15px/1.7 'Noto Sans Devanagari',Inter,sans-serif;color:#7A746C">किसी पंक्ति पर टैप करें</span>
+<span style="display:inline-flex;align-items:center;gap:6px"><span style="width:7px;height:7px;border-radius:999px;background:#7FA87C"></span><span style="font:400 12.5px/1.6 'Noto Sans Devanagari',Inter,sans-serif;color:#7FA87C"><span style="font-family:'JetBrains Mono',monospace">6</span> स्रोत</span></span>
+</div>
+</div>
+</div>
+<div style="font:400 11px/1.4 Inter,sans-serif;color:rgba(0,0,0,.5);text-align:center">Sheet collapsed — Hindi mode</div>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:baseline;gap:9px"><a href="#5" style="font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);border-radius:5px;color:#1a1a1a">5</a><span style="font:400 11.5px/1.3 Inter,sans-serif;color:rgba(0,0,0,.55)">Grounding system — the signature element, shown at component scale</span></div>
+
+<div id="5" style="width:1240px;background:#0A0908;border:1px solid rgba(0,0,0,.18);border-radius:14px;padding:36px;display:grid;grid-template-columns:1fr 1fr;gap:28px;scroll-margin-top:16px">
+
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">Source strip · resting</div>
+<div style="background:#141211;border:1px solid #221F1C;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:14px">
+<div style="font:400 16px/1.7 Inter,sans-serif;color:#B5AFA6;max-width:62ch">Every explanation ends in the material it came from. Chips carry a favicon, the domain, and one word of provenance — so a forum thread never looks like an interview.</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;background:#1C1917;border:1px solid #2E2A26;border-radius:999px"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13.5px/1 Inter,sans-serif;color:#B5AFA6">rekhta.org</span><span style="font:500 11px/1 Inter,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#7A746C">lyrics</span></span>
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;background:#1C1917;border:1px solid rgba(217,164,65,0.28);border-radius:999px"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13.5px/1 Inter,sans-serif;color:#F5F1EA">scroll.in</span><span style="font:500 11px/1 Inter,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#D9A441">interview</span></span>
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;background:#1C1917;border:1px solid #2E2A26;border-radius:999px"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13.5px/1 Inter,sans-serif;color:#B5AFA6">reddit.com</span><span style="font:500 11px/1 Inter,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#7A746C">forum</span></span>
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;background:#1C1917;border:1px solid #2E2A26;border-radius:999px"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13.5px/1 Inter,sans-serif;color:#B5AFA6">sufipoetry.blog</span><span style="font:500 11px/1 Inter,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#7A746C">blog</span></span>
+</div>
+<div style="font:400 12.5px/1.5 Inter,sans-serif;color:#7A746C">Hover lifts the chip and lights its edge gold — the second chip is shown hovered.</div>
+</div>
+
+<div style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C;margin-top:8px">Excerpt — what was actually used</div>
+<div style="background:#1C1917;border:1px solid #433D37;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:14px;box-shadow:0 18px 40px rgba(0,0,0,.45)">
+<div style="display:flex;align-items:center;gap:10px">
+<span style="width:18px;height:18px;border-radius:5px;background:#433D37"></span>
+<span style="font:500 14px/1.6 Inter,sans-serif;color:#F5F1EA">scroll.in</span>
+<span style="padding:3px 8px;border-radius:6px;background:#070606;border:1px solid #2E2A26;font:500 11px/1.4 Inter,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#7A746C">interview</span>
+<span style="flex:1"></span>
+<span style="font:400 13px/1.6 'JetBrains Mono',monospace;color:#7A746C">2011</span>
+</div>
+<div style="border-left:2px solid #D9A441;padding:2px 0 2px 16px;font:400 17px/1.7 Newsreader,serif;color:#F5F1EA;max-width:62ch">The composer describes writing the refrain in one sitting at the shrine, and wanting the phrase to feel like breathing rather than declaration.</div>
+<div style="display:flex;align-items:center;gap:14px;padding-top:4px;border-top:1px solid #2E2A26">
+<span style="font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C">Used in: line meaning, song summary</span>
+<span style="flex:1"></span>
+<span style="font:500 13.5px/1.6 Inter,sans-serif;color:#D9A441">Open source ↗</span>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">State marks — colour never alone</div>
+
+<div style="background:#141211;border:1px solid #221F1C;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;align-items:flex-start;gap:16px">
+<span style="display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;background:#070606;border:1px solid #2E2A26;flex:none"><span style="width:7px;height:7px;border-radius:999px;background:#7FA87C"></span><span style="font:400 13.5px/1.4 Inter,sans-serif;color:#7FA87C"><span style="font-family:'JetBrains Mono',monospace">6</span> sources</span></span>
+<span style="font:400 14px/1.6 Inter,sans-serif;color:#7A746C">Grounded. Every claim above traces to stored material.</span>
+</div>
+<div style="height:1px;background:#221F1C"></div>
+<div style="display:flex;align-items:flex-start;gap:16px">
+<span style="display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;background:#070606;border:1px solid #2E2A26;flex:none"><span style="width:7px;height:7px;border-radius:999px;background:#C9993F;animation:ls-breathe 2.4s ease-in-out infinite"></span><span style="font:400 13.5px/1.4 Inter,sans-serif;color:#C9993F">updating</span></span>
+<span style="font:400 14px/1.6 Inter,sans-serif;color:#7A746C">Two new sources arrived. The old explanation stays readable until the new one lands.</span>
+</div>
+<div style="height:1px;background:#221F1C"></div>
+<div style="display:flex;align-items:flex-start;gap:16px">
+<span style="display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;background:#070606;border:1px solid #2E2A26;flex:none"><span style="width:7px;height:7px;border-radius:999px;background:#C2705A"></span><span style="font:400 13.5px/1.4 Inter,sans-serif;color:#C2705A">not enough</span></span>
+<span style="font:400 14px/1.6 Inter,sans-serif;color:#7A746C">Muted, never alarm-red. Nothing is broken — we just won't guess.</span>
+</div>
+</div>
+
+<div style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C;margin-top:8px">Stale explanation in place</div>
+<div style="background:#141211;border:1px solid #221F1C;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+<span style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">Meaning · line <span style="font-family:'JetBrains Mono',monospace">4</span></span>
+<span style="display:inline-flex;align-items:center;gap:7px"><span style="width:7px;height:7px;border-radius:999px;background:#C9993F;animation:ls-breathe 2.4s ease-in-out infinite"></span><span style="font:400 12.5px/1.5 Inter,sans-serif;color:#C9993F">updating · <span style="font-family:'JetBrains Mono',monospace">2</span> new sources</span></span>
+</div>
+<div style="height:2px;border-radius:2px;background:linear-gradient(90deg,#C9993F 0%,#C9993F 38%,#2E2A26 38%,#2E2A26 100%)"></div>
+<div style="font:400 18px/1.65 Newsreader,serif;color:#F5F1EA">“Fana hua hun”</div>
+<div style="font:400 16px/1.7 Inter,sans-serif;color:#B5AFA6;max-width:62ch">To be dissolved — the self burned off in devotion. Offered here as relief rather than loss, which is why the line sits so quietly against the drums.</div>
+<div style="font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C;padding-top:10px;border-top:1px solid #221F1C">Showing the previous explanation while we re-read. Nothing is hidden and nothing is greyed out.</div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:baseline;gap:9px"><a href="#6" style="font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);border-radius:5px;color:#1a1a1a">6</a><span style="font:400 11.5px/1.3 Inter,sans-serif;color:rgba(0,0,0,.55)">Not enough material — designed as a moment, not an error</span></div>
+
+<div id="6" style="width:1240px;background:#0A0908;border:1px solid rgba(0,0,0,.18);border-radius:14px;overflow:hidden;scroll-margin-top:16px">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:32px;padding:22px 32px;border-bottom:1px solid #221F1C">
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font:500 28px/1.2 Newsreader,serif;color:#F5F1EA">Piya Haji Ali</div>
+<div style="font:400 14px/1.6 Inter,sans-serif;color:#7A746C">A.R. Rahman · <span style="font-family:'JetBrains Mono',monospace;font-size:13px">1997</span></div>
+</div>
+<span style="display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:999px;background:#141211;border:1px solid #2E2A26"><span style="width:7px;height:7px;border-radius:999px;background:#C2705A"></span><span style="font:400 13.5px/1.4 Inter,sans-serif;color:#C2705A">not enough material</span></span>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;align-items:stretch">
+<div style="padding:32px;border-right:1px solid #221F1C;display:flex;flex-direction:column;gap:4px">
+<div style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C;margin-bottom:12px">Lyric · we have the words</div>
+<div style="padding:14px 18px;font:400 21px/1.6 Newsreader,serif;color:#B5AFA6">Piya haji ali</div>
+<div style="padding:14px 18px;font:400 21px/1.6 Newsreader,serif;color:#B5AFA6">Ya ali</div>
+<div style="padding:14px 18px;font:400 21px/1.6 Newsreader,serif;color:#B5AFA6">Dar pe tere aaya</div>
+<div style="padding:14px 18px;font:400 21px/1.6 Newsreader,serif;color:#7A746C">Maula maula</div>
+<div style="margin-top:14px;font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C;max-width:52ch">Words are stored, but there is nothing reliable yet about what they mean in this particular song. So none of them are clickable.</div>
+</div>
+
+<div style="padding:56px 40px;background:#0D0C0B;display:flex;flex-direction:column;justify-content:center;gap:22px">
+<span style="width:44px;height:44px;border-radius:12px;border:1px solid rgba(194,112,90,0.45);background:rgba(194,112,90,0.10);display:flex;align-items:center;justify-content:center"><span style="width:9px;height:9px;border-radius:999px;background:#C2705A"></span></span>
+<div style="font:400 28px/1.45 Newsreader,serif;color:#F5F1EA;max-width:24ch">We don't have enough grounded material on this song yet.</div>
+<div style="font:400 18px/1.65 Inter,sans-serif;color:#B5AFA6;max-width:46ch">We'd rather say nothing than make something up. Two forum posts and a lyric page isn't enough to tell you what a line means.</div>
+<div style="display:flex;align-items:center;gap:14px;padding-top:4px">
+<span style="padding:13px 20px;border-radius:10px;background:#D9A441;color:#0A0908;font:600 15px/1 Inter,sans-serif">Contribute a source</span>
+<span style="padding:13px 20px;border-radius:10px;border:1px solid #2E2A26;background:#141211;color:#B5AFA6;font:500 15px/1 Inter,sans-serif">Notify me when it's ready</span>
+</div>
+<div style="margin-top:10px;padding-top:18px;border-top:1px solid #221F1C;display:flex;flex-direction:column;gap:10px">
+<div style="font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C">What we do have — <span style="font-family:'JetBrains Mono',monospace">2</span> sources, below our bar of <span style="font-family:'JetBrains Mono',monospace">4</span>:</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;background:#141211;border:1px solid #2E2A26;border-radius:999px"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13.5px/1 Inter,sans-serif;color:#B5AFA6">rekhta.org</span><span style="font:500 11px/1 Inter,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#7A746C">lyrics</span></span>
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;background:#141211;border:1px solid #2E2A26;border-radius:999px"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13.5px/1 Inter,sans-serif;color:#B5AFA6">reddit.com</span><span style="font:500 11px/1 Inter,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#7A746C">forum</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:baseline;gap:9px"><a href="#7" style="font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);border-radius:5px;color:#1a1a1a">7</a><span style="font:400 11.5px/1.3 Inter,sans-serif;color:rgba(0,0,0,.55)">Research in progress — slow gold shimmer down the lyric column, honest step text, no spinner</span></div>
+
+<div id="7" style="width:1240px;background:#0A0908;border:1px solid rgba(0,0,0,.18);border-radius:14px;overflow:hidden;scroll-margin-top:16px">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:32px;padding:22px 32px;border-bottom:1px solid #221F1C">
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font:500 28px/1.2 Newsreader,serif;color:#F5F1EA">Allah Hoo</div>
+<div style="font:400 14px/1.6 Inter,sans-serif;color:#7A746C">Nusrat Fateh Ali Khan · qawwali</div>
+</div>
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border-radius:999px;background:#141211;border:1px solid rgba(217,164,65,0.28)"><span style="width:7px;height:7px;border-radius:999px;background:#D9A441;animation:ls-breathe 2s ease-in-out infinite"></span><span style="font:400 13.5px/1.4 Inter,sans-serif;color:#D9A441">researching · about <span style="font-family:'JetBrains Mono',monospace">40</span>s left</span></span>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;align-items:stretch">
+<div style="padding:32px;border-right:1px solid #221F1C;display:flex;flex-direction:column;gap:14px">
+<div style="font:500 12.5px/1.5 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7A746C">Lyric</div>
+<div style="padding:2px 0;font:400 21px/1.6 Newsreader,serif;color:#B5AFA6">Allah hoo, allah hoo</div>
+<div style="height:14px;width:72%;border-radius:6px;background:linear-gradient(90deg,#141211 0%,#1C1917 35%,rgba(217,164,65,0.22) 50%,#1C1917 65%,#141211 100%);background-size:220% 100%;animation:ls-shimmer 3s ease-out infinite"></div>
+<div style="height:14px;width:54%;border-radius:6px;background:linear-gradient(90deg,#141211 0%,#1C1917 35%,rgba(217,164,65,0.22) 50%,#1C1917 65%,#141211 100%);background-size:220% 100%;animation:ls-shimmer 3s ease-out .25s infinite"></div>
+<div style="height:14px;width:81%;border-radius:6px;background:linear-gradient(90deg,#141211 0%,#1C1917 35%,rgba(217,164,65,0.22) 50%,#1C1917 65%,#141211 100%);background-size:220% 100%;animation:ls-shimmer 3s ease-out .5s infinite"></div>
+<div style="height:14px;width:63%;border-radius:6px;background:linear-gradient(90deg,#141211 0%,#1C1917 35%,rgba(217,164,65,0.22) 50%,#1C1917 65%,#141211 100%);background-size:220% 100%;animation:ls-shimmer 3s ease-out .75s infinite"></div>
+<div style="height:14px;width:46%;border-radius:6px;background:linear-gradient(90deg,#141211 0%,#1C1917 35%,rgba(217,164,65,0.22) 50%,#1C1917 65%,#141211 100%);background-size:220% 100%;animation:ls-shimmer 3s ease-out 1s infinite"></div>
+<div style="margin-top:6px;font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C;max-width:50ch">Lines appear as they're confirmed against a lyric source — never invented to fill the column.</div>
+</div>
+
+<div style="padding:32px;background:#0D0C0B;display:flex;flex-direction:column;gap:20px">
+<div style="font:400 18px/1.65 Newsreader,serif;color:#F5F1EA;max-width:40ch">Reading what people have written about this song.</div>
+<div style="display:flex;flex-direction:column;gap:0">
+<div style="display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid #221F1C">
+<span style="width:20px;height:20px;border-radius:999px;border:1px solid rgba(127,168,124,0.5);background:rgba(127,168,124,0.12);display:flex;align-items:center;justify-content:center;font:600 11px/1 Inter,sans-serif;color:#7FA87C">✓</span>
+<span style="flex:1;font:400 16px/1.7 Inter,sans-serif;color:#B5AFA6">Found <span style="font-family:'JetBrains Mono',monospace;color:#F5F1EA">11</span> candidate sources</span>
+<span style="font:400 13px/1.6 'JetBrains Mono',monospace;color:#7A746C">0:18</span>
+</div>
+<div style="display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid #221F1C">
+<span style="width:20px;height:20px;border-radius:999px;border:1px solid rgba(127,168,124,0.5);background:rgba(127,168,124,0.12);display:flex;align-items:center;justify-content:center;font:600 11px/1 Inter,sans-serif;color:#7FA87C">✓</span>
+<span style="flex:1;font:400 16px/1.7 Inter,sans-serif;color:#B5AFA6">Kept <span style="font-family:'JetBrains Mono',monospace;color:#F5F1EA">6</span>, discarded <span style="font-family:'JetBrains Mono',monospace;color:#F5F1EA">5</span> as unreliable</span>
+<span style="font:400 13px/1.6 'JetBrains Mono',monospace;color:#7A746C">0:31</span>
+</div>
+<div style="display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid #221F1C">
+<span style="width:20px;height:20px;border-radius:999px;border:1px solid rgba(217,164,65,0.45);background:rgba(217,164,65,0.10);display:flex;align-items:center;justify-content:center"><span style="width:7px;height:7px;border-radius:999px;background:#D9A441;animation:ls-breathe 1.6s ease-in-out infinite"></span></span>
+<span style="flex:1;font:400 16px/1.7 Inter,sans-serif;color:#F5F1EA">Reading <span style="font-family:'JetBrains Mono',monospace">4</span> of <span style="font-family:'JetBrains Mono',monospace">6</span> sources…</span>
+<span style="font:400 13px/1.6 'JetBrains Mono',monospace;color:#D9A441">now</span>
+</div>
+<div style="display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid #221F1C">
+<span style="width:20px;height:20px;border-radius:999px;border:1px solid #2E2A26"></span>
+<span style="flex:1;font:400 16px/1.7 Inter,sans-serif;color:#7A746C">Writing line-by-line meanings</span>
+</div>
+<div style="display:flex;align-items:center;gap:14px;padding:14px 0">
+<span style="width:20px;height:20px;border-radius:999px;border:1px solid #2E2A26"></span>
+<span style="flex:1;font:400 16px/1.7 Inter,sans-serif;color:#7A746C">Writing the song summary</span>
+</div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;padding-top:4px">
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;background:#141211;border:1px solid #2E2A26;border-radius:999px"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13.5px/1 Inter,sans-serif;color:#B5AFA6">rekhta.org</span></span>
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;background:#141211;border:1px solid #2E2A26;border-radius:999px"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13.5px/1 Inter,sans-serif;color:#B5AFA6">thehindu.com</span></span>
+<span style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;background:#141211;border:1px solid #2E2A26;border-radius:999px;opacity:.5"><span style="width:15px;height:15px;border-radius:4px;background:#433D37"></span><span style="font:400 13.5px/1 Inter,sans-serif;color:#B5AFA6">sufipoetry.blog</span></span>
+</div>
+<div style="margin-top:auto;padding-top:16px;border-top:1px solid #221F1C;font:400 13.5px/1.6 Inter,sans-serif;color:#7A746C;max-width:52ch">You can leave — we'll finish in the background and keep it in your library.</div>
+</div>
+</div>
+</div>
+</div>
+
+<p style="margin:8px 0 0;font:400 12px/1.6 Inter,sans-serif;color:rgba(0,0,0,.5)">Try next: “make the meaning panel a right-docked drawer instead of a column” · “show <a href="#5">5</a> with the excerpt open over the song page” · “add the Pro chatbot state to <a href="#3a">3a</a>”</p>
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showQuotaMeter&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Song page&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { showQuotaMeter: this.props.showQuotaMeter ?? true };
+  }
+}
+</script>
+</body>
+</html>
