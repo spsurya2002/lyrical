@@ -116,19 +116,19 @@ Per Principle II: never report a task complete without having run this.
 
 **Independent test**: switch across all three modes; each renders fully in the correct script; no loading state; scroll position and active line survive; quota unmoved.
 
-- [ ] T044 [US2] Add `mode` handling to `songPageService.ts` and the page query — lyric text by **script** (R-01), meanings by **mode**
-- [ ] T045 [P] [US2] `frontend/src/components/language/ModeSwitch.tsx` — segmented control, always visible, top-right
-- [ ] T046 [P] [US2] `frontend/src/hooks/useLanguageMode.ts` — persist per account when signed in, `localStorage` when not; default `en` (FR-016, R-09)
-- [ ] T047 [US2] Preserve active line and scroll position across a mode switch in `SongPage.tsx` (FR-013)
-- [ ] T048 [P] [US2] `backend/src/llm/LlmProvider.ts` — the provider interface, per-job model config
-- [ ] T049 [P] [US2] `backend/src/llm/providers/gemini.ts` and `backend/src/llm/providers/ollama.ts` — SDK imports permitted **only** in this directory
-- [ ] T050 [US2] Test in `backend/tests/unit/noProviderLeak.test.ts` asserting no provider SDK import exists outside `src/llm/providers/` (R-10). A leak must fail the build, not be discovered at switch time
-- [ ] T051 [US2] BullMQ queue and `backend/src/jobs/backfillRendering.ts` — generate a missing rendering from the stored meaning. Rate-limited per Principle VI
-- [ ] T052 [US2] `mode_unavailable` handling in `songPageService.ts` (R-02) — serve what exists, mark the affected entities honestly, enqueue backfill, **never block and never fall back to another language**
-- [ ] T053 [US2] **Script boundary E2E** in `frontend/tests/e2e/scriptBoundary.spec.ts` — zero Arabic/Urdu codepoints in any response across all three modes, including the song whose stored source **is** in Urdu script
-- [ ] T054 [US2] Test in `backend/tests/integration/modeSwitch.test.ts` — a mode switch consumes **no quota** and triggers **no research** (FR-014, FR-015)
-- [ ] T055 [US2] Devanagari line-height +0.1 in `tokens.css` and lyric components — matras must not clip
-- [ ] T056 [US2] E2E in `frontend/tests/e2e/threeLanguages.spec.ts` — quickstart scenario 2
+- [x] T044 [US2] Add `mode` handling to `songPageService.ts` and the page query — lyric text by **script** (R-01), meanings by **mode**
+- [x] T045 [P] [US2] `frontend/src/components/language/ModeSwitch.tsx` — segmented control, always visible, top-right
+- [x] T046 [P] [US2] `frontend/src/hooks/useLanguageMode.ts` — persist per account when signed in, `localStorage` when not; default `en` (FR-016, R-09)
+- [x] T047 [US2] Preserve active line and scroll position across a mode switch in `SongPage.tsx` (FR-013)
+- [x] T048 [P] [US2] `backend/src/llm/LlmProvider.ts` — the provider interface, per-job model config
+- [x] T049 [P] [US2] `backend/src/llm/providers/gemini.ts` and `backend/src/llm/providers/ollama.ts` — SDK imports permitted **only** in this directory
+- [x] T050 [US2] Test in `backend/tests/unit/noProviderLeak.test.ts` asserting no provider SDK import exists outside `src/llm/providers/` (R-10). A leak must fail the build, not be discovered at switch time
+- [x] T051 [US2] BullMQ queue and `backend/src/jobs/backfillRendering.ts` — generate a missing rendering from the stored meaning. Rate-limited per Principle VI
+- [x] T052 [US2] `mode_unavailable` handling in `songPageService.ts` (R-02) — serve what exists, mark the affected entities honestly, enqueue backfill, **never block and never fall back to another language**
+- [x] T053 [US2] **Script boundary E2E** in `frontend/tests/e2e/scriptBoundary.spec.ts` — zero Arabic/Urdu codepoints in any response across all three modes, including the song whose stored source **is** in Urdu script
+- [x] T054 [US2] Test in `backend/tests/integration/modeSwitch.test.ts` — a mode switch consumes **no quota** and triggers **no research** (FR-014, FR-015)
+- [x] T055 [US2] Devanagari line-height +0.1 in `tokens.css` and lyric components — matras must not clip
+- [x] T056 [US2] E2E in `frontend/tests/e2e/threeLanguages.spec.ts` — quickstart scenario 2
 
 **Checkpoint**: the product serves its full audience.
 
