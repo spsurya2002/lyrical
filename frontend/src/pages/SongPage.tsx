@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { LyricColumn } from '../components/lyric/LyricColumn.js';
 import { MeaningPanel } from '../components/meaning/MeaningPanel.js';
+import { WordGloss } from '../components/meaning/WordGloss.js';
 import { GroundedMark } from '../components/grounding/GroundedMark.js';
 import { FixtureBanner } from '../components/FixtureBanner.js';
 import { ModeSwitch } from '../components/language/ModeSwitch.js';
@@ -20,6 +21,7 @@ export function SongPage() {
   const [mode, setMode] = useLanguageMode();
   const state = useSongPage(slug, mode);
   const [activeLineNo, setActiveLineNo] = useState<number | null>(null);
+  const [selectedWordId, setSelectedWordId] = useState<string | null>(null);
   const positionedFor = useRef<string | null>(null);
 
   // The page opens on the first SERVABLE line, not line 1 — landing on an empty
@@ -93,9 +95,28 @@ export function SongPage() {
           mode={mode}
           lang={page.lang}
           activeLineNo={activeLineNo}
-          onSelect={setActiveLineNo}
+          selectedWordId={selectedWordId}
+          onSelect={(lineNo) => {
+            setActiveLineNo(lineNo);
+            // Selecting a line clears a word: the panel shows one thing at a time.
+            setSelectedWordId(null);
+          }}
+          onSelectWord={(word, lineNo) => {
+            setActiveLineNo(lineNo);
+            setSelectedWordId(word.occurrenceId);
+          }}
         />
-        <MeaningPanel line={activeLine} mode={mode} lang={page.lang} />
+        {selectedWordId === null ? (
+          <MeaningPanel line={activeLine} mode={mode} lang={page.lang} />
+        ) : (
+          <WordGloss
+            slug={slug}
+            occurrenceId={selectedWordId}
+            mode={mode}
+            lang={page.lang}
+            onDismiss={() => setSelectedWordId(null)}
+          />
+        )}
       </div>
 
       <section
