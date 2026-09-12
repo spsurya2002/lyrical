@@ -30,7 +30,13 @@ const schema = z.object({
   OLLAMA_BASE_URL: z.string().default('http://localhost:11434'),
   LLM_MODEL_RENDERING: z.string().default('gemini-2.5-flash'),
 
-  RATE_LIMIT_READ_PER_MINUTE: z.coerce.number().int().positive().default(120),
+  /**
+   * Reads are cheap and cached, and cost no model money — the constitution's
+   * cost concern lives on the model path, not here. This is generous on purpose:
+   * one reader clicking through a 26-line song makes 50+ requests, and real
+   * users share IPs behind office NAT and mobile carriers.
+   */
+  RATE_LIMIT_READ_PER_MINUTE: z.coerce.number().int().positive().default(600),
   RATE_LIMIT_MODEL_PER_MINUTE: z.coerce.number().int().positive().default(10),
 });
 

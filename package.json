@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Explains what songs mean — word by word, line by line — grounded in real sources.",
+  "description": "Explains what songs mean \u2014 word by word, line by line \u2014 grounded in real sources.",
   "engines": {
     "node": ">=20"
   },
@@ -25,7 +25,8 @@
     "typecheck": "npm run typecheck --workspaces --if-present",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "verify": "npm run typecheck && npm run lint && npm run test && npm run test:e2e"
+    "verify": "npm run preflight && npm run typecheck && npm run lint && npm run test && npm run test:e2e",
+    "preflight": "node scripts/preflight.mjs"
   },
   "comments": {
     "overrides": "vitest pulls its own vite, which hoisted a second copy alongside the frontend's. Two vite installs means two sets of Plugin types and a typecheck failure. Vitest 5 accepts vite ^8, so one version serves both."

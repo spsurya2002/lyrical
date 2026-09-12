@@ -15,10 +15,14 @@ export default defineConfig({
     // US5: the mobile sheet and 44px word targets are only meaningful here.
     { name: 'mobile', use: { ...devices['Pixel 7'] } },
   ],
+  // Starts BOTH the API and the web app from the repo root. The song page is
+  // useless without the API, so an e2e run that only started Vite would fail in
+  // a way that looked like a UI bug.
   webServer: {
     command: 'npm run dev',
+    cwd: '..',
     url: 'http://localhost:5173',
     reuseExistingServer: !process.env.CI,
-    timeout: 120_000,
+    timeout: 180_000,
   },
 });

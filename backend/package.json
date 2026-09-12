@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "tsx watch --env-file-if-exists=../.env src/server.ts",
+    "dev": "nodemon",
     "build": "tsc -p tsconfig.build.json",
     "start": "node --env-file-if-exists=../.env dist/server.js",
     "worker": "tsx --env-file-if-exists=../.env src/jobs/worker.ts",
@@ -12,9 +12,10 @@
     "db:seed": "tsx --env-file-if-exists=../.env src/db/seed/index.ts",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:script-boundary": "vitest run tests/integration/scriptBoundary.test.ts",
-    "test:grounding": "vitest run tests/integration/grounding.test.ts",
-    "typecheck": "tsc --noEmit"
+    "test:script-boundary": "vitest run tests/integration/songPage.test.ts -t 'script boundary'",
+    "test:grounding": "vitest run tests/integration/songPage.test.ts -t 'grounding'",
+    "typecheck": "tsc --noEmit",
+    "dev:tsx": "tsx watch --env-file-if-exists=../.env src/server.ts"
   },
   "dependencies": {
     "bullmq": "^5.34.0",
@@ -33,6 +34,7 @@
     "@types/node": "^22.10.0",
     "@types/pg": "^8.11.10",
     "@types/supertest": "^6.0.2",
+    "nodemon": "^3.1.14",
     "supertest": "^7.0.0",
     "testcontainers": "^12.1.0",
     "tsx": "^4.19.0",
