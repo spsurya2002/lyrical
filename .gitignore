@@ -34,3 +34,7 @@ Thumbs.db
 # Design tool exports — large derived bundles, not sources
 design/**/.thumbnail
 design/**/*Screens.html
+
+# Playwright
+playwright-report/
+test-results/
