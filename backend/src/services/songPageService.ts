@@ -60,9 +60,8 @@ function toMeaningView(
   text: string,
   status: 'active' | 'stale',
   sourceCount: number,
-  words: SelectableWord[],
 ): MeaningView {
-  return { meaningId, text, sourceCount, status, words };
+  return { meaningId, text, sourceCount, status };
 }
 
 function toUngrounded(sourceCount: number, hasRendering: boolean): UngroundedView {
@@ -95,7 +94,8 @@ function buildLine(
     return {
       lineNo: row.lineNo,
       text: row.text,
-      meaning: toMeaningView(row.meaningId, row.meaningText, row.meaningStatus, row.sourceCount, words),
+      words,
+      meaning: toMeaningView(row.meaningId, row.meaningText, row.meaningStatus, row.sourceCount),
       ungrounded: null,
     };
   }
@@ -109,7 +109,7 @@ function buildLine(
     needsBackfill.push(row.meaningId);
   }
 
-  return { lineNo: row.lineNo, text: row.text, meaning: null, ungrounded };
+  return { lineNo: row.lineNo, text: row.text, words, meaning: null, ungrounded };
 }
 
 function groupWords(rows: WordRow[], mode: Mode): Map<string, SelectableWord[]> {
@@ -170,7 +170,7 @@ export async function getSongPage(
     const hasRendering = summaryRow.text !== null;
     const state = assessGrounding(summaryRow.sourceCount, hasRendering);
     if (state.servable && summaryRow.text !== null && passesBoundary(summaryRow.text, mode, 'summary.text')) {
-      summary = toMeaningView(summaryRow.meaningId, summaryRow.text, summaryRow.status, summaryRow.sourceCount, []);
+      summary = toMeaningView(summaryRow.meaningId, summaryRow.text, summaryRow.status, summaryRow.sourceCount);
     } else {
       summaryUngrounded = toUngrounded(summaryRow.sourceCount, hasRendering);
     }
