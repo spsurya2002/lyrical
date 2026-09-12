@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { LyricColumn } from '../components/lyric/LyricColumn.js';
 import { MeaningPanel } from '../components/meaning/MeaningPanel.js';
 import { GroundedMark } from '../components/grounding/GroundedMark.js';
+import { FixtureBanner } from '../components/FixtureBanner.js';
 import { useSongPage } from '../hooks/useSongPage.js';
 import type { Mode } from '../types.js';
 
@@ -59,6 +60,7 @@ export function SongPage() {
 
   return (
     <Shell>
+      <FixtureBanner />
       <header className="border-b border-border-subtle pb-6">
         <h1
           lang={page.lang}

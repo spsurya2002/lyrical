@@ -1,4 +1,5 @@
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { FixtureBanner } from './components/FixtureBanner.js';
 import { SongPage } from './pages/SongPage.js';
 
 /**
@@ -27,6 +28,7 @@ const SEEDED = [
 function Home() {
   return (
     <main className="mx-auto max-w-[1240px] px-4 py-12 sm:px-6">
+      <FixtureBanner />
       <h1 className="font-lyric text-display text-primary">LyricSense</h1>
       <p className="mt-4 max-w-measure text-body text-secondary">
         Hindi film songs, explained — word by word, line by line, grounded in real sources.
