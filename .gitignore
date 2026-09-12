@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+build/
+.vite/
+*.tsbuildinfo
+
+# Secrets — never commit these (CLAUDE.md §4)
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Test / coverage
+coverage/
+.nyc_output/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+
+# Local agent state
+.claude/settings.local.json
+
+# Design tool exports — large derived bundles, not sources
+design/**/.thumbnail
+design/**/*Screens.html
