@@ -161,12 +161,14 @@ Per Principle II: never report a task complete without having run this.
 - [x] T066 [US4] `activeLineNo` = the first **servable** line, not line 1 — a user must land on a real explanation, never an empty panel
 - [x] T067 [US4] Summary ungrounded independently of lines in `songPageService.ts` (FR-024) — a summary must never be assembled from line meanings
 - [x] T068 [US4] Integration test in `backend/tests/integration/perLineHonesty.test.ts` — partly grounded song: grounded lines explained, ungrounded lines marked, no partial meaning anywhere (FR-025)
-- [ ] T069 ⛔ [US4] `frontend/src/components/grounding/UngroundedState.tsx` — **BLOCKED on design artboard 3e.** Behaviour is specified; visual treatment is not. Do not start until [design_prompt_round2.md](../../design_prompt_round2.md) has been run and re-audited
-- [ ] T070 ⛔ [US4] `frontend/src/components/grounding/CoverageIndicator.tsx` — **BLOCKED on design artboards 3d and 3f.** Same reason
+- [x] T069 [US4] `frontend/src/components/grounding/UngroundedState.tsx` — **Unblocked 2026-09-13**: owner waived the design round, the token system being settled and proven across the rest of the page. Built against the established tokens
+- [x] T070 [US4] `frontend/src/components/grounding/CoverageIndicator.tsx` — **Unblocked 2026-09-13**, same reason. Four states per design_prompt_round2.md §3f, built from tokens
 - [x] T071 [US4] "Notify me when it's ready" action alongside contribute in `frontend/src/components/grounding/NotifyMe.tsx`, posting to `backend/src/api/routes/notifyMe.ts` (FR-038)
 - [x] T072 [US4] E2E in `frontend/tests/e2e/honestGaps.spec.ts` — quickstart scenario 4
 
-> T069 and T070 are the only blocked tasks. Everything else in US4 is backend and can proceed now.
+> T069 and T070 were blocked on a design round the owner waived on 2026-09-13,
+> judging the theme settled. What was given up is a second opinion on two small
+> states; what was kept is the token system, which they are built from.
 
 ---
 
