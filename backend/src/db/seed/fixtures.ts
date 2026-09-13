@@ -334,6 +334,47 @@ export function arziyan(): SongFixture {
   };
 }
 
+
+/**
+ * A long qawwali — 200 lines, 40 of them explained.
+ *
+ * Qawwalis genuinely run this long, so this is the real shape of the catalogue's
+ * upper end rather than a synthetic stress case. It exists to measure whether
+ * the page needs windowed loading (research.md R-03) or whether that was a
+ * projection worth dropping.
+ */
+export function allahHoo(): SongFixture {
+  const explained = new Set(Array.from({ length: 40 }, (_, i) => i * 5 + 1));
+  const lines: LineFixture[] = Array.from({ length: 200 }, (_, i) => {
+    const n = i + 1;
+    const base: LineFixture = {
+      latn: `Allah hoo, allah hoo — the name repeated until it stops being a word, line ${n}`,
+      deva: `अल्लाह हू, अल्लाह हू — नाम दोहराया जाता है जब तक वह शब्द नहीं रहता, पंक्ति ${n}`,
+    };
+    if (!explained.has(n)) return base;
+    return {
+      ...base,
+      meaning: {
+        sources: FULL.slice(0, 4),
+        text: {
+          en: `Line ${n}: repetition is the argument. The phrase is not explained so much as worn smooth, until saying it and meaning it stop being separate acts.`,
+          hi: `पंक्ति ${n}: दोहराव ही तर्क है। वाक्य समझाया नहीं जाता, घिसकर चिकना किया जाता है — जब तक कहना और मानना अलग नहीं रह जाते।`,
+          'hi-Latn': `Line ${n}: dohraav hi tark hai. Vaakya samjhaaya nahin jaata, ghiskar chikna kiya jaata hai — jab tak kehna aur maanna alag nahin reh jaate.`,
+        },
+      },
+    };
+  });
+
+  return {
+    slug: 'allah-hoo',
+    title: { latn: 'Allah Hoo', deva: 'अल्लाह हू' },
+    artist: 'Nusrat Fateh Ali Khan',
+    year: 1990,
+    proves: 'A long song — 200 lines, 40 explained. Measures whether windowed loading is needed.',
+    lines,
+  };
+}
+
 export function allSongs(): SongFixture[] {
-  return [...SONGS, arziyan()];
+  return [...SONGS, arziyan(), allahHoo()];
 }
