@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { openMeaning } from './helpers.js';
 
 /**
  * US2 — read the same song in Hindi or Hinglish.
@@ -39,8 +40,9 @@ test.describe('three languages', () => {
     expect(anyIn(body, DEVANAGARI)).toBe(true);
   });
 
-  test('Hinglish is Hindi in Latin letters, with no Devanagari', async ({ page }) => {
+  test('Hinglish is Hindi in Latin letters, with no Devanagari', async ({ page }, testInfo) => {
     await page.goto('/song/kun-faya-kun');
+    await openMeaning(page, testInfo);
     await page.getByTestId('mode-hi-Latn').click();
 
     // Wait for the Hinglish rendering to actually arrive. The previous language
@@ -52,8 +54,9 @@ test.describe('three languages', () => {
     expect(anyIn(meaning, DEVANAGARI)).toBe(false);
   });
 
-  test('English shows no Devanagari after coming back from Hindi', async ({ page }) => {
+  test('English shows no Devanagari after coming back from Hindi', async ({ page }, testInfo) => {
     await page.goto('/song/kun-faya-kun');
+    await openMeaning(page, testInfo);
     await page.getByTestId('mode-hi').click();
     await expect(page.getByTestId('meaning-text')).toContainText('धर्मग्रंथ');
 
@@ -77,8 +80,9 @@ test.describe('three languages', () => {
     }
   });
 
-  test('never shows a loading state while switching (FR-014)', async ({ page }) => {
+  test('never shows a loading state while switching (FR-014)', async ({ page }, testInfo) => {
     await page.goto('/song/kun-faya-kun');
+    await openMeaning(page, testInfo);
     await expect(page.getByTestId('meaning-text')).toBeVisible();
 
     for (const mode of ['hi', 'hi-Latn', 'en']) {

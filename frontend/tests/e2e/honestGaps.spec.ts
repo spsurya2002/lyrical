@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { openMeaning } from './helpers.js';
 
 /**
  * US4 — be told honestly when the tool doesn't know.
@@ -50,12 +51,13 @@ test.describe('honest gaps', () => {
     await expect(page.getByTestId('notify-done')).toContainText('recorded');
   });
 
-  test('explains some lines and marks the rest on a partly grounded song', async ({ page }) => {
+  test('explains some lines and marks the rest on a partly grounded song', async ({ page }, testInfo) => {
     await page.goto('/song/arziyan');
     await expect(page.getByTestId('coverage')).toHaveText('4 of 26 lines explained');
 
     // The opening line is a grounded one, not line 1.
     await expect(page.getByTestId('lyric-line-3')).toHaveAttribute('aria-current', 'true');
+    await openMeaning(page, testInfo);
     await expect(page.getByTestId('meaning-text')).not.toBeEmpty();
 
     // And an unexplained line says so rather than showing nothing.
@@ -78,8 +80,9 @@ test.describe('honest gaps', () => {
     await expect(page.getByTestId('song-summary')).toHaveCount(0);
   });
 
-  test('keeps a stale explanation readable while it is replaced (FR-007)', async ({ page }) => {
+  test('keeps a stale explanation readable while it is replaced (FR-007)', async ({ page }, testInfo) => {
     await page.goto('/song/tere-bina');
+    await openMeaning(page, testInfo);
     await expect(page.getByTestId('meaning-text')).not.toBeEmpty();
     await expect(page.getByTestId('grounded-mark').first()).toContainText('updating');
   });
