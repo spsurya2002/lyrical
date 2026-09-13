@@ -200,12 +200,12 @@ Per Principle II: never report a task complete without having run this.
 
 ## Phase 9: Polish
 
-- [ ] T083 [P] Keyboard path in `frontend/src/components/lyric/LyricColumn.tsx` and `frontend/src/components/meaning/MeaningPanel.tsx` — every meaning reachable and dismissible with Escape, across all three modes; E2E in `frontend/tests/e2e/keyboard.spec.ts` (FR-033)
-- [ ] T084 [P] `lang="hi"` on Devanagari content, `lang="hi-Latn"` on Hinglish, so screen readers switch voice (FR-034)
-- [ ] T085 [P] Visible focus everywhere: 2px `--accent` ring, 2px offset. No outline removed without a replacement
-- [ ] T086 Performance check in `backend/tests/integration/largeSong.test.ts` and `frontend/tests/e2e/performance.spec.ts` — a 100+ line song, line selection with no perceptible delay (SC-008), and the R-03 windowing threshold above 150 lines
-- [ ] T087 Remove any off-palette hex that crept in; confirm `tokens.css` is the only file containing hex values
-- [ ] T088 Final `npm run verify` plus the two checks that must never be skipped: `npm run test:script-boundary` and `npm run test:grounding`
+- [x] T083 [P] Keyboard path in `frontend/src/components/lyric/LyricColumn.tsx` and `frontend/src/components/meaning/MeaningPanel.tsx` — every meaning reachable and dismissible with Escape, across all three modes; E2E in `frontend/tests/e2e/keyboard.spec.ts` (FR-033)
+- [x] T084 [P] `lang="hi"` on Devanagari content, `lang="hi-Latn"` on Hinglish, so screen readers switch voice (FR-034)
+- [x] T085 [P] Visible focus everywhere: 2px `--accent` ring, 2px offset. No outline removed without a replacement
+- [x] T086 Performance check in `backend/tests/integration/largeSong.test.ts` and `frontend/tests/e2e/performance.spec.ts` — a 100+ line song, line selection with no perceptible delay (SC-008), and the R-03 windowing threshold above 150 lines
+- [x] T087 Remove any off-palette hex that crept in; confirm `tokens.css` is the only file containing hex values
+- [x] T088 Final `npm run verify` plus the two checks that must never be skipped: `npm run test:script-boundary` and `npm run test:grounding`
 
 ---
 
