@@ -30,6 +30,13 @@ export default tseslint.config(
     },
   },
   {
+    // Playwright requires the first argument of a test hook to be a
+    // destructuring pattern, even when the hook needs no fixture. An empty
+    // pattern is the framework's idiom here, not an oversight.
+    files: ['**/tests/e2e/**/*.ts'],
+    rules: { 'no-empty-pattern': 'off' },
+  },
+  {
     // Config files and repo scripts run in Node and legitimately use its globals.
     files: ['**/*.config.ts', '**/*.config.js', 'scripts/**/*.mjs'],
     languageOptions: {
