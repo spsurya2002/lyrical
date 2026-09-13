@@ -176,10 +176,10 @@ Per Principle II: never report a task complete without having run this.
 
 **Independent test**: at 390px, tap a line — the meaning rises from the bottom, part of the lyric stays visible; tap a word without hitting its neighbour.
 
-- [ ] T073 [P] [US5] `frontend/src/components/meaning/MeaningSheet.tsx` — bottom sheet, swipe to dismiss, lyric never fully obscured (FR-031)
-- [ ] T074 [US5] Responsive switch at 1100px in `SongPage.tsx` — panel above, sheet below
-- [ ] T075 [US5] ≥44×44px touch targets for individual words in `LyricLine.tsx`, achieved with **padding and line spacing, not smaller text** (FR-032)
-- [ ] T076 [US5] E2E in `frontend/tests/e2e/mobile.spec.ts` at 390px — quickstart scenario 5
+- [x] T073 [P] [US5] `frontend/src/components/meaning/MeaningSheet.tsx` — bottom sheet, swipe to dismiss, lyric never fully obscured (FR-031)
+- [x] T074 [US5] Responsive switch at 1100px in `SongPage.tsx` — panel above, sheet below
+- [x] T075 [US5] ≥44×44px touch targets for individual words in `LyricLine.tsx`, achieved with **padding and line spacing, not smaller text** (FR-032)
+- [x] T076 [US5] E2E in `frontend/tests/e2e/mobile.spec.ts` at 390px — quickstart scenario 5
 
 ---
 

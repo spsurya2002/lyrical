@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { openMeaning } from './helpers.js';
 
 /**
  * US1 — read a song and see where its meaning came from.
@@ -26,8 +27,9 @@ function hasProhibitedScript(text: string): boolean {
 }
 
 test.describe('song page', () => {
-  test('shows a lyric, its meaning, and the sources behind it', async ({ page }) => {
+  test('shows a lyric, its meaning, and the sources behind it', async ({ page }, testInfo) => {
     await page.goto('/song/kun-faya-kun');
+    await openMeaning(page, testInfo);
 
     await expect(page.getByRole('heading', { name: 'Kun Faya Kun' })).toBeVisible();
     await expect(page.getByTestId('meaning-panel')).toBeVisible();
@@ -44,15 +46,17 @@ test.describe('song page', () => {
     await expect(page.getByTestId('lyric-line-1')).not.toHaveAttribute('aria-current', 'true');
   });
 
-  test('selecting a line shows that line’s meaning', async ({ page }) => {
+  test('selecting a line shows that line’s meaning', async ({ page }, testInfo) => {
     await page.goto('/song/kun-faya-kun');
+    await openMeaning(page, testInfo);
     const before = await page.getByTestId('meaning-panel').textContent();
     await page.getByTestId('lyric-line-3').click();
     await expect(page.getByTestId('meaning-panel')).not.toHaveText(before ?? '');
   });
 
-  test('opening a source shows the excerpt actually used', async ({ page }) => {
+  test('opening a source shows the excerpt actually used', async ({ page }, testInfo) => {
     await page.goto('/song/kun-faya-kun');
+    await openMeaning(page, testInfo);
     await page.getByTestId('source-strip').getByRole('button').first().click();
     await expect(page.locator('blockquote')).toBeVisible();
   });

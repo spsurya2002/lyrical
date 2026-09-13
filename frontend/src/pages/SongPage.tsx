@@ -2,10 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { LyricColumn } from '../components/lyric/LyricColumn.js';
 import { MeaningPanel } from '../components/meaning/MeaningPanel.js';
+import { MeaningSheet } from '../components/meaning/MeaningSheet.js';
 import { WordGloss } from '../components/meaning/WordGloss.js';
 import { GroundedMark } from '../components/grounding/GroundedMark.js';
 import { FixtureBanner } from '../components/FixtureBanner.js';
 import { ModeSwitch } from '../components/language/ModeSwitch.js';
+import { useIsNarrow } from '../hooks/useIsNarrow.js';
 import { useLanguageMode } from '../hooks/useLanguageMode.js';
 import { useSongPage } from '../hooks/useSongPage.js';
 
@@ -23,6 +25,8 @@ export function SongPage() {
   const state = useSongPage(slug, mode);
   const [activeLineNo, setActiveLineNo] = useState<number | null>(null);
   const [selectedWordId, setSelectedWordId] = useState<string | null>(null);
+  const [sheetOpen, setSheetOpen] = useState(false);
+  const narrow = useIsNarrow();
   const positionedFor = useRef<string | null>(null);
 
   // The page opens on the first SERVABLE line, not line 1 — landing on an empty
@@ -40,6 +44,14 @@ export function SongPage() {
     if (positionedFor.current === slug) return;
     positionedFor.current = slug;
     setActiveLineNo(state.page.activeLineNo ?? state.page.lines[0]?.lineNo ?? null);
+    // On a phone the sheet stays shut until the reader taps — opening it on
+    // arrival would cover the song before they had seen it.
+    //
+    // The exception is a song with NOTHING grounded. There, FR-022 requires the
+    // page to say plainly that it lacks material, and there is no reading
+    // experience to interrupt. Leaving that behind a tap would be the same
+    // quiet evasion the desktop panel already had.
+    setSheetOpen(state.page.activeLineNo === null);
   }, [state, slug]);
 
   if (state.status === 'loading') {
@@ -66,6 +78,19 @@ export function SongPage() {
   const activeLine = page.lines.find((l) => l.lineNo === activeLineNo) ?? null;
   const { linesExplained, linesTotal } = page.coverage;
 
+  const meaningContent =
+    selectedWordId === null ? (
+      <MeaningPanel line={activeLine} mode={mode} lang={page.lang} slug={slug} />
+    ) : (
+      <WordGloss
+        slug={slug}
+        occurrenceId={selectedWordId}
+        mode={mode}
+        lang={page.lang}
+        onDismiss={() => setSelectedWordId(null)}
+      />
+    );
+
   return (
     <Shell>
       <FixtureBanner />
@@ -90,7 +115,14 @@ export function SongPage() {
         </p>
       </header>
 
-      <div className="grid gap-10 py-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+      <div
+        className={[
+          'grid gap-10 py-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]',
+          // The open sheet covers the bottom of the screen. Without room to
+          // scroll past it, the lyric lines underneath cannot be reached at all.
+          narrow && sheetOpen ? 'pb-[56vh]' : '',
+        ].join(' ')}
+      >
         <LyricColumn
           lines={page.lines}
           mode={mode}
@@ -101,24 +133,23 @@ export function SongPage() {
             setActiveLineNo(lineNo);
             // Selecting a line clears a word: the panel shows one thing at a time.
             setSelectedWordId(null);
+            setSheetOpen(true);
           }}
           onSelectWord={(word, lineNo) => {
             setActiveLineNo(lineNo);
             setSelectedWordId(word.occurrenceId);
+            setSheetOpen(true);
           }}
         />
-        {selectedWordId === null ? (
-          <MeaningPanel line={activeLine} mode={mode} lang={page.lang} slug={slug} />
-        ) : (
-          <WordGloss
-            slug={slug}
-            occurrenceId={selectedWordId}
-            mode={mode}
-            lang={page.lang}
-            onDismiss={() => setSelectedWordId(null)}
-          />
-        )}
+        {/* Panel or sheet, never both — see useIsNarrow. */}
+        {!narrow && meaningContent}
       </div>
+
+      {narrow && (
+        <MeaningSheet open={sheetOpen} onClose={() => setSheetOpen(false)}>
+          {meaningContent}
+        </MeaningSheet>
+      )}
 
       <section
         aria-label="What the song means"
