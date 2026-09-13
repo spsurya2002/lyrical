@@ -7,6 +7,8 @@ import { WordGloss } from '../components/meaning/WordGloss.js';
 import { GroundedMark } from '../components/grounding/GroundedMark.js';
 import { FixtureBanner } from '../components/FixtureBanner.js';
 import { ModeSwitch } from '../components/language/ModeSwitch.js';
+import { ChatbotEntry } from '../components/plan/ChatbotEntry.js';
+import { QuotaMeter } from '../components/plan/QuotaMeter.js';
 import { useIsNarrow } from '../hooks/useIsNarrow.js';
 import { useLanguageMode } from '../hooks/useLanguageMode.js';
 import { useSongPage } from '../hooks/useSongPage.js';
@@ -96,6 +98,13 @@ export function SongPage() {
       <FixtureBanner />
       <header className="border-b border-border-subtle pb-6">
         <div className="mb-4 flex flex-wrap items-center justify-end gap-3">
+          {/* Pro and signed-out viewers get no meter — there is nothing to count. */}
+          {page.viewer !== null && page.viewer.quota !== null && (
+            <QuotaMeter
+              remaining={page.viewer.quota.remaining}
+              limit={page.viewer.quota.limit}
+            />
+          )}
           <ModeSwitch mode={mode} onChange={setMode} />
         </div>
         <h1
@@ -142,8 +151,23 @@ export function SongPage() {
           }}
         />
         {/* Panel or sheet, never both — see useIsNarrow. */}
-        {!narrow && meaningContent}
+        {!narrow && (
+          <div className="min-w-0">
+            {meaningContent}
+            <ChatbotEntry
+              available={page.viewer?.chatbotAvailable ?? false}
+              signedIn={page.viewer !== null}
+            />
+          </div>
+        )}
       </div>
+
+      {narrow && (
+        <ChatbotEntry
+          available={page.viewer?.chatbotAvailable ?? false}
+          signedIn={page.viewer !== null}
+        />
+      )}
 
       {narrow && (
         <MeaningSheet open={sheetOpen} onClose={() => setSheetOpen(false)}>
