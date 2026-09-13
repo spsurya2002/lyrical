@@ -189,12 +189,12 @@ Per Principle II: never report a task complete without having run this.
 
 **Independent test**: as Basic, the meter shows, the chatbot entry is visible and marked `PRO` and does not open — and the server refuses it regardless of the UI.
 
-- [ ] T077 [US6] `viewer` block in the page response from `getEntitlements(userId)` — `null` when signed out (contract)
-- [ ] T078 [P] [US6] `frontend/src/components/plan/QuotaMeter.tsx` — neutral until 1 remaining, then `--stale`. **Never red**
-- [ ] T079 [P] [US6] `frontend/src/components/plan/ProBadge.tsx` — features shown and gated, not hidden
-- [ ] T080 [US6] **Entitlement contract test** in `backend/tests/contract/entitlements.test.ts` — call each gated route directly with a Basic token and assert `402` with `PRO_ONLY_FEATURE`. Hiding a button is not a security boundary (FR-030)
-- [ ] T081 [US6] Test in `backend/tests/integration/noQuotaConsumed.test.ts` — **no route in this feature consumes quota, ever** (FR-028)
-- [ ] T082 [US6] E2E in `frontend/tests/e2e/planGating.spec.ts` — quickstart scenario 6
+- [x] T077 [US6] `viewer` block in the page response from `getEntitlements(userId)` — `null` when signed out (contract)
+- [x] T078 [P] [US6] `frontend/src/components/plan/QuotaMeter.tsx` — neutral until 1 remaining, then `--stale`. **Never red**
+- [x] T079 [P] [US6] `frontend/src/components/plan/ProBadge.tsx` — features shown and gated, not hidden
+- [x] T080 [US6] **Entitlement contract test** in `backend/tests/contract/entitlements.test.ts` — call each gated route directly with a Basic token and assert `402` with `PRO_ONLY_FEATURE`. Hiding a button is not a security boundary (FR-030)
+- [x] T081 [US6] Test in `backend/tests/integration/noQuotaConsumed.test.ts` — **no route in this feature consumes quota, ever** (FR-028)
+- [x] T082 [US6] E2E in `frontend/tests/e2e/planGating.spec.ts` — quickstart scenario 6
 
 ---
 
