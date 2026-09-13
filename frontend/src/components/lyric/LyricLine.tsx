@@ -49,6 +49,12 @@ export function LyricLine({
         aria-current={isActive ? 'true' : undefined}
         onClick={() => onSelect(line.lineNo)}
         onKeyDown={(event) => {
+          // Only keys pressed on the ROW itself. A word button inside handles
+          // its own Enter, and the same keydown bubbles here — so without this
+          // check, selecting a word by keyboard immediately deselected it
+          // again. Pointer users never saw it: the word's click handler stops
+          // propagation, but keydown has no such guard.
+          if (event.target !== event.currentTarget) return;
           if (event.key === 'Enter' || event.key === ' ') {
             event.preventDefault();
             onSelect(line.lineNo);
