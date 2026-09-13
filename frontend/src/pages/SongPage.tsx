@@ -4,6 +4,7 @@ import { LyricColumn } from '../components/lyric/LyricColumn.js';
 import { MeaningPanel } from '../components/meaning/MeaningPanel.js';
 import { MeaningSheet } from '../components/meaning/MeaningSheet.js';
 import { WordGloss } from '../components/meaning/WordGloss.js';
+import { CoverageIndicator } from '../components/grounding/CoverageIndicator.js';
 import { GroundedMark } from '../components/grounding/GroundedMark.js';
 import { FixtureBanner } from '../components/FixtureBanner.js';
 import { ModeSwitch } from '../components/language/ModeSwitch.js';
@@ -119,9 +120,7 @@ export function SongPage() {
           {page.song.film !== null && <span>· {page.song.film}</span>}
         </p>
         {/* FR-026: a sparsely covered song must not look like a complete one. */}
-        <p data-testid="coverage" className="mt-3 text-xs text-muted">
-          {linesExplained} of {linesTotal} lines explained
-        </p>
+        <CoverageIndicator linesExplained={linesExplained} linesTotal={linesTotal} />
       </header>
 
       <div
