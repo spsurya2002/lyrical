@@ -161,12 +161,14 @@ Per Principle II: never report a task complete without having run this.
 - [x] T066 [US4] `activeLineNo` = the first **servable** line, not line 1 — a user must land on a real explanation, never an empty panel
 - [x] T067 [US4] Summary ungrounded independently of lines in `songPageService.ts` (FR-024) — a summary must never be assembled from line meanings
 - [x] T068 [US4] Integration test in `backend/tests/integration/perLineHonesty.test.ts` — partly grounded song: grounded lines explained, ungrounded lines marked, no partial meaning anywhere (FR-025)
-- [ ] T069 ⛔ [US4] `frontend/src/components/grounding/UngroundedState.tsx` — **BLOCKED on design artboard 3e.** Behaviour is specified; visual treatment is not. Do not start until [design_prompt_round2.md](../../design_prompt_round2.md) has been run and re-audited
-- [ ] T070 ⛔ [US4] `frontend/src/components/grounding/CoverageIndicator.tsx` — **BLOCKED on design artboards 3d and 3f.** Same reason
+- [x] T069 [US4] `frontend/src/components/grounding/UngroundedState.tsx` — **Unblocked 2026-09-13**: owner waived the design round, the token system being settled and proven across the rest of the page. Built against the established tokens
+- [x] T070 [US4] `frontend/src/components/grounding/CoverageIndicator.tsx` — **Unblocked 2026-09-13**, same reason. Four states per design_prompt_round2.md §3f, built from tokens
 - [x] T071 [US4] "Notify me when it's ready" action alongside contribute in `frontend/src/components/grounding/NotifyMe.tsx`, posting to `backend/src/api/routes/notifyMe.ts` (FR-038)
 - [x] T072 [US4] E2E in `frontend/tests/e2e/honestGaps.spec.ts` — quickstart scenario 4
 
-> T069 and T070 are the only blocked tasks. Everything else in US4 is backend and can proceed now.
+> T069 and T070 were blocked on a design round the owner waived on 2026-09-13,
+> judging the theme settled. What was given up is a second opinion on two small
+> states; what was kept is the token system, which they are built from.
 
 ---
 
@@ -189,23 +191,23 @@ Per Principle II: never report a task complete without having run this.
 
 **Independent test**: as Basic, the meter shows, the chatbot entry is visible and marked `PRO` and does not open — and the server refuses it regardless of the UI.
 
-- [ ] T077 [US6] `viewer` block in the page response from `getEntitlements(userId)` — `null` when signed out (contract)
-- [ ] T078 [P] [US6] `frontend/src/components/plan/QuotaMeter.tsx` — neutral until 1 remaining, then `--stale`. **Never red**
-- [ ] T079 [P] [US6] `frontend/src/components/plan/ProBadge.tsx` — features shown and gated, not hidden
-- [ ] T080 [US6] **Entitlement contract test** in `backend/tests/contract/entitlements.test.ts` — call each gated route directly with a Basic token and assert `402` with `PRO_ONLY_FEATURE`. Hiding a button is not a security boundary (FR-030)
-- [ ] T081 [US6] Test in `backend/tests/integration/noQuotaConsumed.test.ts` — **no route in this feature consumes quota, ever** (FR-028)
-- [ ] T082 [US6] E2E in `frontend/tests/e2e/planGating.spec.ts` — quickstart scenario 6
+- [x] T077 [US6] `viewer` block in the page response from `getEntitlements(userId)` — `null` when signed out (contract)
+- [x] T078 [P] [US6] `frontend/src/components/plan/QuotaMeter.tsx` — neutral until 1 remaining, then `--stale`. **Never red**
+- [x] T079 [P] [US6] `frontend/src/components/plan/ProBadge.tsx` — features shown and gated, not hidden
+- [x] T080 [US6] **Entitlement contract test** in `backend/tests/contract/entitlements.test.ts` — call each gated route directly with a Basic token and assert `402` with `PRO_ONLY_FEATURE`. Hiding a button is not a security boundary (FR-030)
+- [x] T081 [US6] Test in `backend/tests/integration/noQuotaConsumed.test.ts` — **no route in this feature consumes quota, ever** (FR-028)
+- [x] T082 [US6] E2E in `frontend/tests/e2e/planGating.spec.ts` — quickstart scenario 6
 
 ---
 
 ## Phase 9: Polish
 
-- [ ] T083 [P] Keyboard path in `frontend/src/components/lyric/LyricColumn.tsx` and `frontend/src/components/meaning/MeaningPanel.tsx` — every meaning reachable and dismissible with Escape, across all three modes; E2E in `frontend/tests/e2e/keyboard.spec.ts` (FR-033)
-- [ ] T084 [P] `lang="hi"` on Devanagari content, `lang="hi-Latn"` on Hinglish, so screen readers switch voice (FR-034)
-- [ ] T085 [P] Visible focus everywhere: 2px `--accent` ring, 2px offset. No outline removed without a replacement
-- [ ] T086 Performance check in `backend/tests/integration/largeSong.test.ts` and `frontend/tests/e2e/performance.spec.ts` — a 100+ line song, line selection with no perceptible delay (SC-008), and the R-03 windowing threshold above 150 lines
-- [ ] T087 Remove any off-palette hex that crept in; confirm `tokens.css` is the only file containing hex values
-- [ ] T088 Final `npm run verify` plus the two checks that must never be skipped: `npm run test:script-boundary` and `npm run test:grounding`
+- [x] T083 [P] Keyboard path in `frontend/src/components/lyric/LyricColumn.tsx` and `frontend/src/components/meaning/MeaningPanel.tsx` — every meaning reachable and dismissible with Escape, across all three modes; E2E in `frontend/tests/e2e/keyboard.spec.ts` (FR-033)
+- [x] T084 [P] `lang="hi"` on Devanagari content, `lang="hi-Latn"` on Hinglish, so screen readers switch voice (FR-034)
+- [x] T085 [P] Visible focus everywhere: 2px `--accent` ring, 2px offset. No outline removed without a replacement
+- [x] T086 Performance check in `backend/tests/integration/largeSong.test.ts` and `frontend/tests/e2e/performance.spec.ts` — a 100+ line song, line selection with no perceptible delay (SC-008), and the R-03 windowing threshold above 150 lines
+- [x] T087 Remove any off-palette hex that crept in; confirm `tokens.css` is the only file containing hex values
+- [x] T088 Final `npm run verify` plus the two checks that must never be skipped: `npm run test:script-boundary` and `npm run test:grounding`
 
 ---
 

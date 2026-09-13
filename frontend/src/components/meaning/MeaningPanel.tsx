@@ -1,7 +1,7 @@
 import type { LineView, Mode } from '../../types.js';
 import { GroundedMark } from '../grounding/GroundedMark.js';
-import { NotifyMe } from '../grounding/NotifyMe.js';
 import { SourceStrip } from '../grounding/SourceStrip.js';
+import { UngroundedState } from '../grounding/UngroundedState.js';
 
 interface Props {
   line: LineView | null;
@@ -17,9 +17,6 @@ interface Props {
  * no branch here that can render a hedged half-answer. That is the point: the
  * product has two states, and so does this component.
  *
- * Visual detail of the ungrounded state is still provisional — artboards 3d–3f
- * (design_prompt_round2.md) will settle it. The behaviour below is what the spec
- * requires either way.
  */
 export function MeaningPanel({ line, mode, lang, slug }: Props) {
   if (line === null) {
@@ -65,40 +62,8 @@ export function MeaningPanel({ line, mode, lang, slug }: Props) {
           <SourceStrip meaningId={line.meaning.meaningId} mode={mode} />
         </>
       ) : (
-        <UngroundedNotice line={line} slug={slug} />
+        <UngroundedState ungrounded={line.ungrounded} slug={slug} />
       )}
     </aside>
-  );
-}
-
-function UngroundedNotice({ line, slug }: { line: LineView & { meaning: null }; slug: string }) {
-  const { reason, sourceCount, sourcesRequired } = line.ungrounded;
-
-  return (
-    <div data-testid="ungrounded-state" className="max-w-measure">
-      <p className="text-body text-ungrounded">
-        {reason === 'mode_unavailable'
-          ? 'This explanation is not available in this language yet.'
-          : 'We don’t have enough grounded material for this line yet.'}
-      </p>
-      <p className="mt-2 text-sm text-muted">
-        {reason === 'below_bar'
-          ? `${sourceCount} sources · we need ${sourcesRequired}. We’d rather say nothing than make something up.`
-          : reason === 'no_material'
-            ? 'Nothing reliable has been written about this line that we can find.'
-            : 'We’re preparing it. Nothing is lost.'}
-      </p>
-      {reason !== 'mode_unavailable' && (
-        <div className="mt-4 flex flex-wrap gap-2">
-          <button
-            type="button"
-            className="rounded-md border border-accent-edge px-3 py-2 text-sm text-accent transition-colors hover:border-accent hover:text-accent-hover"
-          >
-            Contribute a source
-          </button>
-          <NotifyMe slug={slug} />
-        </div>
-      )}
-    </div>
   );
 }

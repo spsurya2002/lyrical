@@ -24,5 +24,16 @@ export default defineConfig({
     url: 'http://localhost:5173',
     reuseExistingServer: !process.env.CI,
     timeout: 180_000,
+    env: {
+      // A whole browser suite runs from one IP, so it shares a single rate-limit
+      // bucket — something no real user does. At the production ceiling of 600
+      // the suite exhausted it (606 requests in one run) and pages came back
+      // empty, which looks exactly like a UI bug and is not one.
+      //
+      // The limiter stays ATTACHED here; only its ceiling moves. A route that
+      // forgot its limiter is still a route with no limiter, and the contract
+      // tests still prove the gate works.
+      RATE_LIMIT_READ_PER_MINUTE: '100000',
+    },
   },
 });

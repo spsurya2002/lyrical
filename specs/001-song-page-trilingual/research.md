@@ -69,11 +69,32 @@ characters; a 100-line qawwali is therefore ~60–80 KB uncompressed, well under
 gzipped — cheap enough to send once. Word occurrences are a different order of
 magnitude: a long song has 400+ of them and a user opens perhaps five.
 
-**Threshold**: above 150 lines, switch to windowed loading (send the active line
-plus 20 either side). Recorded as a configuration value, not a hardcoded limit.
-
 **Rejected**: lazy line meanings (fails SC-008); eager word meanings (payload
 dominated by content almost nobody opens).
+
+### Amended 2026-09-13 — windowing dropped, on measurement
+
+This decision originally added: *"above 150 lines, switch to windowed loading."*
+That was a projection made before anything had been measured. A 200-line fixture
+was then added and measured (T086, `tests/integration/largeSong.test.ts`):
+
+```
+payload: 47.2 KB for 200 lines
+26 lines: 7ms · 200 lines: 8ms  (1.1x for 7.7x the lines)
+```
+
+Both halves of the projection were wrong. The payload is well under the 60–80 KB
+this decision estimated for a song half that length, and response time barely
+moves with line count because the three fixed queries dominate — the per-line
+cost is close to nothing.
+
+**Windowing is therefore not built**, and `LINE_WINDOWING_THRESHOLD` is removed
+rather than left in place unused: a configuration value that controls nothing is
+a claim about the system that isn't true.
+
+The test keeps the numbers honest. Its timing assertion fails if the page ever
+becomes more than linearly expensive in lines, which is the shape an N+1 would
+take — the actual risk this decision was worried about.
 
 ---
 

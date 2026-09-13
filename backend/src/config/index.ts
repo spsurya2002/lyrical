@@ -19,9 +19,6 @@ const schema = z.object({
   /** The four-source bar (D-003). Tunable without a migration or a code change. */
   GROUNDING_MIN_SOURCES: z.coerce.number().int().positive().default(4),
 
-  /** Above this many lines, line meanings load windowed rather than whole (R-03). */
-  LINE_WINDOWING_THRESHOLD: z.coerce.number().int().positive().default(150),
-
   GOOGLE_CLIENT_ID: z.string().optional(),
   GOOGLE_CLIENT_SECRET: z.string().optional(),
 
