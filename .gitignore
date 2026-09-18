@@ -38,3 +38,9 @@ design/**/*Screens.html
 # Playwright
 playwright-report/
 test-results/
+
+# Reference documents — kept locally, not committed.
+# They contain full lyrics, and this repository is public; there is no reason to
+# add more copyrighted text to it than the product itself requires (R-001).
+# docs/architecture.md cites them by name as the quality bar.
+*.pdf
