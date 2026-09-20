@@ -313,7 +313,43 @@ Cheap model, narrow job. Failure withholds the output and records why.
 
 ### Layer 6 — Presentation
 
-**Already built and unchanged.**
+Mostly built, with **one correction**.
+
+The song page renders two columns, but the right one shows only the meaning of
+the line you clicked. A reader therefore never sees the song and its meaning
+together, and has to work for every line.
+
+The reference documents read straight through — line, then meaning, line, then
+meaning — and that is what makes them usable. The page must do the same:
+
+```
+LYRIC                      │  MEANING
+Ya nizaam-ud-din auliya    │  not explained yet
+                           │
+Kun faya kun               │  A phrase carried into filmi verse
+                           │  from scripture: be, and it is.
+                           │                       ● 6 sources
+Maula maula                │  Lord, master — repeated until it
+                           │  stops being a title.  ● 4 sources
+```
+
+**Both columns render the whole song, meanings vertically aligned to their
+lines, scrolling together.** Clicking a line still highlights the pair and is
+how word meanings and source strips open — those stay collapsed so the page
+remains readable.
+
+Two consequences worth stating:
+
+- **On mobile the columns stack, which produces exactly the reference
+  documents' interleaved shape** — line, meaning, line, meaning. That is the
+  right mobile reading experience, and it likely removes the bottom sheet
+  (`MeaningSheet`, `useIsNarrow`) rather than adding to it.
+- The design principle still holds: the lyric stays the hero. It keeps
+  `--text-lyric` at `--text-primary`; the meaning is smaller and
+  `--text-secondary`. That is the same contrast the reference documents use.
+
+This is a presentation change only — the API contract, the grounding rules and
+the data model are untouched by it.
 
 ---
 
@@ -432,15 +468,21 @@ Replaces the sequencing in `roadmap.md`.
 
 | Spec | Scope |
 |---|---|
-| **002** | Schema — Work/Rendition, lyric provenance, KB tables, `source_chunk`, pgvector, `rights_status` |
-| **003** | Lyrics pipeline — adapters, curated crawl, reconciliation, confidence, transliteration |
-| **004** | Knowledge base — schema, retrieval, review queue |
-| **005** | Explanation agent — agentic RAG with KB write-back |
-| **006** | Verification layer |
-| **007** | Identity and discovery — search, disambiguation, landing |
-| **008+** | Accounts, contributions, library, payments, chatbot, export |
+| **002** | Reading layout — both columns render the whole song, aligned and scrolling together |
+| **003** | Schema — Work/Rendition, lyric provenance, KB tables, `source_chunk`, pgvector, `rights_status` |
+| **004** | Lyrics pipeline — adapters, curated crawl, reconciliation, confidence, transliteration |
+| **005** | Knowledge base — schema, retrieval, review queue |
+| **006** | Explanation agent — agentic RAG with KB write-back |
+| **007** | Verification layer |
+| **008** | Identity and discovery — search, disambiguation, landing |
+| **009+** | Accounts, contributions, library, payments, chatbot, export |
 
-002–006 produces one real, trustworthy explained song. 007 makes it reachable.
+003–007 produces one real, trustworthy explained song. 008 makes it reachable.
+
+**002 goes first deliberately.** It is small, it is presentation-only, and doing
+it before the pipeline means everything built afterwards targets the shape the
+page will actually have. Doing it later would mean re-checking every screenshot,
+every design decision and forty end-to-end tests against a layout that moved.
 
 ---
 
